@@ -1,4 +1,4 @@
-# jobs_in_parallel
+# jobs_in_parallel_fail
 
 Goal of this is to create a pipeline as such:
 
@@ -24,6 +24,13 @@ All jobs are started with:
 jobs.sh
 ```
 
+The idea was that `jobs.sh` would oversee the entire operations.
+
+That is an incorrect idea: `jobs.sh` cannot predict when
+the slaves of job_2 have finished.
+
+The road to success it to let `job_2_master.sh` start `job_3.sh`. 
+
 ## In detail
 
 ```
@@ -37,3 +44,4 @@ job_1.sh -> file_1.txt -> | job_2_slave.sh  | -> job_3.sh
             file_5.txt -> | job_2_slave.sh  | ->
             etcetera      +-----------------+
 ```
+
