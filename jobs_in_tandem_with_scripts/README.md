@@ -13,6 +13,3 @@ All jobs are started with:
 ```
 jobs.sh
 ```
-
-
-
