@@ -19,7 +19,9 @@ echo $script
 
 echo "Sending script to sbatch:"
 
-echo "$script" | sbatch 
+jobid=`echo "$script" | sbatch | cut -d ' ' -f 4`
 
-#jobid=`sbatch job_1.sh | cut -d ' ' -f 4`
-#echo "job id is "$jobid
+#echo "$script" | sbatch # Works
+#jobid=`sbatch job_1.sh | cut -d ' ' -f 4`  # Works
+
+echo "job id is "$jobid
