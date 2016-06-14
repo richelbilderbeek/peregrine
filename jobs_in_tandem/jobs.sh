@@ -62,3 +62,38 @@ jobid=`echo "$script" | sbatch | cut -d ' ' -f 4`
 echo "job id of second script is "$jobid
 
 
+
+
+##############################
+# Run third script
+##############################
+
+script="#!/bin/bash
+#SBATCH --time=0:01:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks=1
+#SBATCH --mem=1M
+#SBATCH --job-name=job_3
+#SBATCH --output=job_3.log
+#SBATCH --dependency=afterok:"$jobid"
+
+if [ ! -e 'job_2.txt' ]
+then
+  echo \"ERROR: job_2.txt absent\"
+  exit 1
+fi
+
+mv job_2.txt job_3.txt
+echo \"Added by job_3.sh\" >> job_3.txt
+"
+
+echo "Script:"
+echo $script
+
+echo "Sending script to sbatch:"
+jobid=`echo "$script" | sbatch | cut -d ' ' -f 4`
+
+echo "job id of third script is "$jobid
+
+
