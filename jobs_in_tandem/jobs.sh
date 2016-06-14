@@ -3,7 +3,7 @@
 # Clean up
 rm job_1.txt
 
-echo \
+echo
  "#!/bin/bash
   #SBATCH --time=0:01:00
   #SBATCH --nodes=1
