@@ -4,6 +4,7 @@
 rm job_1.txt
 
 script="
+#!/bin/bash
 #SBATCH --time=0:01:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
