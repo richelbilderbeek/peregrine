@@ -19,6 +19,6 @@ echo "job id of first script is "$jobid
 
 cmd="sbatch job_2.sh --dependecy=afterok:"$jobid" | cut -d ' ' -f 4"
 echo "Starting cmd: "$cmd
-jobid=$cmd
+jobid=`$cmd`
 
 echo "job id of second script is "$jobid
