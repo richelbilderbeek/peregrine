@@ -3,5 +3,16 @@
 # Clean up
 rm job_1.txt
 
-jobid=`sbatch job_1.sh | cut -d ' ' -f 4`
-echo "job id is "$jobid
+echo "#!/bin/bash" \
+  "#SBATCH --time=0:01:00" \
+  "#SBATCH --nodes=1" \
+  "#SBATCH --ntasks-per-node=1" \
+  "#SBATCH --ntasks=1" \
+  "#SBATCH --mem=1M" \
+  "#SBATCH --job-name=job_1" \
+  "#SBATCH --output=job_1.log" \
+  "echo "Created by job_1.sh" > job_1.txt" \
+ | sbatch
+  
+#jobid=`sbatch job_1.sh | cut -d ' ' -f 4`
+#echo "job id is "$jobid
