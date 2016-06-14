@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Clean up
-rm job_1.txt
+rm *.txt
+rm *.log
 
 ##############################
 # Run first script
@@ -16,8 +17,7 @@ echo "job id of first script is "$jobid
 # Run second script
 ##############################
 
-echo "Script:"
-echo $script
-
 echo "Sending script to sbatch:"
 jobid=`sbatch job_2.sh --dependecy=afterok:$id | cut -d ' ' -f 4`
+
+echo "job id of second script is "$jobid
