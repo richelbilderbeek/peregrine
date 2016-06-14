@@ -17,7 +17,7 @@ echo "job id of first script is "$jobid
 # Run second script
 ##############################
 
-cmd="sbatch job_2.sh --dependency=afterok:$jobid"
+cmd="sbatch --dependency=afterok:$jobid job_2.sh"
 
 echo "cmd: "$cmd
 
