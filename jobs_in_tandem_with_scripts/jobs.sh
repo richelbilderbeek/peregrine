@@ -18,6 +18,6 @@ echo "job id of first script is "$jobid
 ##############################
 
 echo "Sending script to sbatch:"
-jobid=`sbatch job_2.sh --dependency=afterok:$id | cut -d ' ' -f 4"`
+jobid=`sbatch job_2.sh --dependency=afterok:$id | cut -d ' ' -f 4`
 
 echo "job id of second script is "$jobid
