@@ -4,7 +4,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1M
-#SBATCH --job-name=job_1
+#SBATCH --job-name=job_2
 #SBATCH --output=job_2.log
 if [ ! -e 'job_1.txt' ]
 then
