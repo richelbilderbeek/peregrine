@@ -8,5 +8,5 @@
 #SBATCH --output=job_3.log
 for filename in `ls *.txt`
 do
-  cat filename >> job_3.txt
+  cat $filename >> job_3.txt
 done

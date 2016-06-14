@@ -4,8 +4,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1M
-#SBATCH --job-name=job_2
-#SBATCH --output=job_2.log
+#SBATCH --job-name=job_2_master
+#SBATCH --output=job_2_master.log
 jobids=()
 
 for filename in `ls *.txt`
