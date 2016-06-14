@@ -4,7 +4,6 @@
 rm job_1.txt
 
 script="
-#!/bin/bash
 #SBATCH --time=0:01:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -20,7 +19,7 @@ $script
 
 echo "Sending script to sbatch:"
 
-sbatch < $script
+sbatch $script
 
 #jobid=`sbatch job_1.sh | cut -d ' ' -f 4`
 #echo "job id is "$jobid
