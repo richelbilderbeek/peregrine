@@ -15,7 +15,7 @@ echo \"Created by job_1.sh\" > job_1.txt
 "
 
 echo "Script:"
-$script
+echo $script
 
 echo "Sending script to sbatch:"
 
