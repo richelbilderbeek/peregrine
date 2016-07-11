@@ -10,10 +10,8 @@
 # Start file creation
 echo "Created by job1 master" > out.txt
 
-# Array to hold all the job IDs
-jobids=()
-
 # Start all jobs, while collecting the job IDs
+jobids=()
 for i in {1..3}
 do
   cmd="sbatch job1_slave.sh $i"
