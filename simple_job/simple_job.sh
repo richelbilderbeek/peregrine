@@ -4,6 +4,6 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1M
-#SBATCH --job-name=job_2_slave
-#SBATCH --output=job_2_slave_%j.log
-echo "Added by job_2_slave.sh" >> $1
+#SBATCH --job-name=simple_job
+#SBATCH --output=simple_job.log
+echo "Created by simple_job.sh" > simple_job.txt
