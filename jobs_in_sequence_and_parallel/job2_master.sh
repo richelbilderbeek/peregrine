@@ -4,13 +4,13 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1M
-#SBATCH --job-name=job_2_master
-#SBATCH --output=job_2_master.log
+#SBATCH --job-name=job2_master
+#SBATCH --output=job2_master.log
 jobids=()
 
 for filename in `ls *.txt`
 do
-  cmd="sbatch job_2_slave.sh $filename"
+  cmd="sbatch job2_slave.sh $filename"
   echo "cmd: "$cmd
   jobids+=(`$cmd | cut -d ' ' -f 4`)
 done
@@ -19,7 +19,7 @@ txt=$(printf ":%s" "${jobids[@]}")
 txt=${txt:1}
 echo $txt 
 
-cmd="sbatch --dependency=afterok:$txt job_3.sh"
+cmd="sbatch --dependency=afterok:$txt job3.sh"
 echo "cmd: "$cmd
 jobid=`$cmd | cut -d ' ' -f 4`
 echo "jobid: "$jobid
