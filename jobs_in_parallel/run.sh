@@ -1,2 +1,2 @@
 #!/bin/bash
-sbatch job1_master.sh"
+sbatch job1_master.sh
