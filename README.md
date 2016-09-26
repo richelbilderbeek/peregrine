@@ -4,7 +4,7 @@ My notes, presentations and testing scripts about the Peregrine cluster.
 
 ## Presentations
 
- * Setting up a pipeline [PDF](setting_up_a_pipeline.pdf) [ODP](setting_up_a_pipeline.odp)
+ * Running jobs with dependencies on the Peregrine computer cluster [PDF](job_dependencies.pdf) [ODP](job_dependencies.odp)
 
 ## Do a `git pull`
 
