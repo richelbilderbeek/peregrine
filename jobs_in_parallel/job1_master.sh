@@ -10,6 +10,9 @@
 # Start file creation
 echo "Created by job1 master" > out.txt
 
+# To be sure the file has been created
+sleep 1
+
 # Start all jobs, while collecting the job IDs
 jobids=()
 for i in {1..3}
