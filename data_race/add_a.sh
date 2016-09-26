@@ -6,5 +6,5 @@
 #SBATCH --mem=1M
 #SBATCH --job-name=start_b
 #SBATCH --output=start_b.log
-cat shakspeare.html >> out.txt
+cat shakespeare.html >> out.txt
 sbatch add_b.sh
