@@ -6,4 +6,4 @@
 #SBATCH --mem=1M
 #SBATCH --job-name=b
 #SBATCH --output=b.log
-echo "B" >> out.txt
+echo "*" >> out.txt
