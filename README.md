@@ -4,6 +4,7 @@ My notes, presentations and testing scripts about the Peregrine cluster.
 
 ## Presentations
 
+ * Running (independent) jobs on the Peregrine computer cluster [PDF](independent_jobs.pdf) [ODP](independent_jobs.odp)
  * Running jobs with dependencies on the Peregrine computer cluster [PDF](job_dependencies.pdf) [ODP](job_dependencies.odp)
 
 ## Do a `git pull`

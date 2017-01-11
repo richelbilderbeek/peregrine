@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH --time=0:00:01
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks=1
+#SBATCH --mem=1M
+#SBATCH --job-name=job_without_rep
+#SBATCH --output=my.log
+echo $RANDOM
