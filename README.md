@@ -36,8 +36,17 @@ Now just type `p` to log in to Peregrine
 On the Peregrine computer cluster, do:
 
 ```
-echo "alias q='squeue -u $USER'" >> ~/.bashrc
+echo "alias q='squeue -u $USER'" >> ~/.bash_profile
 ```
+
+Do not use `.bashrc`, as this will disable using `scp`.
 
 Now just type `q` to view your jobs in the queue.
 
+## Get a welcome message
+
+```
+echo "cowsay -f stegosaurus \'Welcome master'" >> ~/.bash_profile
+```
+
+Do not use `.bashrc`, as this will disable using `scp`.
