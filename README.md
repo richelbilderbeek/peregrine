@@ -46,7 +46,7 @@ Now just type `q` to view your jobs in the queue.
 ## Get a welcome message
 
 ```
-echo "cowsay -f stegosaurus \'Welcome master'" >> ~/.bash_profile
+echo "cowsay -f stegosaurus 'Welcome master'" >> ~/.bash_profile
 ```
 
 Do not use `.bashrc`, as this will disable using `scp`.
