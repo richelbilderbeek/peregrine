@@ -61,10 +61,18 @@ Me:
 
 ```
 sshare
+sshare | egrep "p230198" | rev | cut -d " " -f 2
 ```
 
 All:
 
 ```
 sshare -a
+```
+
+Or, to add the commands `love_me` and `love_all` to your profile:
+
+```
+echo "alias love_me='sshare | egrep "p230198" | rev | cut -d " " -f 2'" >> ~/.bash_profile
+echo "alias love_all='sshare -a'" >> ~/.bash_profile
 ```
