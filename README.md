@@ -60,7 +60,6 @@ Do not use `.bashrc`, as this will disable using `scp`.
 Me:
 
 ```
-sshare
 sshare | egrep "p230198" | rev | cut -d " " -f 2
 ```
 
