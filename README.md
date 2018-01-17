@@ -75,3 +75,9 @@ Or, to add the commands `love_me` and `love_all` to your profile:
 echo "alias love_me='sshare | egrep "p230198" | rev | cut -d " " -f 2'" >> ~/.bash_profile
 echo "alias love_all='sshare -a'" >> ~/.bash_profile
 ```
+
+## View the queue with the long names readable
+
+```
+squeue -u $USER -o "%.8i %.6P %.28j %.8u %.2t %.10M %.6D %R"
+```
