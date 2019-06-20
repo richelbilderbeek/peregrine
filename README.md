@@ -1,4 +1,8 @@
-# Peregrine
+# peregrine
+
+Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
+---|---
+`master`|[![Build Status](https://travis-ci.org/richelbilderbeek/peregrine.svg?branch=master)](https://travis-ci.org/richelbilderbeek/peregrine)
 
 My notes, presentations and testing scripts about the Peregrine cluster.
 
