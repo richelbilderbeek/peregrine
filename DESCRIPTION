@@ -15,3 +15,13 @@ LazyData: true
 URL: https://github.com/richelbilderbeek/peregrine
 BugReports: https://github.com/richelbilderbeek/peregrine/issues
 Language: en-US
+Imports:
+    beastier,
+    beautier,
+    pirouette,
+    rappdirs,
+    stringr,
+    testit    
+Suggests:
+    testthat
+RoxygenNote: 6.1.1

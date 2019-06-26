@@ -7,6 +7,8 @@ r_github_packages:
   - jimhester/lintr
   - MangoTheCat/goodpractice
   - ropensci/spelling
+  - ropensci/beastier
+  - richelbilderbeek/pirouette
 
 before_script:
   # Check dead links
