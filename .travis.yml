@@ -8,6 +8,9 @@ r_github_packages:
   - MangoTheCat/goodpractice
   - ropensci/spelling
   - ropensci/beastier
+  - richelbilderbeek/mauricer
+  - richelbilderbeek/babette
+  - richelbilderbeek/mcbette
   - richelbilderbeek/pirouette
 
 before_script:
