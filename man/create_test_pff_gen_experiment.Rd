@@ -11,6 +11,16 @@
   2000, store_every = 1000),
   beast2_options = create_pff_beast2_options())
 }
+\arguments{
+\item{mrca_prior}{an MRCA priors,
+as created by \link[beautier]{create_mrca_prior}}
+
+\item{mcmc}{an MCMC,
+as created by \link[beautier]{create_mcmc}}
+
+\item{beast2_options}{BEAST2 options,
+as created by \link[beastier]{create_beast2_options}}
+}
 \description{
 Creates a Peregrine-friendly generative experiment for testing
 }
