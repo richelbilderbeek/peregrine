@@ -92,12 +92,4 @@ test_that("use", {
       "Peregrine-unfriendly filename for '"
     )
   }
-
-  # Check misc_params
-  pir_params <- good_pir_params
-  pff_pir_params$misc_params$tree_filename <- "/tmp/puf"
-  expect_error(
-    check_pff_pir_params(pir_params),
-    "Peregrine-unfriendly filename for '"
-  )
 })
