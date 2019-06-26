@@ -1,0 +1,17 @@
+Package: peregrine
+Title: Work With The Groninger Peregrine Computer Cluster  
+Version: 0.1
+Authors@R: c(
+    person("Richèl J.C.", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")))
+Maintainer: Richèl J.C. Bilderbeek <richel@richelbilderbeek.nl>
+Description: The Peregrine computer cluster is a computer cluster in
+    the Dutch city of Groningen. Running R code on such a cluster
+    has different constraints then when doing so on a local computer.
+    This package provides functionality to check if one meets all
+    constraints imposed on a Peregrine user.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/richelbilderbeek/peregrine
+BugReports: https://github.com/richelbilderbeek/peregrine/issues
+Language: en-US

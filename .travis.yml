@@ -1,13 +1,29 @@
-language: generic
+language: r
 dist: xenial
+cache: packages
 
-install:
+r_github_packages:
+  - jimhester/covr
+  - jimhester/lintr
+  - MangoTheCat/goodpractice
+  - ropensci/spelling
+
+before_script:
   # Check dead links
   - sudo apt-get install -qq npm
   - npm config set strict-ssl false
   - sudo npm install -g markdown-link-check
+  # proselint
+  - sudo pip install proselint
 
 script:
+  - travis_wait 60 R CMD build .
+  - travis_wait 60 R CMD check *tar.gz
+
+after_success:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then Rscript -e 'lintr::lint_package()'; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then Rscript -e 'covr::codecov()'; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then proselint *.md | egrep -v "typography\.symbols\.curly_quotes"; fi
   # Check dead links
   - rm .travis.yml
   - ./scripts/check_dead_links
