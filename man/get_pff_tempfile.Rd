@@ -4,8 +4,8 @@
 \alias{get_pff_tempfile}
 \title{Get a Peregrine-friendly temporary filename}
 \usage{
-get_pff_tempfile(pattern = "razzo_file_",
-  pff_tmpdir = get_pff_tempdir(), fileext = "")
+get_pff_tempfile(pattern = "pff_", pff_tmpdir = get_pff_tempdir(),
+  fileext = "")
 }
 \arguments{
 \item{pattern}{see \link{tempfile}}
