@@ -15,6 +15,6 @@ get_pff_tempdir <- function() {
     rappdirs::user_cache_dir(),
     basename(tempfile())
   )
-  testit::assert(is_pff(dirname))
+  testit::assert(is_pff(dirname)) # nolint peregrine function
   dirname
 }

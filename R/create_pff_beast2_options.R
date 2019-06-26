@@ -25,10 +25,10 @@ create_pff_beast2_options <- function(
     output_state_filename = output_state_filename,
     beast2_working_dir = beast2_working_dir
   )
-  testit::assert(is_pff(beast2_options$input_filename))
-  testit::assert(is_pff(beast2_options$output_log_filename))
-  testit::assert(is_pff(beast2_options$output_trees_filenames))
-  testit::assert(is_pff(beast2_options$output_state_filename))
-  testit::assert(is_pff(beast2_options$beast2_working_dir))
+  testit::assert(is_pff(beast2_options$input_filename)) # nolint peregrine function
+  testit::assert(is_pff(beast2_options$output_log_filename)) # nolint peregrine function
+  testit::assert(is_pff(beast2_options$output_trees_filenames)) # nolint peregrine function
+  testit::assert(is_pff(beast2_options$output_state_filename)) # nolint peregrine function
+  testit::assert(is_pff(beast2_options$beast2_working_dir)) # nolint peregrine function
   beast2_options
 }

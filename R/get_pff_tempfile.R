@@ -15,17 +15,17 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 get_pff_tempfile <- function(
-  pattern = "razzo_file_",
+  pattern = "pff_",
   pff_tmpdir = get_pff_tempdir(),
   fileext = ""
 ) {
-  testit::assert(is_pff(pff_tmpdir))
+  testit::assert(is_pff(pff_tmpdir)) # nolint peregrine function
   filename <- tempfile(
     pattern = pattern,
     tmpdir = pff_tmpdir,
     fileext = fileext
   )
   testit::assert(!file.exists(filename))
-  testit::assert(is_pff(filename))
+  testit::assert(is_pff(filename)) # nolint peregrine function
   filename
 }
