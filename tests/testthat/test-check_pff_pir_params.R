@@ -42,49 +42,9 @@ test_that("use", {
     "Peregrine-unfriendly filename for '"
   )
 
+  check_pff_experiments(pir_params$experiments)
+
   for (i in seq_along(pir_params$experiments)) {
-    pir_params <- good_pir_params
-    pir_params$experiments[[i]]$beast2_options$input_filename <- "/tmp/puf"
-    expect_error(
-      check_pff_pir_params(pir_params),
-      "Peregrine-unfriendly filename for '"
-    )
-
-    pir_params <- good_pir_params
-    pir_params$experiments[[i]]$beast2_options$output_log_filename <- "/tmp/puf"
-    expect_error(
-      check_pff_pir_params(pir_params),
-      "Peregrine-unfriendly filename for '"
-    )
-
-    pir_params <- good_pir_params
-    pir_params$experiments[[i]]$beast2_options$output_trees_filenames <- "/tmp/puf"
-    expect_error(
-      check_pff_pir_params(pir_params),
-      "Peregrine-unfriendly filename for '"
-    )
-
-    pir_params <- good_pir_params
-    pir_params$experiments[[i]]$beast2_options$output_state_filename <- "/tmp/puf"
-    expect_error(
-      check_pff_pir_params(pir_params),
-      "Peregrine-unfriendly filename for '"
-    )
-
-    pir_params <- good_pir_params
-    pir_params$experiments[[i]]$beast2_options$beast2_working_dir <- "/tmp/puf"
-    expect_error(
-      check_pff_pir_params(pir_params),
-      "Peregrine-unfriendly filename for '"
-    )
-
-    pir_params <- good_pir_params
-    pir_params$experiments[[i]]$beast2_options$beast2_path <- "/tmp/puf"
-    expect_error(
-      check_pff_pir_params(pir_params),
-      "Peregrine-unfriendly filename for '"
-    )
-
     pir_params <- good_pir_params
     pir_params$experiments[[i]]$errors_filename <- "/tmp/puf.csv"
     expect_error(

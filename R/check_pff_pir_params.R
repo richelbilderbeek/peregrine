@@ -26,28 +26,5 @@ check_pff_pir_params <- function(
   if (!peregrine::is_pff(pir_params$alignment_params$fasta_filename)) {
     stop("Peregrine-unfriendly filename for 'pir_params$alignment_params$fasta_filename'")
   }
-  for (i in seq_along(pir_params$experiments)) {
-    experiment <- pir_params$experiments[[i]]
-    if (!peregrine::is_pff(experiment$beast2_options$input_filename)) {
-      stop("Peregrine-unfriendly filename for 'experiment$beast2_options$input_filename'")
-    }
-    if (!peregrine::is_pff(experiment$beast2_options$output_log_filename)) {
-      stop("Peregrine-unfriendly filename for 'experiment$beast2_options$output_log_filename'")
-    }
-    if (!peregrine::is_pff(experiment$beast2_options$output_trees_filenames)) {
-      stop("Peregrine-unfriendly filename for 'experiment$beast2_options$output_trees_filenames'")
-    }
-    if (!peregrine::is_pff(experiment$beast2_options$output_state_filename)) {
-      stop("Peregrine-unfriendly filename for 'experiment$beast2_options$output_state_filename'")
-    }
-    if (!peregrine::is_pff(experiment$beast2_options$beast2_working_dir)) {
-      stop("Peregrine-unfriendly filename for 'experiment$beast2_options$beast2_working_dir'")
-    }
-    if (!peregrine::is_pff(experiment$beast2_options$beast2_path)) {
-      stop("Peregrine-unfriendly filename for 'experiment$beast2_options$beast2_path'")
-    }
-    if (!peregrine::is_pff(experiment$errors_filename)) {
-      stop("Peregrine-unfriendly filename for 'experiment$errors_filename'")
-    }
-  }
+  check_pff_experiments(pir_params$experiments)
 }
