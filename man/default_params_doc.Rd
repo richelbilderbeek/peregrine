@@ -12,14 +12,15 @@ default_params_doc(alignment, alignment_params, bd_mutation_rate, bd_tree,
   fileext, filename, folder_name, init_speciation_rate,
   init_extinction_rate, input_filename, lambda, mbd_l_matrix,
   mbd_mutation_rate, mbd_params, mbd_paramses, mbd_params_interval,
-  mbd_sim_rng_seed, mbd_tree, mcmc, mcmc_chain_length, misc_params,
+  mbd_sim_rng_seed, mbd_tree, mcmc, mcmc_chain_length, method, misc_params,
   mrca_prior, mu, mutation_rate, n_replicates, nu, nu_events,
   output_log_filename, output_trees_filenames, output_state_filename,
   parameter_filename, parameters_filename, pattern, pff_tmpdir, phylo,
-  pir_params, posterior_trees, precision, project_folder_name, q,
+  pir_params, posterior_trees, precision, project_folder_name, q, rng_seed,
   sample_interval, seed, sequence_length, sim_pars, sim_phylo, site_model,
   site_models, sub_chain_length, tree, tree_prior, tree_priors,
-  tree_filename, trees_filename, twinning_params, verbose)
+  tree_filename, trees_filename, twin_alignment_filename,
+  twin_evidence_filename, twin_tree_filename, twinning_params, verbose)
 }
 \arguments{
 \item{alignment}{a DNA alignment}
@@ -114,6 +115,15 @@ as created by \link[beautier]{create_mcmc}}
 
 \item{mcmc_chain_length}{length of an MCMC}
 
+\item{method}{determines how to create the twin tree
+\itemize{
+    \item 'random_tree' just produces a random tree;
+    \item 'max_clade_cred' simulates \code{n_replicates} trees and
+      uses \link[phangorn]{maxCladeCred} to create a consensus tree;
+    \item 'max_likelihood' simulates \code{n_replicates} trees
+     and selects the most likely;
+  }}
+
 \item{misc_params}{additional parameters for razzo. They contain
 tree_filename to store the original given tree and mbd_sim_rng_seed for
 when an mbd tree is simulated}
@@ -167,6 +177,8 @@ will be the full path to \code{razzo_project}}
 \item{q}{per-species speciation probability in case of occurrance of
 a multiple event. See \code{\link[mbd]{mbd_sim}}}
 
+\item{rng_seed}{a random number generator seed}
+
 \item{sample_interval}{the interval at which the MCMC algorithm
 makes a measurement}
 
@@ -199,10 +211,27 @@ as created by \link[beautier]{create_tree_prior}}
 
 \item{trees_filename}{name of the BEAST2 posterior phylogenies file}
 
+\item{twin_alignment_filename}{name of the FASTA file the twin
+alignment will be saved to}
+
+\item{twin_evidence_filename}{filename to store the estimated
+evidences (aka marginal likelihoods) of the twin tree}
+
+\item{twin_tree_filename}{name of the (\code{.newick}) file the twin
+tree will be saved to}
+
 \item{twinning_params}{parameters for creating a twin tree,
 as can be created by \code{\link[pirouette]{create_twinning_params}}}
 
 \item{verbose}{give more output}
+
+\item{twin_model}{the model you want to use to generate the twin tree:
+\itemize{
+  \item \code{birth_death}: birth death
+  \item \code{yule}: Yule or pure-birth
+}
+See \link[pirouette]{get_twin_models} to see all possible
+values of \code{twin_model}}
 }
 \description{
 This function does nothing. It is intended to inherit is parameters'

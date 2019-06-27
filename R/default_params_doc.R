@@ -57,6 +57,14 @@
 #' @param mcmc an MCMC,
 #' as created by \link[beautier]{create_mcmc}
 #' @param mcmc_chain_length length of an MCMC
+#' @param method determines how to create the twin tree
+#' \itemize{
+#'     \item 'random_tree' just produces a random tree;
+#'     \item 'max_clade_cred' simulates \code{n_replicates} trees and
+#'       uses \link[phangorn]{maxCladeCred} to create a consensus tree;
+#'     \item 'max_likelihood' simulates \code{n_replicates} trees
+#'      and selects the most likely;
+#'   }
 #' @param misc_params additional parameters for razzo. They contain
 #'   tree_filename to store the original given tree and mbd_sim_rng_seed for
 #'   when an mbd tree is simulated
@@ -90,6 +98,7 @@
 #'   will be the full path to \code{razzo_project}
 #' @param q per-species speciation probability in case of occurrance of
 #'   a multiple event. See \code{\link[mbd]{mbd_sim}}
+#' @param rng_seed a random number generator seed
 #' @param sample_interval the interval at which the MCMC algorithm
 #'   makes a measurement
 #' @param sequence_length the length of each DNA sequence in an alignment
@@ -109,6 +118,19 @@
 #' @param tree_priors a list of one or more tree priors,
 #'   as created by \link[beautier]{create_tree_prior}
 #' @param trees_filename name of the BEAST2 posterior phylogenies file
+#' @param twin_alignment_filename name of the FASTA file the twin
+#'   alignment will be saved to
+#' @param twin_evidence_filename filename to store the estimated
+#'   evidences (aka marginal likelihoods) of the twin tree
+#' @param twin_tree_filename  name of the (\code{.newick}) file the twin
+#'   tree will be saved to
+#' @param twin_model the model you want to use to generate the twin tree:
+#'   \itemize{
+#'     \item \code{birth_death}: birth death
+#'     \item \code{yule}: Yule or pure-birth
+#'   }
+#'   See \link[pirouette]{get_twin_models} to see all possible
+#'   values of \code{twin_model}
 #' @param twinning_params parameters for creating a twin tree,
 #'   as can be created by \code{\link[pirouette]{create_twinning_params}}
 #' @param verbose give more output
@@ -154,6 +176,7 @@ default_params_doc <- function(
   mbd_tree,
   mcmc,
   mcmc_chain_length,
+  method,
   misc_params,
   mrca_prior,
   mu,
@@ -174,6 +197,7 @@ default_params_doc <- function(
   precision,
   project_folder_name,
   q,
+  rng_seed,
   sample_interval,
   seed,
   sequence_length,
@@ -187,6 +211,9 @@ default_params_doc <- function(
   tree_priors,
   tree_filename,
   trees_filename,
+  twin_alignment_filename,
+  twin_evidence_filename,
+  twin_tree_filename,
   twinning_params,
   verbose
 ) {

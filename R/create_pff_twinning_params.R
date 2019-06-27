@@ -1,0 +1,24 @@
+#' Create a PFF twinning parameter set
+#' @inheritParams default_params_doc
+#' @export
+create_pff_twinning_params <- function(
+  rng_seed = pirouette::create_twinning_params()$rng_seed,
+  twin_model = pirouette::create_twinning_params()$twin_model,
+  method = pirouette::create_twinning_params()$method,
+  n_replicates = pirouette::create_twinning_params()$n_replicates,
+  twin_tree_filename = get_pff_tempfile(pattern = "tree_twin_", fileext = ".newick"),
+  twin_alignment_filename = get_pff_tempfile(pattern = "alignment_twin_", fileext = ".fasta"),
+  twin_evidence_filename = get_pff_tempfile(pattern = "evidence_twin_",  fileext = ".csv")
+) {
+  twinning_params <- pirouette::create_twinning_params(
+    rng_seed = rng_seed,
+    twin_model = twin_model,
+    method = method,
+    n_replicates = n_replicates,
+    twin_tree_filename = twin_tree_filename,
+    twin_alignment_filename = twin_alignment_filename,
+    twin_evidence_filename = twin_evidence_filename
+  )
+  check_pff_twinning_params(twinning_params)
+  twinning_params
+}

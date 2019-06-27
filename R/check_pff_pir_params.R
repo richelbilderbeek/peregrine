@@ -13,15 +13,7 @@ check_pff_pir_params <- function(
   if (!peregrine::is_pff(pir_params$evidence_filename)) {
     stop("Peregrine-unfriendly filename for 'pir_params$evidence_filename'")
   }
-  if (!peregrine::is_pff(pir_params$twinning_params$twin_tree_filename)) {
-    stop("Peregrine-unfriendly filename for 'pir_params$twinning_params$twin_tree_filename'")
-  }
-  if (!peregrine::is_pff(pir_params$twinning_params$twin_alignment_filename)) {
-    stop("Peregrine-unfriendly filename for 'pir_params$twinning_params$twin_alignment_filename'")
-  }
-  if (!peregrine::is_pff(pir_params$twinning_params$twin_evidence_filename)) {
-    stop("Peregrine-unfriendly filename for 'pir_params$twinning_params$twin_evidence_filename'")
-  }
+  check_pff_twinning_params(pir_params$twinning_params)
   if (!peregrine::is_pff(pir_params$alignment_params$fasta_filename)) {
     stop("Peregrine-unfriendly filename for 'pir_params$alignment_params$fasta_filename'")
   }
