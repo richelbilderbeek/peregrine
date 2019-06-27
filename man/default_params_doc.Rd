@@ -17,10 +17,11 @@ default_params_doc(alignment, alignment_params, bd_mutation_rate, bd_tree,
   output_log_filename, output_trees_filenames, output_state_filename,
   parameter_filename, parameters_filename, pattern, pff_tmpdir, phylo,
   pir_params, posterior_trees, precision, project_folder_name, q, rng_seed,
-  sample_interval, seed, sequence_length, sim_pars, sim_phylo, site_model,
-  site_models, sub_chain_length, tree, tree_prior, tree_priors,
-  tree_filename, trees_filename, twin_alignment_filename,
-  twin_evidence_filename, twin_tree_filename, twinning_params, verbose)
+  root_sequence, sample_interval, seed, sequence_length, sim_pars,
+  sim_phylo, site_model, site_models, sub_chain_length, tree, tree_prior,
+  tree_priors, tree_filename, trees_filename, twin_alignment_filename,
+  twin_evidence_filename, twin_model, twin_tree_filename, twinning_params,
+  verbose)
 }
 \arguments{
 \item{alignment}{a DNA alignment}
@@ -179,6 +180,9 @@ a multiple event. See \code{\link[mbd]{mbd_sim}}}
 
 \item{rng_seed}{a random number generator seed}
 
+\item{root_sequence}{the DNA sequence at the root of the phylogeny.
+By default, this will consist out of an equal amount of each letter}
+
 \item{sample_interval}{the interval at which the MCMC algorithm
 makes a measurement}
 
@@ -217,14 +221,6 @@ alignment will be saved to}
 \item{twin_evidence_filename}{filename to store the estimated
 evidences (aka marginal likelihoods) of the twin tree}
 
-\item{twin_tree_filename}{name of the (\code{.newick}) file the twin
-tree will be saved to}
-
-\item{twinning_params}{parameters for creating a twin tree,
-as can be created by \code{\link[pirouette]{create_twinning_params}}}
-
-\item{verbose}{give more output}
-
 \item{twin_model}{the model you want to use to generate the twin tree:
 \itemize{
   \item \code{birth_death}: birth death
@@ -232,6 +228,14 @@ as can be created by \code{\link[pirouette]{create_twinning_params}}}
 }
 See \link[pirouette]{get_twin_models} to see all possible
 values of \code{twin_model}}
+
+\item{twin_tree_filename}{name of the (\code{.newick}) file the twin
+tree will be saved to}
+
+\item{twinning_params}{parameters for creating a twin tree,
+as can be created by \code{\link[pirouette]{create_twinning_params}}}
+
+\item{verbose}{give more output}
 }
 \description{
 This function does nothing. It is intended to inherit is parameters'

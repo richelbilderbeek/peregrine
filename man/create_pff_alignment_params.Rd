@@ -4,14 +4,30 @@
 \alias{create_pff_alignment_params}
 \title{Create alignment parameters with PFF}
 \usage{
-
-  create_pff_alignment_params(root_sequence = pirouette::create_alignment_params()$root_sequence,
+create_pff_alignment_params(
+  root_sequence = pirouette::create_alignment_params()$root_sequence,
   mutation_rate = pirouette::create_alignment_params()$mutation_rate,
   site_model = pirouette::create_alignment_params()$site_model,
   clock_model = pirouette::create_alignment_params()$clock_model,
   rng_seed = pirouette::create_alignment_params()$rng_seed,
-  fasta_filename = get_pff_tempfile(pattern = "alignment_", fileext =
-  ".fasta"))
+  fasta_filename = get_pff_tempfile(pattern = "alignment_", fileext = ".fasta")
+)
+}
+\arguments{
+\item{root_sequence}{the DNA sequence at the root of the phylogeny.
+By default, this will consist out of an equal amount of each letter}
+
+\item{mutation_rate}{something}
+
+\item{site_model}{a nucleotide substitution model,
+as created by \link[beautier]{create_site_model}}
+
+\item{clock_model}{a clock model,
+as created by \link[beautier]{create_clock_model}}
+
+\item{rng_seed}{a random number generator seed}
+
+\item{fasta_filename}{name of a FASTA file}
 }
 \description{
 Create alignment parameters with PFF

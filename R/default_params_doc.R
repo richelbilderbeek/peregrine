@@ -99,6 +99,8 @@
 #' @param q per-species speciation probability in case of occurrance of
 #'   a multiple event. See \code{\link[mbd]{mbd_sim}}
 #' @param rng_seed a random number generator seed
+#' @param root_sequence the DNA sequence at the root of the phylogeny.
+#'   By default, this will consist out of an equal amount of each letter
 #' @param sample_interval the interval at which the MCMC algorithm
 #'   makes a measurement
 #' @param sequence_length the length of each DNA sequence in an alignment
@@ -198,6 +200,7 @@ default_params_doc <- function(
   project_folder_name,
   q,
   rng_seed,
+  root_sequence,
   sample_interval,
   seed,
   sequence_length,
@@ -213,6 +216,7 @@ default_params_doc <- function(
   trees_filename,
   twin_alignment_filename,
   twin_evidence_filename,
+  twin_model,
   twin_tree_filename,
   twinning_params,
   verbose
