@@ -1,5 +1,7 @@
 test_that("use", {
-  expect_silent(check_pff_experiment(peregrine::create_test_pff_gen_experiment()))
+  expect_silent(
+    check_pff_experiment(peregrine::create_test_pff_gen_experiment())
+  )
   expect_error(check_pff_experiment(pirouette::create_test_experiment()))
 
   good_experiment <- create_test_pff_gen_experiment()

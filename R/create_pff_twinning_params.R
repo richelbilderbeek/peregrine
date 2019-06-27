@@ -6,9 +6,15 @@ create_pff_twinning_params <- function(
   twin_model = pirouette::create_twinning_params()$twin_model,
   method = pirouette::create_twinning_params()$method,
   n_replicates = pirouette::create_twinning_params()$n_replicates,
-  twin_tree_filename = get_pff_tempfile(pattern = "tree_twin_", fileext = ".newick"),
-  twin_alignment_filename = get_pff_tempfile(pattern = "alignment_twin_", fileext = ".fasta"),
-  twin_evidence_filename = get_pff_tempfile(pattern = "evidence_twin_",  fileext = ".csv")
+  twin_tree_filename = get_pff_tempfile(
+    pattern = "tree_twin_", fileext = ".newick"
+  ),
+  twin_alignment_filename = get_pff_tempfile(
+    pattern = "alignment_twin_", fileext = ".fasta"
+  ),
+  twin_evidence_filename = get_pff_tempfile(
+    pattern = "evidence_twin_",  fileext = ".csv"
+  )
 ) {
   twinning_params <- pirouette::create_twinning_params(
     rng_seed = rng_seed,

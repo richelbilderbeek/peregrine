@@ -5,42 +5,42 @@ test_that("use", {
   expect_silent(check_pff_beast2_options(good_beast2_options))
 
   beast2_options <- good_beast2_options
-  beast2_options$input_filename <- "/tmp/puf"
+  beast2_options$input_filename <- "/tmp/puf" # nolint do use absolute path in test
   expect_error(
     check_pff_beast2_options(beast2_options),
     "Peregrine-unfriendly filename for '"
   )
 
   beast2_options <- good_beast2_options
-  beast2_options$output_log_filename <- "/tmp/puf"
+  beast2_options$output_log_filename <- "/tmp/puf" # nolint do use absolute path in test
   expect_error(
     check_pff_beast2_options(beast2_options),
     "Peregrine-unfriendly filename for '"
   )
 
   beast2_options <- good_beast2_options
-  beast2_options$output_trees_filenames <- "/tmp/puf"
+  beast2_options$output_trees_filenames <- "/tmp/puf" # nolint do use absolute path in test
   expect_error(
     check_pff_beast2_options(beast2_options),
     "Peregrine-unfriendly filename for '"
   )
 
   beast2_options <- good_beast2_options
-  beast2_options$output_state_filename <- "/tmp/puf"
+  beast2_options$output_state_filename <- "/tmp/puf" # nolint do use absolute path in test
   expect_error(
     check_pff_beast2_options(beast2_options),
     "Peregrine-unfriendly filename for '"
   )
 
   beast2_options <- good_beast2_options
-  beast2_options$beast2_working_dir <- "/tmp/puf"
+  beast2_options$beast2_working_dir <- "/tmp/puf" # nolint do use absolute path in test
   expect_error(
     check_pff_beast2_options(beast2_options),
     "Peregrine-unfriendly filename for '"
   )
 
   beast2_options <- good_beast2_options
-  beast2_options$beast2_path <- "/tmp/puf"
+  beast2_options$beast2_path <- "/tmp/puf" # nolint do use absolute path in test
   expect_error(
     check_pff_beast2_options(beast2_options),
     "Peregrine-unfriendly filename for '"
