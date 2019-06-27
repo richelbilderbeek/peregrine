@@ -14,8 +14,6 @@ check_pff_pir_params <- function(
     stop("Peregrine-unfriendly filename for 'pir_params$evidence_filename'")
   }
   check_pff_twinning_params(pir_params$twinning_params)
-  if (!peregrine::is_pff(pir_params$alignment_params$fasta_filename)) {
-    stop("Peregrine-unfriendly filename for 'pir_params$alignment_params$fasta_filename'")
-  }
+  check_pff_alignment_params(pir_params$alignment_params)
   check_pff_experiments(pir_params$experiments)
 }
