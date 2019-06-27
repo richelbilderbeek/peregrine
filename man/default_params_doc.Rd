@@ -6,16 +6,20 @@
 documentation.}
 \usage{
 default_params_doc(alignment, alignment_params, bd_mutation_rate, bd_tree,
-  bd_tree_filename, brts, chain_length, clock_model, cond, crown_age,
-  error_measure_params, experiment_type, experiments, fasta_filename,
-  filename, folder_name, init_speciation_rate, init_extinction_rate,
-  lambda, mbd_l_matrix, mbd_mutation_rate, mbd_params, mbd_paramses,
-  mbd_params_interval, mbd_sim_rng_seed, mbd_tree, mcmc_chain_length,
-  misc_params, mu, mutation_rate, n_replicates, nu, nu_events,
-  parameter_filename, parameters_filename, phylo, pir_params,
-  posterior_trees, precision, project_folder_name, q, sample_interval,
-  seed, sequence_length, sim_pars, sim_phylo, site_model, sub_chain_length,
-  tree, tree_filename, trees_filename, twinning_params, verbose)
+  bd_tree_filename, beast2_options, beast2_working_dir, brts, chain_length,
+  clock_model, clock_models, cond, crown_age, error_measure_params,
+  exclude_model, experiment, experiments, experiment_type, fasta_filename,
+  fileext, filename, folder_name, init_speciation_rate,
+  init_extinction_rate, input_filename, lambda, mbd_l_matrix,
+  mbd_mutation_rate, mbd_params, mbd_paramses, mbd_params_interval,
+  mbd_sim_rng_seed, mbd_tree, mcmc, mcmc_chain_length, misc_params,
+  mrca_prior, mu, mutation_rate, n_replicates, nu, nu_events,
+  output_log_filename, output_trees_filenames, output_state_filename,
+  parameter_filename, parameters_filename, pattern, pff_tmpdir, phylo,
+  pir_params, posterior_trees, precision, project_folder_name, q,
+  sample_interval, seed, sequence_length, sim_pars, sim_phylo, site_model,
+  site_models, sub_chain_length, tree, tree_prior, tree_priors,
+  tree_filename, trees_filename, twinning_params, verbose)
 }
 \arguments{
 \item{alignment}{a DNA alignment}
@@ -31,12 +35,21 @@ process}
 
 \item{bd_tree_filename}{name of the file that stores a BD twin tree}
 
+\item{beast2_options}{BEAST2 options,
+as can be created by \link[beastier]{create_beast2_options}}
+
+\item{beast2_working_dir}{BEAST2 temporary working directory,
+as used in \link[beastier]{create_beast2_options}}
+
 \item{brts}{set of branching times}
 
 \item{chain_length}{something}
 
-\item{clock_model}{Name of the clock model that has
-to be used for the inference. Valid names are 'strict' and 'rln'.}
+\item{clock_model}{a clock model,
+as created by \link[beautier]{create_clock_model}}
+
+\item{clock_models}{a list of one or more clock models,
+as created by \link[beautier]{create_clock_model}}
 
 \item{cond}{conditioning as specified in \code{\link[mbd]{mbd_sim}}}
 
@@ -46,13 +59,23 @@ to be used for the inference. Valid names are 'strict' and 'rln'.}
 between given tree and inferred trees in measure,
 as can be created by \code{\link[pirouette]{create_error_measure_params}}}
 
+\item{exclude_model}{an inference model that has to be excluded, as can be
+created by \link[beautier]{create_inference_model}}
+
+\item{experiment}{a \link{pirouette} experiment,
+as can be created by \link{create_experiment}}
+
+\item{experiments}{a list of one or more \link{pirouette} experiments,
+as can be created by \link{create_experiment}. If more than one experiment
+is provided and a "generative" experiment is part of them, the "generative"
+one has to be the first in the list.}
+
 \item{experiment_type}{the type of experiment,
 can be either \code{test} or \code{full}}
 
-\item{experiments}{provides information on how the experiment has to be set
-up. To create it use \code{\link[pirouette]{create_experiment}}}
-
 \item{fasta_filename}{name of a FASTA file}
+
+\item{fileext}{see \link{tempfile}}
 
 \item{filename}{the file's name, without the path}
 
@@ -61,6 +84,9 @@ up. To create it use \code{\link[pirouette]{create_experiment}}}
 \item{init_speciation_rate}{a speciation rate}
 
 \item{init_extinction_rate}{an extinction rate}
+
+\item{input_filename}{BEAST2 input file name,
+as used in \link[beastier]{create_beast2_options}}
 
 \item{lambda}{per-lineage speciation rate. See \code{\link[mbd]{mbd_sim}}}
 
@@ -83,11 +109,17 @@ this data frame will hold 10 rows, each with different seeds}
 
 \item{mbd_tree}{an MBD tree}
 
+\item{mcmc}{an MCMC,
+as created by \link[beautier]{create_mcmc}}
+
 \item{mcmc_chain_length}{length of an MCMC}
 
 \item{misc_params}{additional parameters for razzo. They contain
 tree_filename to store the original given tree and mbd_sim_rng_seed for
 when an mbd tree is simulated}
+
+\item{mrca_prior}{an MRCA priors,
+as created by \link[beautier]{create_mrca_prior}}
 
 \item{mu}{per-species extinction rate. See \code{\link[mbd]{mbd_sim}}}
 
@@ -101,13 +133,27 @@ See \code{\link[mbd]{mbd_sim}}}
 \item{nu_events}{the number of nu-triggered events that have to be
 present in the simulated tree}
 
+\item{output_log_filename}{BEAST2 ouput \code{.log} file name,
+as used in \link[beastier]{create_beast2_options}}
+
+\item{output_trees_filenames}{BEAST2 ouput \code{.trees} file name,
+as used in \link[beastier]{create_beast2_options}}
+
+\item{output_state_filename}{BEAST2 ouput \code{.xml.state} file name,
+as used in \link[beastier]{create_beast2_options}}
+
 \item{parameter_filename}{full path to a \code{parameters.RDa} file}
 
 \item{parameters_filename}{full path to a \code{parameters.RDa} file}
 
+\item{pattern}{see \link{tempfile}}
+
+\item{pff_tmpdir}{Peregrine-friendly temporary directory name,
+see \link{get_pff_tempdir}}
+
 \item{phylo}{a phylogeny}
 
-\item{pir_params}{a parameter set for one \code{pirouette} run,
+\item{pir_params}{\code{pirouette} parameters,
 as created by \link[pirouette]{create_pir_params}}
 
 \item{posterior_trees}{phylogenetic trees in a BEAST2 posterior,
@@ -132,13 +178,22 @@ makes a measurement}
 
 \item{sim_phylo}{something}
 
-\item{site_model}{Name of the site model that
-has to be used for the inference. Valid names are 'jc69' and 'gtr'.}
+\item{site_model}{a nucleotide substitution model,
+as created by \link[beautier]{create_site_model}}
+
+\item{site_models}{a list of one or more site models,
+as created by \link[beautier]{create_site_model}}
 
 \item{sub_chain_length}{length of the sub-chain used by the Nested Sampling
 algorithm to estimate the marginal likelihood}
 
 \item{tree}{an ultrametric phylogenetic tree of class \code{phylo}}
+
+\item{tree_prior}{a tree prior,
+as created by \link[beautier]{create_tree_prior}}
+
+\item{tree_priors}{a list of one or more tree priors,
+as created by \link[beautier]{create_tree_prior}}
 
 \item{tree_filename}{name of the phylogeny file}
 

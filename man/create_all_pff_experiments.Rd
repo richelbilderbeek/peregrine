@@ -11,6 +11,22 @@ create_all_pff_experiments(site_models = beautier::create_site_models(),
   tree_priors = beautier::create_tree_priors(),
   mcmc = beautier::create_mcmc(store_every = 1000), exclude_model = NA)
 }
+\arguments{
+\item{site_models}{a list of one or more site models,
+as created by \link[beautier]{create_site_model}}
+
+\item{clock_models}{a list of one or more clock models,
+as created by \link[beautier]{create_clock_model}}
+
+\item{tree_priors}{a list of one or more tree priors,
+as created by \link[beautier]{create_tree_prior}}
+
+\item{mcmc}{an MCMC,
+as created by \link[beautier]{create_mcmc}}
+
+\item{exclude_model}{an inference model that has to be excluded, as can be
+created by \link[beautier]{create_inference_model}}
+}
 \description{
 Create all experiments as done by
 \link[pirouette]{create_all_experiments}

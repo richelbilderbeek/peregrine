@@ -1,14 +1,5 @@
 #' Create BEAST2 options that has Peregrine friendly filenames
-#' @param input_filename BEAST2 input file name,
-#' as used in \link[beastier]{create_beast2_options}
-#' @param output_log_filename BEAST2 ouput \code{.log} file name,
-#' as used in \link[beastier]{create_beast2_options}
-#' @param output_trees_filenames BEAST2 ouput \code{.trees} file name,
-#' as used in \link[beastier]{create_beast2_options}
-#' @param output_state_filename BEAST2 ouput \code{.xml.state} file name,
-#' as used in \link[beastier]{create_beast2_options}
-#' @param beast2_working_dir BEAST2 temporary working directory,
-#' as used in \link[beastier]{create_beast2_options}
+#' @inheritParams default_params_doc
 #' @author Richel J.C. Bilderbeek
 #' @export
 create_pff_beast2_options <- function(

@@ -1,4 +1,5 @@
 #' Convert an experiment to one with PFF.
+#' @inheritParams default_params_doc
 #' @export
 to_pff_experiment <- function(experiment) {
   pirouette::check_experiment(experiment)

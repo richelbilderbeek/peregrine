@@ -6,6 +6,10 @@
 \usage{
 to_pff_experiment(experiment)
 }
+\arguments{
+\item{experiment}{a \link{pirouette} experiment,
+as can be created by \link{create_experiment}}
+}
 \description{
 Convert an experiment to one with PFF.
 }

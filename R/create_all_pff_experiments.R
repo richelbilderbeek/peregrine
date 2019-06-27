@@ -1,6 +1,7 @@
 #' Create all experiments as done by
 #' \link[pirouette]{create_all_experiments}
 #' with PFF
+#' @inheritParams default_params_doc
 #' @export
 create_all_pff_experiments <- function(
   site_models = beautier::create_site_models(),

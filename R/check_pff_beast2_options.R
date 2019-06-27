@@ -1,4 +1,5 @@
 #' Check if the BEAST2 options are PFF
+#' @inheritParams default_params_doc
 #' @export
 check_pff_beast2_options <- function(beast2_options) {
 

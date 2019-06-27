@@ -8,7 +8,7 @@ are_pff_experiments(experiments)
 }
 \arguments{
 \item{experiments}{a list of \code{pirouette} experiments,
-as created by \link[pirouette]{create_experiments}}
+as created by \link[pirouette]{create_experiment}}
 }
 \description{
 Determine if all experiments have Peregrine friendly filenames

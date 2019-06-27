@@ -1,10 +1,5 @@
 #' Creates a Peregrine-friendly generative experiment for testing
-#' @param mrca_prior an MRCA priors,
-#' as created by \link[beautier]{create_mrca_prior}
-#' @param mcmc an MCMC,
-#' as created by \link[beautier]{create_mcmc}
-#' @param beast2_options BEAST2 options,
-#' as created by \link[beastier]{create_beast2_options}
+#' @inheritParams default_params_doc
 #' @author Richel J.C. Bilderbeek
 #' @export
 create_test_pff_gen_experiment <- function(

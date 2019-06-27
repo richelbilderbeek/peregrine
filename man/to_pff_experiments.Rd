@@ -7,6 +7,12 @@ filenames to ones that do}
 \usage{
 to_pff_experiments(experiments)
 }
+\arguments{
+\item{experiments}{a list of one or more \link{pirouette} experiments,
+as can be created by \link{create_experiment}. If more than one experiment
+is provided and a "generative" experiment is part of them, the "generative"
+one has to be the first in the list.}
+}
 \description{
 Convert all the experiments with Peregrine-unfriendly
 filenames to ones that do

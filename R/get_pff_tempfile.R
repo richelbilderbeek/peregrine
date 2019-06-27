@@ -1,8 +1,5 @@
 #' Get a Peregrine-friendly temporary filename
-#' @param pattern see \link{tempfile}
-#' @param pff_tmpdir Peregrine-friendly temporary directory name,
-#'   see \link{get_pff_tempdir}
-#' @param fileext see \link{tempfile}
+#' @inheritParams default_params_doc
 #' @seealso use \link{get_pff_tempdir}
 #' to get a Peregrine-friendly folder name
 #' @examples

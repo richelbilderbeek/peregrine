@@ -1,6 +1,5 @@
 #' Determine if an experiment has Peregrine friendly filenames
-#' @param experiment a \code{pirouette} experiment,
-#' as created by \link[pirouette]{create_experiment}
+#' @inheritParams default_params_doc
 #' @export
 is_pff_experiment <- function(experiment) {
   result <- FALSE

@@ -2,8 +2,7 @@
 #'
 #' Will \link{stop} if the \code{pir_params} are invalid
 #' or Peregrine-unfriendly, else will do nothing
-#' @param pir_params \code{pirouette} parameters,
-#'   as created by \link[pirouette]{create_pir_params}
+#' @inheritParams default_params_doc
 #' @author Richel J.C. Bilderbeek
 #' @export
 check_pff_pir_params <- function(

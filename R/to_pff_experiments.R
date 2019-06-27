@@ -1,5 +1,6 @@
 #' Convert all the experiments with Peregrine-unfriendly
 #' filenames to ones that do
+#' @inheritParams default_params_doc
 #' @export
 to_pff_experiments <- function(experiments) {
 

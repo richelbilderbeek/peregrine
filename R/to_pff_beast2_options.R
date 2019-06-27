@@ -1,6 +1,7 @@
 #' Converts a BEAST2 options to have PFF.
 #' If all filenames are Peregrine-friendly,
 #' this function does not alter the input
+#' @inheritParams default_params_doc
 #' @export
 to_pff_beast2_options <- function(beast2_options) {
 

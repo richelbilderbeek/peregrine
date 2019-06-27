@@ -6,6 +6,10 @@
 \usage{
 check_pff_experiment(experiment)
 }
+\arguments{
+\item{experiment}{a \link{pirouette} experiment,
+as can be created by \link{create_experiment}}
+}
 \description{
 Check if an experiment has PFF
 }

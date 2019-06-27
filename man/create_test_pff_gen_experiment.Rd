@@ -19,7 +19,7 @@ as created by \link[beautier]{create_mrca_prior}}
 as created by \link[beautier]{create_mcmc}}
 
 \item{beast2_options}{BEAST2 options,
-as created by \link[beastier]{create_beast2_options}}
+as can be created by \link[beastier]{create_beast2_options}}
 }
 \description{
 Creates a Peregrine-friendly generative experiment for testing
