@@ -14,5 +14,8 @@
 #SBATCH --output=run_r_script_with_x%j.log
 module load R
 module load ImageMagick
+module load X11 
+module load libX11
+module load xprop
 echo "xvfb-run Rscript $@"
 xvfb-run Rscript "$@"
