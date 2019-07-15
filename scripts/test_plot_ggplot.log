@@ -1,0 +1,94 @@
+
+The following have been reloaded with a version change:
+  1) GCCcore/7.3.0 => GCCcore/6.4.0
+  2) zlib/1.2.11-GCCcore-7.3.0 => zlib/1.2.11-GCCcore-6.4.0
+
+
+The following have been reloaded with a version change:
+  1) Ghostscript/9.23-GCCcore-6.4.0 => Ghostscript/9.22-GCCcore-6.4.0-cairo-1.14.12
+  2) ImageMagick/6.9.10-5-GCCcore-6.4.0 => ImageMagick/7.0.7-26-foss-2018a
+  3) LittleCMS/2.9-GCCcore-6.4.0 => LittleCMS/2.9-foss-2018a
+  4) expat/2.2.5-GCCcore-7.3.0 => expat/2.2.5-GCCcore-6.4.0
+
+
+The following have been reloaded with a version change:
+  1) GCCcore/6.4.0 => GCCcore/7.3.0
+  2) X11/20180131-GCCcore-6.4.0 => X11/20180604-GCCcore-7.3.0
+  3) bzip2/1.0.6-GCCcore-6.4.0 => bzip2/1.0.6-GCCcore-7.3.0
+  4) expat/2.2.5-GCCcore-6.4.0 => expat/2.2.5-GCCcore-7.3.0
+  5) fontconfig/2.12.6-GCCcore-6.4.0 => fontconfig/2.13.0-GCCcore-7.3.0
+  6) freetype/2.9-GCCcore-6.4.0 => freetype/2.9.1-GCCcore-7.3.0
+  7) libpng/1.6.34-GCCcore-6.4.0 => libpng/1.6.34-GCCcore-7.3.0
+  8) ncurses/6.1-GCCcore-6.4.0 => ncurses/6.1-GCCcore-7.3.0
+  9) util-linux/2.31-GCCcore-6.4.0 => util-linux/2.32-GCCcore-7.3.0
+ 10) zlib/1.2.11-GCCcore-6.4.0 => zlib/1.2.11-GCCcore-7.3.0
+
+
+The following have been reloaded with a version change:
+  1) FFTW/3.3.7-gompi-2018a => FFTW/3.3.4-gompi-2016a
+  2) GCC/6.4.0-2.28 => GCC/4.9.3-2.25
+  3) GCCcore/7.3.0 => GCCcore/4.9.3
+  4) OpenBLAS/0.2.20-GCC-6.4.0-2.28 => OpenBLAS/0.2.15-GCC-4.9.3-2.25-LAPACK-3.6.0
+  5) OpenMPI/2.1.2-GCC-6.4.0-2.28 => OpenMPI/1.10.3-GCC-4.9.3-2.25
+  6) ScaLAPACK/2.0.2-gompi-2018a-OpenBLAS-0.2.20 => ScaLAPACK/2.0.2-gompi-2016a-OpenBLAS-0.2.15-LAPACK-3.6.0
+  7) binutils/2.28-GCCcore-6.4.0 => binutils/2.25-GCCcore-4.9.3
+  8) foss/2018a => foss/2016a
+  9) gompi/2018a => gompi/2016a
+ 10) hwloc/1.11.8-GCCcore-6.4.0 => hwloc/1.11.2-GCC-4.9.3-2.25
+ 11) numactl/2.0.11-GCCcore-6.4.0 => numactl/2.0.11-GCC-4.9.3-2.25
+
+
+The following have been reloaded with a version change:
+  1) GCCcore/4.9.3 => GCCcore/6.4.0
+  2) X11/20180604-GCCcore-7.3.0 => X11/20180131-GCCcore-6.4.0
+  3) bzip2/1.0.6-GCCcore-7.3.0 => bzip2/1.0.6-GCCcore-6.4.0
+  4) expat/2.2.5-GCCcore-7.3.0 => expat/2.2.5-GCCcore-6.4.0
+  5) fontconfig/2.13.0-GCCcore-7.3.0 => fontconfig/2.12.6-GCCcore-6.4.0
+  6) freetype/2.9.1-GCCcore-7.3.0 => freetype/2.9-GCCcore-6.4.0
+  7) libpng/1.6.34-GCCcore-7.3.0 => libpng/1.6.34-GCCcore-6.4.0
+  8) zlib/1.2.11-GCCcore-7.3.0 => zlib/1.2.11-GCCcore-6.4.0
+
+xvfb-run Rscript test_plot_ggplot.R
+Warning messages:
+1: In grid.Call(C_stringMetric, as.graphicsAnnot(x$label)) :
+  X11 used font size 24 when 37 was requested
+2: In grid.Call(C_stringMetric, as.graphicsAnnot(x$label)) :
+  X11 used font size 24 when 45 was requested
+
+
+###############################################################################
+Peregrine Cluster
+Job 6592157 for user 'p230198'
+Finished at: Mon Jul 15 10:46:57 CEST 2019
+
+Job details:
+============
+
+Name                : run_r_script_with_x
+User                : p230198
+Partition           : regular
+Nodes               : pg-node065
+Cores               : 1
+State               : COMPLETED
+Submit              : 2019-07-15T10:46:47
+Start               : 2019-07-15T10:46:48
+End                 : 2019-07-15T10:46:57
+Reserved walltime   : 10:00:00
+Used walltime       : 00:00:09
+Used CPU time       : 00:00:05 (efficiency: 56.58%)
+% User (Computation): 76.47%
+% System (I/O)      : 23.51%
+Mem reserved        : 10G/node
+Max Mem used        : 0.00  (pg-node065)
+Max Disk Write      : 0.00  (pg-node065)
+Max Disk Read       : 0.00  (pg-node065)
+
+
+Acknowledgements:
+=================
+
+Please see this page if you want to acknowledge Peregrine in your publications:
+
+https://redmine.hpc.rug.nl/redmine/projects/peregrine/wiki/ScientificOutput
+
+################################################################################
