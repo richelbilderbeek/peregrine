@@ -14,5 +14,5 @@
 #SBATCH --output=run_r_script_with_x%j.log
 module load R
 module load ImageMagick
-echo "xvfb-run $@ --no-save"
-xvfb-run "$@" --no-save
+echo "xvfb-run Rscript $@"
+xvfb-run Rscript "$@"
