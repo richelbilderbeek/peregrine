@@ -10,10 +10,10 @@ check_pff_pir_params <- function(
 ) {
   pirouette::check_pir_params(pir_params)
 
-  if (!peregrine::is_pff(pir_params$evidence_filename)) {
+  if (!is_pff(pir_params$evidence_filename)) { # nolint peregrine function
     stop("Peregrine-unfriendly filename for 'pir_params$evidence_filename'")
   }
-  check_pff_twinning_params(pir_params$twinning_params)
-  check_pff_alignment_params(pir_params$alignment_params)
-  check_pff_experiments(pir_params$experiments)
+  check_pff_twinning_params(pir_params$twinning_params) # nolint peregrine function
+  check_pff_alignment_params(pir_params$alignment_params) # nolint peregrine function
+  check_pff_experiments(pir_params$experiments) # nolint peregrine function
 }

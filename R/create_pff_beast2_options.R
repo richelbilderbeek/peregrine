@@ -3,11 +3,11 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 create_pff_beast2_options <- function(
-  input_filename = get_pff_tempfile(),
-  output_log_filename = get_pff_tempfile(),
-  output_trees_filenames = get_pff_tempfile(),
-  output_state_filename = get_pff_tempfile(),
-  beast2_working_dir = get_pff_tempdir()
+  input_filename = get_pff_tempfile(), # nolint peregrine function
+  output_log_filename = get_pff_tempfile(), # nolint peregrine function
+  output_trees_filenames = get_pff_tempfile(), # nolint peregrine function
+  output_state_filename = get_pff_tempfile(), # nolint peregrine function
+  beast2_working_dir = get_pff_tempdir() # nolint peregrine function
 ) {
   beast2_options <- beastier::create_beast2_options(
     input_filename = input_filename,

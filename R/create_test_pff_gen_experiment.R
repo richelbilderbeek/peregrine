@@ -20,7 +20,7 @@ create_test_pff_gen_experiment <- function(
     ),
     beast2_options = beast2_options
   )
-  experiment$errors_filename <- get_pff_tempfile(
+  experiment$errors_filename <- get_pff_tempfile( # nolint peregrine function
     pattern = "errors_", fileext = ".csv"
   )
   experiment

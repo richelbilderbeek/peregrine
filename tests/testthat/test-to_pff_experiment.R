@@ -5,7 +5,7 @@ test_that("use", {
   expect_true(is_pff_experiment(experiment))
 
   # Individual elements
-  experiment$errors_filename <- "/tmp/puf.csv"
+  experiment$errors_filename <- "/tmp/puf.csv" # nolint do use absolute path in tests
   expect_false(is_pff_experiment(experiment))
   experiment <- to_pff_experiment(experiment)
   expect_true(is_pff_experiment(experiment))

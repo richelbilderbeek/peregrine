@@ -17,5 +17,5 @@ create_all_pff_experiments <- function(
     mcmc = mcmc,
     exclude_model = exclude_model
   )
-  to_pff_experiments(experiments)
+  to_pff_experiments(experiments) # nolint peregrine function
 }

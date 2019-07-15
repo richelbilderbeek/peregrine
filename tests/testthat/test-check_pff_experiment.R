@@ -10,7 +10,7 @@ test_that("use", {
   # experiment$beast2_options is checked by check_is_pff_beast2_options
 
   experiment <- good_experiment
-  experiment$errors_filename <- "/tmp/puf.csv"
+  experiment$errors_filename <- "/tmp/puf.csv" # nolint do use absolute path in tests
   expect_error(
     check_pff_experiment(experiment),
     "Peregrine-unfriendly filename for '"

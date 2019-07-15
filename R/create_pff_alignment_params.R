@@ -26,6 +26,6 @@ create_pff_alignment_params <- function(
     rng_seed = rng_seed,
     fasta_filename = fasta_filename
   )
-  check_pff_alignment_params(alignment_params)
+  check_pff_alignment_params(alignment_params) # nolint peregrine function
   alignment_params
 }
