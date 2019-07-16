@@ -10,7 +10,9 @@ create_pff_alignment_params(
   site_model = pirouette::create_alignment_params()$site_model,
   clock_model = pirouette::create_alignment_params()$clock_model,
   rng_seed = pirouette::create_alignment_params()$rng_seed,
-  fasta_filename = get_pff_tempfile(pattern = "alignment_", fileext = ".fasta")
+  fasta_filename = get_pff_tempfile(
+    pattern = "alignment_", fileext = ".fasta"
+  )
 )
 }
 \arguments{
