@@ -23,6 +23,9 @@ expect_false(is_pff("/tmp/peregrine_unfriendly"))
 \seealso{
 see \link{get_pff_tempdir} and \link{get_pff_tempfile}
 to get a Peregrine-friendly temporary folder and filename
+
+Use \link{to_pff} to convert a filename or folder to
+its Peregrine-friendly equivalent
 }
 \author{
 Richel J.C. Bilderbeek

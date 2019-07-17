@@ -2,7 +2,9 @@ context("test-check_pff_pir_params")
 
 test_that("use", {
 
-  good_pir_params <- create_test_pff_pir_params()
+  good_pir_params <- create_test_pff_pir_params(
+    twinning_params = create_pff_twinning_params()
+  )
 
   # Mostly done by check_pir_params
 

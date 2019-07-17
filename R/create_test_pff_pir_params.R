@@ -7,29 +7,30 @@
 #'   ),
 #'   experiments = list(create_test_pff_gen_experiment())
 #' )
+#' @seealso Use \link{create_pff_pir_params} to create a
+#'   PFF \code{pir_params} without testing defaults
 #' @author Richel J.C. Bilderbeek
 #' @export
 create_test_pff_pir_params <- function(
   alignment_params = pirouette::create_alignment_params(
     fasta_filename = get_pff_tempfile()
   ),
-  experiments = list(create_test_pff_gen_experiment())
+  twinning_params = NA,
+  experiments = list(create_test_pff_gen_experiment()),
+  error_measure_params = pirouette::create_error_measure_params(),
+  evidence_filename = get_pff_tempfile(
+    pattern = "evidence_",
+    fileext = ".csv"
+  ),
+  verbose = FALSE
 ) {
-  pir_params <- pirouette::create_test_pir_params(
+  pir_params <- create_pff_pir_params( # nolint peregrine function
     alignment_params = alignment_params,
+    twinning_params = twinning_params,
     experiments = experiments,
-    twinning_params = pirouette::create_twinning_params(
-      twin_tree_filename = get_pff_tempfile(),
-      twin_alignment_filename = get_pff_tempfile(),
-      twin_evidence_filename = get_pff_tempfile(
-        pattern = "evidence_",
-        fileext = ".csv"
-      )
-    ),
-    evidence_filename = get_pff_tempfile(
-      pattern = "evidence_",
-      fileext = ".csv"
-    )
+    error_measure_params = error_measure_params,
+    evidence_filename = evidence_filename,
+    verbose = verbose
   )
   pir_params
 }
