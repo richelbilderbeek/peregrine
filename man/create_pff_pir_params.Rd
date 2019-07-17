@@ -4,12 +4,11 @@
 \alias{create_pff_pir_params}
 \title{Create a \code{pir_params} with PFFs}
 \usage{
-create_pff_pir_params(
-  alignment_params = pirouette::create_alignment_params(
-    fasta_filename = get_pff_tempfile()
-  ),
-  experiments = list(create_test_pff_gen_experiment())
-)
+create_pff_pir_params(alignment_params, twinning_params = NA,
+  experiments = list(pirouette::create_experiment()),
+  error_measure_params = pirouette::create_error_measure_params(),
+  evidence_filename = get_pff_tempfile(pattern = "evidence_", fileext =
+  ".csv"), verbose = FALSE)
 }
 \arguments{
 \item{alignment_params}{parameters for creating an alignment,
@@ -26,6 +25,9 @@ one has to be the first in the list.}
 \item{error_measure_params}{parameters to set how the error
 between given tree and inferred trees in measure,
 as can be created by \code{\link[pirouette]{create_error_measure_params}}}
+
+\item{evidence_filename}{filename to store the estimated
+evidences (aka marginal likelihoods)}
 
 \item{verbose}{give more output}
 }

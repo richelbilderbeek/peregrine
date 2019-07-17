@@ -1,12 +1,5 @@
 #' Create a \code{pir_params} with PFFs
 #' @inheritParams default_params_doc
-#' @usage
-#' create_pff_pir_params(
-#'   alignment_params = pirouette::create_alignment_params(
-#'     fasta_filename = get_pff_tempfile()
-#'   ),
-#'   experiments = list(create_test_pff_gen_experiment())
-#' )
 #' @seealso Use \link{create_test_pff_pir_params} to create a testing
 #'   PFF \code{pir_params}
 #' @author Richel J.C. Bilderbeek

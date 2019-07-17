@@ -5,7 +5,14 @@
 #'   alignment_params = pirouette::create_alignment_params(
 #'     fasta_filename = get_pff_tempfile()
 #'   ),
-#'   experiments = list(create_test_pff_gen_experiment())
+#'   twinning_params = NA,
+#'   experiments = list(create_test_pff_gen_experiment()),
+#'   error_measure_params = pirouette::create_error_measure_params(),
+#'   evidence_filename = get_pff_tempfile(
+#'     pattern = "evidence_",
+#'     fileext = ".csv"
+#'   ),
+#'   verbose = FALSE
 #' )
 #' @seealso Use \link{create_pff_pir_params} to create a
 #'   PFF \code{pir_params} without testing defaults

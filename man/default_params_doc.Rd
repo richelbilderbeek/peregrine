@@ -5,23 +5,19 @@
 \title{This function does nothing. It is intended to inherit is parameters'
 documentation.}
 \usage{
-default_params_doc(alignment, alignment_params, bd_mutation_rate, bd_tree,
-  bd_tree_filename, beast2_options, beast2_working_dir, brts, chain_length,
-  clock_model, clock_models, cond, crown_age, error_measure_params,
-  exclude_model, experiment, experiments, experiment_type, fasta_filename,
-  fileext, filename, folder_name, init_speciation_rate,
-  init_extinction_rate, input_filename, lambda, mbd_l_matrix,
-  mbd_mutation_rate, mbd_params, mbd_paramses, mbd_params_interval,
-  mbd_sim_rng_seed, mbd_tree, mcmc, mcmc_chain_length, method, misc_params,
-  mrca_prior, mu, mutation_rate, n_replicates, nu, nu_events,
+default_params_doc(alignment, alignment_params, beast2_options,
+  beast2_working_dir, chain_length, clock_model, clock_models, crown_age,
+  error_measure_params, evidence_filename, exclude_model, experiment,
+  experiments, experiment_type, fasta_filename, fileext, filename,
+  folder_name, input_filename, mcmc, mcmc_chain_length, method,
+  misc_params, mrca_prior, mutation_rate, n_replicates,
   output_log_filename, output_trees_filenames, output_state_filename,
   parameter_filename, parameters_filename, pattern, pff_tmpdir, phylo,
-  pir_params, posterior_trees, precision, project_folder_name, q, rng_seed,
-  root_sequence, sample_interval, seed, sequence_length, sim_pars,
-  sim_phylo, site_model, site_models, sub_chain_length, tree, tree_prior,
-  tree_priors, tree_filename, trees_filename, twin_alignment_filename,
-  twin_evidence_filename, twin_model, twin_tree_filename, twinning_params,
-  verbose)
+  pir_params, posterior_trees, rng_seed, root_sequence, sample_interval,
+  seed, sequence_length, site_model, site_models, sub_chain_length, tree,
+  tree_prior, tree_priors, tree_filename, trees_filename,
+  twin_alignment_filename, twin_evidence_filename, twin_model,
+  twin_tree_filename, twinning_params, verbose)
 }
 \arguments{
 \item{alignment}{a DNA alignment}
@@ -29,21 +25,11 @@ default_params_doc(alignment, alignment_params, bd_mutation_rate, bd_tree,
 \item{alignment_params}{parameters for creating an alignment,
 as can be created by \code{\link[pirouette]{create_alignment_params}}}
 
-\item{bd_mutation_rate}{the mutation rate when creating an alignment
-from a BD tree}
-
-\item{bd_tree}{a phylogent of class \code{phylo}, created by a Birth Death
-process}
-
-\item{bd_tree_filename}{name of the file that stores a BD twin tree}
-
 \item{beast2_options}{BEAST2 options,
 as can be created by \link[beastier]{create_beast2_options}}
 
 \item{beast2_working_dir}{BEAST2 temporary working directory,
 as used in \link[beastier]{create_beast2_options}}
-
-\item{brts}{set of branching times}
 
 \item{chain_length}{something}
 
@@ -53,13 +39,14 @@ as created by \link[beautier]{create_clock_model}}
 \item{clock_models}{a list of one or more clock models,
 as created by \link[beautier]{create_clock_model}}
 
-\item{cond}{conditioning as specified in \code{\link[mbd]{mbd_sim}}}
-
 \item{crown_age}{The crown age of the tree.}
 
 \item{error_measure_params}{parameters to set how the error
 between given tree and inferred trees in measure,
 as can be created by \code{\link[pirouette]{create_error_measure_params}}}
+
+\item{evidence_filename}{filename to store the estimated
+evidences (aka marginal likelihoods)}
 
 \item{exclude_model}{an inference model that has to be excluded, as can be
 created by \link[beautier]{create_inference_model}}
@@ -83,33 +70,8 @@ can be either \code{test} or \code{full}}
 
 \item{folder_name}{name of the main folder}
 
-\item{init_speciation_rate}{a speciation rate}
-
-\item{init_extinction_rate}{an extinction rate}
-
 \item{input_filename}{BEAST2 input file name,
 as used in \link[beastier]{create_beast2_options}}
-
-\item{lambda}{per-lineage speciation rate. See \code{\link[mbd]{mbd_sim}}}
-
-\item{mbd_l_matrix}{the L matrix of an MBD tree}
-
-\item{mbd_mutation_rate}{the mutation rate when creating an alignment
-from a MBD tree}
-
-\item{mbd_params}{MBD parameter set}
-
-\item{mbd_paramses}{data frame with one MBD parameter set per row.
-If a simulation with one MBD parameter set has 10 replicates,
-this data frame will hold 10 rows, each with different seeds}
-
-\item{mbd_params_interval}{data frame with one MBD parameter set per row.
-If a simulation with one MBD parameter set has 10 replicates,
-this data frame will hold 10 rows, each with different seeds}
-
-\item{mbd_sim_rng_seed}{rng seed to simulate a mbd tree}
-
-\item{mbd_tree}{an MBD tree}
 
 \item{mcmc}{an MCMC,
 as created by \link[beautier]{create_mcmc}}
@@ -132,17 +94,9 @@ when an mbd tree is simulated}
 \item{mrca_prior}{an MRCA priors,
 as created by \link[beautier]{create_mrca_prior}}
 
-\item{mu}{per-species extinction rate. See \code{\link[mbd]{mbd_sim}}}
-
 \item{mutation_rate}{something}
 
 \item{n_replicates}{number of replicates}
-
-\item{nu}{the rate at which a multiple-birth specation is triggered.
-See \code{\link[mbd]{mbd_sim}}}
-
-\item{nu_events}{the number of nu-triggered events that have to be
-present in the simulated tree}
 
 \item{output_log_filename}{BEAST2 ouput \code{.log} file name,
 as used in \link[beastier]{create_beast2_options}}
@@ -170,14 +124,6 @@ as created by \link[pirouette]{create_pir_params}}
 \item{posterior_trees}{phylogenetic trees in a BEAST2 posterior,
 of class \code{multiphylo}}
 
-\item{precision}{define the precision of the approximation.}
-
-\item{project_folder_name}{project folder name,
-will be the full path to \code{razzo_project}}
-
-\item{q}{per-species speciation probability in case of occurrance of
-a multiple event. See \code{\link[mbd]{mbd_sim}}}
-
 \item{rng_seed}{a random number generator seed}
 
 \item{root_sequence}{the DNA sequence at the root of the phylogeny.
@@ -189,10 +135,6 @@ makes a measurement}
 \item{seed}{a random number generator seed}
 
 \item{sequence_length}{the length of each DNA sequence in an alignment}
-
-\item{sim_pars}{something}
-
-\item{sim_phylo}{something}
 
 \item{site_model}{a nucleotide substitution model,
 as created by \link[beautier]{create_site_model}}
