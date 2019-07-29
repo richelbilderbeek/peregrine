@@ -69,6 +69,10 @@
 #' @param posterior_trees phylogenetic trees in a BEAST2 posterior,
 #'   of class \code{multiphylo}
 #' @param rng_seed a random number generator seed
+#' @param rng_seed_twin_alignment the random number generator seed
+#'   as used in the simulation of a twin alignment
+#' @param rng_seed_twin_tree the random number generator seed as used in the
+#'   simulation of a twin tree
 #' @param root_sequence the DNA sequence at the root of the phylogeny.
 #'   By default, this will consist out of an equal amount of each letter
 #' @param sample_interval the interval at which the MCMC algorithm
@@ -148,6 +152,8 @@ default_params_doc <- function(
   pir_params,
   posterior_trees,
   rng_seed,
+  rng_seed_twin_alignment,
+  rng_seed_twin_tree,
   root_sequence,
   sample_interval,
   seed,

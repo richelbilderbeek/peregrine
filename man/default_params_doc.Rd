@@ -13,8 +13,9 @@ default_params_doc(alignment, alignment_params, beast2_options,
   misc_params, mrca_prior, mutation_rate, n_replicates,
   output_log_filename, output_trees_filenames, output_state_filename,
   parameter_filename, parameters_filename, pattern, pff_tmpdir, phylo,
-  pir_params, posterior_trees, rng_seed, root_sequence, sample_interval,
-  seed, sequence_length, site_model, site_models, sub_chain_length, tree,
+  pir_params, posterior_trees, rng_seed, rng_seed_twin_alignment,
+  rng_seed_twin_tree, root_sequence, sample_interval, seed,
+  sequence_length, site_model, site_models, sub_chain_length, tree,
   tree_prior, tree_priors, tree_filename, trees_filename,
   twin_alignment_filename, twin_evidence_filename, twin_model,
   twin_tree_filename, twinning_params, verbose)
@@ -125,6 +126,12 @@ as created by \link[pirouette]{create_pir_params}}
 of class \code{multiphylo}}
 
 \item{rng_seed}{a random number generator seed}
+
+\item{rng_seed_twin_alignment}{the random number generator seed
+as used in the simulation of a twin alignment}
+
+\item{rng_seed_twin_tree}{the random number generator seed as used in the
+simulation of a twin tree}
 
 \item{root_sequence}{the DNA sequence at the root of the phylogeny.
 By default, this will consist out of an equal amount of each letter}

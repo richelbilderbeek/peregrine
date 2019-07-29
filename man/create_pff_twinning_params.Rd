@@ -17,6 +17,12 @@
   fileext = ".csv"))
 }
 \arguments{
+\item{rng_seed_twin_tree}{the random number generator seed as used in the
+simulation of a twin tree}
+
+\item{rng_seed_twin_alignment}{the random number generator seed
+as used in the simulation of a twin alignment}
+
 \item{twin_model}{the model you want to use to generate the twin tree:
 \itemize{
   \item \code{birth_death}: birth death
