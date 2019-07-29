@@ -5,7 +5,8 @@
 \title{Create a PFF twinning parameter set}
 \usage{
 
-  create_pff_twinning_params(rng_seed = pirouette::create_twinning_params()$rng_seed,
+  create_pff_twinning_params(rng_seed_twin_tree = pirouette::create_twinning_params()$rng_seed_twin_tree,
+  rng_seed_twin_alignment = pirouette::create_twinning_params()$rng_seed_twin_alignment,
   twin_model = pirouette::create_twinning_params()$twin_model,
   method = pirouette::create_twinning_params()$method,
   n_replicates = pirouette::create_twinning_params()$n_replicates,
@@ -16,8 +17,6 @@
   fileext = ".csv"))
 }
 \arguments{
-\item{rng_seed}{a random number generator seed}
-
 \item{twin_model}{the model you want to use to generate the twin tree:
 \itemize{
   \item \code{birth_death}: birth death

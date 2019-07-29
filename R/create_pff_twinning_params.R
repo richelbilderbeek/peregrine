@@ -2,7 +2,9 @@
 #' @inheritParams default_params_doc
 #' @export
 create_pff_twinning_params <- function(
-  rng_seed = pirouette::create_twinning_params()$rng_seed,
+  rng_seed_twin_tree = pirouette::create_twinning_params()$rng_seed_twin_tree,
+  rng_seed_twin_alignment
+    = pirouette::create_twinning_params()$rng_seed_twin_alignment,
   twin_model = pirouette::create_twinning_params()$twin_model,
   method = pirouette::create_twinning_params()$method,
   n_replicates = pirouette::create_twinning_params()$n_replicates,
@@ -17,7 +19,8 @@ create_pff_twinning_params <- function(
   )
 ) {
   twinning_params <- pirouette::create_twinning_params(
-    rng_seed = rng_seed,
+    rng_seed_twin_tree = rng_seed_twin_tree,
+    rng_seed_twin_alignment = rng_seed_twin_alignment,
     twin_model = twin_model,
     method = method,
     n_replicates = n_replicates,
