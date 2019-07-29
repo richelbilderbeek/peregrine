@@ -37,3 +37,6 @@ after_success:
   # Check dead links
   - rm .travis.yml
   - ./scripts/check_dead_links
+
+after_failure:
+  - cat /home/travis/build/richelbilderbeek/peregrine/peregrine.Rcheck/00check.log
