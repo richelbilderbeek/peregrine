@@ -8,9 +8,11 @@ to_pff_pir_params <- function(pir_params) {
   pir_params$alignment_params <- to_pff_alignment_params(
     pir_params$alignment_params
   )
-  pir_params$twinning_params <- to_pff_twinning_params(
-    pir_params$twinning_params
-  )
+  if (!beautier::is_one_na(pir_params$twinning_params)) {
+    pir_params$twinning_params <- to_pff_twinning_params(
+      pir_params$twinning_params
+    )
+  }
   pir_params$experiments <- to_pff_experiments(
     pir_params$experiments
   )
