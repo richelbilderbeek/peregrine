@@ -11,4 +11,3 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov 
 
  * A collection of notes on the Groningen Peregrine computer cluster: [see my notes](doc/README.md)
  * An R package for some Peregrine functions
-
