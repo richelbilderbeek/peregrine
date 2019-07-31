@@ -8,13 +8,9 @@ to_pff_experiments <- function(experiments) {
 
   first_pff_cand_experiment <- NA
   for (experiment in experiments) {
-    testit::assert(
-      experiment$inference_conditions$model_type %in%
-      c("generative", "candidate")
-    )
     if (experiment$inference_conditions$model_type == "candidate") {
-      first_pff_cand_experiment <- to_pff_experiment(experiment)
-      check_pff_experiment(first_pff_cand_experiment)
+      first_pff_cand_experiment <- to_pff_experiment(experiment) # nolint peregrine function
+      check_pff_experiment(first_pff_cand_experiment) # nolint peregrine function
       break
     }
   }
@@ -22,10 +18,6 @@ to_pff_experiments <- function(experiments) {
 
   for (i in seq_along(experiments)) {
     experiment <- experiments[[i]]
-    testit::assert(
-      experiment$inference_conditions$model_type %in%
-      c("generative", "candidate")
-    )
     if (experiment$inference_conditions$model_type == "generative") {
       experiments[[i]] <- to_pff_experiment(experiment) # nolint peregrine function
     } else {
