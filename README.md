@@ -11,3 +11,23 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov 
 
  * A collection of notes on the Groningen Peregrine computer cluster: [see my notes](doc/README.md)
  * An R package for some Peregrine functions
+
+## Example
+
+The most important function is `is_pff`: 'Is Peregrine-friendly
+Filename/Folder'. If this function returns `FALSE`, one better not uses
+that path on the Peregrine cluster!
+
+```r
+library(peregrine)
+library(testthat)
+
+expect_true(is_pff(get_pff_tempdir()))
+expect_true(is_pff(get_pff_tempfile()))
+expect_false(is_pff("/local/tmp/peregrine_unfriendly"))
+expect_false(is_pff("/tmp/peregrine_unfriendly"))
+```
+
+One can use `to_pff` to convert a filename or folder to
+its Peregrine-friendly equivalent.
+
