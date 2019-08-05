@@ -7,9 +7,12 @@
 #
 #   sbatch run_r_script test_is_pff.R
 #
+#
+# On Peregrine, this folder will work:
+#
+#  /local/tmp/
 
 non_pff_prefixes <- c(
-  "/local/tmp/",
   "/tmp/",
   "/",
   "/data/",
