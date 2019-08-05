@@ -23,6 +23,5 @@ get_pff_tempfile <- function(
     fileext = fileext
   )
   testit::assert(!file.exists(filename))
-  testit::assert(is_pff(filename)) # nolint peregrine function
   filename
 }
