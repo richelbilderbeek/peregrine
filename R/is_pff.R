@@ -17,6 +17,10 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 is_pff <- function(filename) {
+
+  # Convert to canonical form
+  filename <- gsub(pattern = "\\\\", replacement = "/", x = filename)
+
   if (stringr::str_count(string = filename, pattern = "/") == 1) {
     return(FALSE)
   }
