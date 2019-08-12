@@ -12,18 +12,35 @@
 # Works with:
 #
 #   sbatch run_r_script test_is_pff.R
+#   Rscript test_is_pff.R
 #
-
 if (!peregrine::is_on_peregrine()) {
   stop("It has no use this run this script in a non-Peregrine environment")
 }
+if (peregrine::is_on_peregrine_login_node()) {
+  print("Run on login node")
+}
+if (peregrine::is_on_peregrine_login_node()) {
+  print("Run on worker node using sbatch")
+}
 
-non_pff_prefixes <- c(
-  "/tmp/",
-  "/",
-  "/data/",
-  "/data/p230198"
-)
+non_pff_prefixes <- NULL
+if (peregrine::is_on_peregrine_worker_node()) {
+  non_pff_prefixes <- c(
+    # "/tmp/"
+    "/",
+    "/data/",
+    "/data/p230198"
+  )
+}
+if (peregrine::is_on_peregrine_login_node()) {
+  non_pff_prefixes <- c(
+    "/tmp/",
+    "/",
+    "/data/",
+    "/data/p230198"
+  )
+}
 
 # Can create file there?
 for (non_pff_prefix in non_pff_prefixes) {
