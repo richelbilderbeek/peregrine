@@ -14,6 +14,11 @@
 #   sbatch run_r_script test_is_pff.R
 #   Rscript test_is_pff.R
 #
+
+library(peregrine)
+library(testthat)
+
+
 if (!peregrine::is_on_peregrine()) {
   stop("It has no use this run this script in a non-Peregrine environment")
 }
@@ -48,7 +53,30 @@ for (filename in filenames) {
   print(paste0(filename, " | ", can_create_file(filename)))
 }
 
-stop("Done for now")
+
+if (is_on_peregrine_login_node()) {
+  expect_false(can_create_file("/local/tmp.txt"))
+  expect_true(can_create_file("/local/tmp/tmp.txt"))
+  expect_false(can_create_file("/tmp.txt"))
+  expect_true(can_create_file("/tmp/tmp.txt"))
+  expect_false(can_create_file("/data/tmp.txt"))
+  expect_true(can_create_file("/data/p230198/tmp.txt"))
+  expect_true(can_create_file("/home/p230198/tmp.txt"))
+  expect_false(can_create_file("/home/tmp.txt"))
+}
+
+if (is_on_peregrine_worker_node()) {
+  expect_true(can_create_file("/local/tmp.txt"))
+  expect_true(can_create_file("/local/tmp/tmp.txt"))
+  expect_false(can_create_file("/tmp.txt"))
+  expect_true(can_create_file("/tmp/tmp.txt"))
+  expect_false(can_create_file("/data/tmp.txt"))
+  expect_true(can_create_file("/data/p230198/tmp.txt"))
+  expect_true(can_create_file("/home/p230198/tmp.txt"))
+  expect_false(can_create_file("/home/tmp.txt"))
+}
+
+stop("OK")
 
 non_pff_prefixes <- NULL
 if (peregrine::is_on_peregrine_worker_node()) {
