@@ -46,8 +46,7 @@ if (peregrine::is_on_peregrine_login_node()) {
 for (non_pff_prefix in non_pff_prefixes) {
   print(paste0("Testing prefix '", non_pff_prefix, "'"))
   filename <- file.path(non_pff_prefix, "tmp.txt")
-  # Creation fails silently
-  testthat::expect_silent(file.create(filename))
+  testthat::expect_warning(file.create(filename))
   print(paste0("File exists: ", file.exists(filename)))
   # testthat::expect_false(file.exists(filename))
 }
