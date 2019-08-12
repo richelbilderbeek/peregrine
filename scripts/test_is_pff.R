@@ -20,7 +20,7 @@ if (!peregrine::is_on_peregrine()) {
 if (peregrine::is_on_peregrine_login_node()) {
   print("Run on login node")
 }
-if (peregrine::is_on_peregrine_login_node()) {
+if (peregrine::is_on_peregrine_worker_node()) {
   print("Run on worker node using sbatch")
 }
 
