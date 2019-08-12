@@ -1,23 +1,32 @@
-# Test if certain filenames are Peregrine-unfriendy,
-# by using these on Peregrine. Each of these test should fail.
-# Running them on a non-Peregrine computer has no use and
-# the tests probably pass
+# Test if certain filenames are Peregrine-unfriendy or Peregrine-friendy,
+# by using these on Peregrine.
+#
+# For the Peregrine-unfriendy filename, each of these test should fail
+# by a BEAST2 error.
+# For the Peregrine-friendy filenames, each of these test should pass.
+#
+# Running them on a non-Peregrine computer has no use: the tests
+# for Peregrine-unfriendly paths will probably pass, the tests for Peregrine
+# friendly files will probably fail.
 #
 # Works with:
 #
 #   sbatch run_r_script test_is_pff.R
 #
-#
-# On Peregrine, this folder will work:
-#
-#  
-
 non_pff_prefixes <- c(
   "/tmp/",
   "/",
   "/data/",
   "/data/p230198"
 )
+
+# Can create file there?
+for (non_pff_prefix in non_pff_prefixes) {
+  print(paste0("Testing prefix '", non_pff_prefix, "'"))
+  filename <- file.path(non_pff_prefix, "tmp.txt")
+  testthat::expect_error(file.create(filename))
+}
+
 for (non_pff_prefix in non_pff_prefixes) {
   # testit::assert(!peregrine::is_pff(non_pff_prefix))
   print(paste0("Testing prefix '", non_pff_prefix, "'"))
