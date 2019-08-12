@@ -10,7 +10,7 @@
 #
 # On Peregrine, this folder will work:
 #
-#  /local/tmp/
+#  
 
 non_pff_prefixes <- c(
   "/tmp/",
@@ -36,3 +36,22 @@ for (non_pff_prefix in non_pff_prefixes) {
   )
 }
 
+pff_prefixes <- c(
+  "/home/p230198",
+  "/local/tmp/"
+)
+
+for (pff_prefixes in pff_prefixes) {
+  # testit::assert(peregrine::is_pff(pff_prefix))
+  print(paste0("Testing prefix '", pff_prefix, "'"))
+  testthat::expect_silent(
+    beastier::run_beast2_from_options(
+      beastier::create_beast2_options(
+        input_filename = beastier::get_beastier_paths("2_4.xml"),
+        output_log_filename = file.path(pff_prefix, "tmp_out.log"),
+        output_trees_filenames = file.path(pff_prefix, "tmp_out.trees"),
+        output_state_filename = file.path(pff_prefix, "tmp_out.xml.state")
+      )
+    )
+  )
+}
