@@ -119,12 +119,14 @@ prefixes <- c(
   "/home/p230198"
 )
 
-print("Can create BEAST2?")
-print(" ")
-print("prefix | can_run_beast")
-print("---|---")
-for (prefix in prefixes) {
-  print(paste0(prefix, " | ", can_run_beast(prefix)))
+if (1 == 2) {
+  print("Can create BEAST2?")
+  print(" ")
+  print("prefix | can_run_beast")
+  print("---|---")
+  for (prefix in prefixes) {
+    print(paste0(prefix, " | ", can_run_beast(prefix)))
+  }
 }
 
 can_start_beast <- function() {
@@ -166,5 +168,6 @@ print(" ")
 print("prefix | can_start_beast")
 print("---|---")
 for (prefix in prefixes) {
-  print(paste0(prefix, " | ", can_start_beast(prefix)))
+  setwd(prefix)
+  print(paste0(prefix, " | ", can_start_beast()))
 }
