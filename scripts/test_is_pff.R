@@ -24,7 +24,9 @@ non_pff_prefixes <- c(
 for (non_pff_prefix in non_pff_prefixes) {
   print(paste0("Testing prefix '", non_pff_prefix, "'"))
   filename <- file.path(non_pff_prefix, "tmp.txt")
-  testthat::expect_error(file.create(filename))
+  # Creation fails silently
+  testthat::expect_silent(file.create(filename))
+  testthat::expect_false(file.exists(filename))
 }
 
 for (non_pff_prefix in non_pff_prefixes) {
