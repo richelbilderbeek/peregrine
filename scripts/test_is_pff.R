@@ -24,6 +24,30 @@ if (peregrine::is_on_peregrine_worker_node()) {
   print("Run on worker node using sbatch")
 }
 
+
+can_create_file <- function(filename) {
+  file.create(filename, showWarnings = FALSE)
+  file.exists(filename)
+}
+
+cat("Can create file?")
+cat(" ")
+cat("filename | can_create_file")
+cat("---|---")
+filenames <- c(
+  "/local/tmp.txt",
+  "/local/tmp/tmp.txt",
+  "/tmp.txt",
+  "/tmp/tmp.txt",
+  "/data/tmp.txt",
+  "/data/p230198/tmp.txt",
+  "/home/p230198/tmp.txt",
+  "/home/tmp.txt"
+)
+for (filename in filenames) {
+  cat(paste0(filename, " | ", can_create_file(filename)))
+}
+
 non_pff_prefixes <- NULL
 if (peregrine::is_on_peregrine_worker_node()) {
   non_pff_prefixes <- c(
