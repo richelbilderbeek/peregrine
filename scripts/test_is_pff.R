@@ -30,10 +30,10 @@ can_create_file <- function(filename) {
   file.exists(filename)
 }
 
-cat("Can create file?")
-cat(" ")
-cat("filename | can_create_file")
-cat("---|---")
+print("Can create file?")
+print(" ")
+print("filename | can_create_file")
+print("---|---")
 filenames <- c(
   "/local/tmp.txt",
   "/local/tmp/tmp.txt",
@@ -45,8 +45,10 @@ filenames <- c(
   "/home/tmp.txt"
 )
 for (filename in filenames) {
-  cat(paste0(filename, " | ", can_create_file(filename)))
+  print(paste0(filename, " | ", can_create_file(filename)))
 }
+
+stop("Done for now")
 
 non_pff_prefixes <- NULL
 if (peregrine::is_on_peregrine_worker_node()) {
