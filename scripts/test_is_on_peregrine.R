@@ -7,3 +7,5 @@
 #
 print(Sys.getenv("HOSTNAME"))
 print(peregrine::is_on_peregrine())
+print(peregrine::is_on_peregrine_login_node())
+print(peregrine::is_on_peregrine_worker_node())

@@ -3,5 +3,5 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 is_on_peregrine <- function() {
-  Sys.getenv("HOSTNAME") == "peregrine.hpc.rug.nl"
+  is_on_peregrine_login_node() || is_on_peregrine_worker_node()
 }
