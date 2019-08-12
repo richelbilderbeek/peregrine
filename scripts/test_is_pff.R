@@ -126,3 +126,45 @@ print("---|---")
 for (prefix in prefixes) {
   print(paste0(prefix, " | ", can_run_beast(prefix)))
 }
+
+can_start_beast <- function() {
+  input_filename <- "my_file.xml"
+  file.copy(from = beastier::get_beastier_paths("2_4.xml"),
+    to = input_filename
+  )
+  output_log_filename <- "out.log"
+  output_trees_filenames <- "out.trees"
+  output_state_filename <- "out.xml.state"
+  beast2_options <- beastier::create_beast2_options(
+    input_filename = input_filename,
+    output_log_filename = output_log_filename,
+    output_trees_filenames = output_trees_filenames,
+    output_state_filename = output_state_filename
+  )
+  tryCatch({
+    suppressMessages(
+      beastier::run_beast2_from_options(beast2_options)
+    )
+  }, error = function(e) { # nolint do not use e
+    return(FALSE)
+  }
+  )
+  all(
+    file.exists(
+      c(
+        input_filename,
+        output_log_filename,
+        output_trees_filenames,
+        output_state_filename
+      )
+    )
+  )
+}
+
+print("Can start BEAST2?")
+print(" ")
+print("prefix | can_start_beast")
+print("---|---")
+for (prefix in prefixes) {
+  print(paste0(prefix, " | ", can_start_beast(prefix)))
+}
