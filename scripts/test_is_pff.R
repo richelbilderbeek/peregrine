@@ -124,5 +124,5 @@ print(" ")
 print("prefix | can_run_beast")
 print("---|---")
 for (prefix in prefixes) {
-  print(paste0(filename, " | ", can_run_beast(filename)))
+  print(paste0(prefix, " | ", can_run_beast(prefix)))
 }
