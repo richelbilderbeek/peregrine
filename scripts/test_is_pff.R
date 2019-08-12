@@ -88,8 +88,13 @@ can_run_beast <- function(prefix) {
     output_trees_filenames = output_trees_filenames,
     output_state_filename = output_state_filename
   )
-  suppressMessages(
-    beastier::run_beast2_from_options(beast2_options)
+  tryCatch({
+    suppressMessages(
+      beastier::run_beast2_from_options(beast2_options)
+    )
+  }, error = function(e) { # nolint do not use e
+    return(FALSE)
+  }
   )
   all(
     file.exists(
