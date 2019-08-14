@@ -11,5 +11,4 @@ test_that("use", {
   if (beastier::is_on_appveyor()) {
     expect_false(is_on_peregrine())
   }
-
 })
