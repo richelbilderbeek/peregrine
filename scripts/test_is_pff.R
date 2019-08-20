@@ -171,3 +171,109 @@ for (prefix in prefixes) {
   setwd(prefix)
   print(paste0(prefix, " | ", can_start_beast()))
 }
+
+
+
+################################################################################
+# Can a certain folder be used to store BEAST2 output files?
+################################################################################
+can_use_beast <- function(folder_name) {
+  input_filename <- beastier::get_beastier_paths("2_4.xml")
+  output_log_filename <- file.path(folder_name, "out.log")
+  output_trees_filenames <- file.path(folder_name, "out.trees")
+  output_state_filename <- file.path(folder_name, "out.xml.state")
+  beast2_options <- beastier::create_beast2_options(
+    input_filename = input_filename,
+    output_log_filename = output_log_filename,
+    output_trees_filenames = output_trees_filenames,
+    output_state_filename = output_state_filename,
+    beast2_working_dir = get_pff_tempdir()
+  )
+  tryCatch({
+    suppressMessages(
+      beastier::run_beast2_from_options(beast2_options)
+    )
+  }, error = function(e) { # nolint do not use e
+    return(FALSE)
+  }
+  )
+  all(
+    file.exists(
+      c(
+        input_filename,
+        output_log_filename,
+        output_trees_filenames,
+        output_state_filename
+      )
+    )
+  )
+}
+
+folder_names <- c(
+  "/tmp",
+  "/local/tmp",
+  "/data/p230198",
+  "/home/p230198"
+)
+
+print("Can use BEAST2?")
+print(paste("getwd():", getwd()))
+print(" ")
+print("folder_name | can_use_beast")
+print("---|---")
+for (folder_name in folder_names) {
+  print(paste0(folder_name, " | ", can_use_beast(folder_name)))
+}
+
+
+
+################################################################################
+# Can a certain folder be used as a BEAST2 working directory?
+################################################################################
+can_use_working_dir <- function(folder_name) {
+  input_filename <- beastier::get_beastier_paths("2_4.xml")
+  output_log_filename <- file.path(get_pff_tempdir(), "out.log")
+  output_trees_filenames <- file.path(get_pff_tempdir(), "out.trees")
+  output_state_filename <- file.path(get_pff_tempdir(), "out.xml.state")
+  beast2_options <- beastier::create_beast2_options(
+    input_filename = input_filename,
+    output_log_filename = output_log_filename,
+    output_trees_filenames = output_trees_filenames,
+    output_state_filename = output_state_filename,
+    beast2_working_dir = folder_name
+  )
+  tryCatch({
+    suppressMessages(
+      beastier::run_beast2_from_options(beast2_options)
+    )
+  }, error = function(e) { # nolint do not use e
+    return(FALSE)
+  }
+  )
+  all(
+    file.exists(
+      c(
+        input_filename,
+        output_log_filename,
+        output_trees_filenames,
+        output_state_filename
+      )
+    )
+  )
+}
+
+folder_names <- c(
+  "/tmp",
+  "/local/tmp",
+  "/data/p230198",
+  "/home/p230198"
+)
+
+print("Can use working dir?")
+print(paste("getwd():", getwd()))
+print(" ")
+print("folder_name | can_use_working_dir")
+print("---|---")
+for (folder_name in folder_names) {
+  print(paste0(folder_name, " | ", can_use_working_dir(folder_name)))
+}
