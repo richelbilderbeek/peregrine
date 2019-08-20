@@ -31,3 +31,51 @@ expect_false(is_pff("/tmp/peregrine_unfriendly"))
 One can use `to_pff` to convert a filename or folder to
 its Peregrine-friendly equivalent.
 
+## Measurements
+
+Using `scripts/test_is_pff.R`.
+
+### Can create file?
+
+filename | can_create_file
+---|---
+/local/tmp.txt | TRUE
+/local/tmp/tmp.txt | TRUE
+/tmp.txt | FALSE
+/tmp/tmp.txt | TRUE
+/data/tmp.txt | FALSE
+/data/p230198/tmp.txt | TRUE
+/home/p230198/tmp.txt | TRUE
+/home/tmp.txt | FALSE
+
+
+###Can start BEAST2?
+
+prefix | can_start_beast
+---|---
+/local | TRUE
+/local/tmp | TRUE
+/tmp | FALSE
+/ | FALSE
+/data | FALSE
+/data/p230198 | FALSE
+/home | FALSE
+/home/p230198 | FALSE
+
+### Can use BEAST2?
+
+folder_name | can_use_beast
+---|---
+/tmp | FALSE
+/local/tmp | TRUE
+/data/p230198 | FALSE
+/home/p230198 | TRUE
+
+### Can use working dir?
+
+folder_name | can_use_working_dir
+---|---
+/tmp | FALSE
+/local/tmp | FALSE
+/data/p230198 | FALSE
+/home/p230198 | TRUE
