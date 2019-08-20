@@ -10,6 +10,8 @@
 #' expect_true(is_pff(get_pff_tempfile()))
 #' expect_false(is_pff("/peregrine_unfriendly"))
 #' expect_false(is_pff("/tmp/peregrine_unfriendly"))
+#' expect_false(is_pff("/local/peregrine_unfriendly"))
+#' expect_false(is_pff("/local/tmp/peregrine_unfriendly"))
 #' expect_false(is_pff("/data/peregrine_unfriendly"))
 #' expect_false(is_pff("/data/p230198/peregrine_unfriendly"))
 #' @seealso Use \link{to_pff} to convert a filename or folder to
@@ -28,7 +30,7 @@ is_pff <- function(filename) {
     is.na(
       stringr::str_match(
         string = filename,
-        pattern = "^(/tmp/|/data/)"
+        pattern = "^(/tmp/|/data/|/local/)"
       )
     )
   )
