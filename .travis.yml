@@ -32,6 +32,7 @@ before_install:
 script:
   - travis_wait 60 R CMD build .
   - travis_wait 60 R CMD check *tar.gz
+  - Rscript scripts/run_pir.R
 
 after_success:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then Rscript -e 'lintr::lint_package()'; fi
