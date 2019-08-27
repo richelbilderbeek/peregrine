@@ -18,6 +18,6 @@ peregrine::check_pff_pir_params(pir_params)
 
 # Run it
 pirouette::pir_run(
-  phylogeny = ape::read.tree(text = "((A:2, B:2):1, C:3);"),
+  phylogeny = ape::rcoal(n = 6),
   pir_params = pir_params
 )
