@@ -81,3 +81,9 @@ echo "alias love_all='sshare -a'" >> ~/.bash_profile
 ```
 squeue -u $USER -o "%.8i %.6P %.28j %.8u %.2t %.10M %.6D %R"
 ```
+
+## View a user's email
+
+```
+finger p123456
+```
