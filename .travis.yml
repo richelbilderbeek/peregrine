@@ -15,7 +15,8 @@ r_github_packages:
   - richelbilderbeek/mauricer
   - richelbilderbeek/babette
   - richelbilderbeek/mcbette
-  - richelbilderbeek/pirouette@richel
+  - thijsjanzen/nodeSub
+  - richelbilderbeek/pirouette
 
 before_install:
   - sudo add-apt-repository -y ppa:opencpu/imagemagick
