@@ -87,3 +87,29 @@ squeue -u $USER -o "%.8i %.6P %.28j %.8u %.2t %.10M %.6D %R"
 ```
 finger p123456
 ```
+
+## View your quotum
+
+```
+pgquota
+```
+
+also
+
+```
+lfs quota -h /home
+```
+
+## Remove cached files older than 7 days
+
+```
+cd ~/.cache
+find . -type f -mtime +7 -execdir rm -- '{}' \;
+```
+
+## Remove empty folders
+
+```
+cd ~/.cache
+find . -type d -empty -print0 | xargs -0 -I {} /bin/rmdir "{}"
+```
