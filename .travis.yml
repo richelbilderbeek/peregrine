@@ -9,7 +9,7 @@ r_github_packages:
   - richelbilderbeek/nLTT
   - ropensci/spelling
   - ropensci/beastier
-  - richelbilderbeek/beautier
+  - richelbilderbeek/beautier@develop
   - richelbilderbeek/tracerer
   - richelbilderbeek/beastier
   - richelbilderbeek/mauricer
