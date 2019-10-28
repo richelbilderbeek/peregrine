@@ -17,7 +17,9 @@ LazyData: true
 URL: https://github.com/richelbilderbeek/peregrine
 BugReports: https://github.com/richelbilderbeek/peregrine/issues
 Language: en-US
+Depends:
 Imports:
+    assertive,
     beastier,
     beautier,
     pirouette,
