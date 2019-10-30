@@ -24,8 +24,8 @@ to_pff_experiments <- function(experiments) {
       testit::assert(experiment$inference_conditions$model_type == "candidate")
       experiments[[i]]$errors_filename <- first_pff_cand_experiment$errors_filename # nolint yup it's long
       experiments[[i]]$beast2_options$input_filename <- first_pff_cand_experiment$beast2_options$input_filename # nolint yup it's long
-      experiments[[i]]$beast2_options$output_log_filename <- first_pff_cand_experiment$beast2_options$output_log_filename # nolint yup it's long
-      experiments[[i]]$beast2_options$output_trees_filenames <- first_pff_cand_experiment$beast2_options$output_trees_filenames # nolint yup it's long
+      experiments[[i]]$inference_model$mcmc$tracelog$filename <- first_pff_cand_experiment$inference_model$mcmc$tracelog$filename # nolint yup it's long
+      experiments[[i]]$inference_model$mcmc$treelog$filename <- first_pff_cand_experiment$inference_model$mcmc$treelog$filename # nolint yup it's long
       experiments[[i]]$beast2_options$output_state_filename <- first_pff_cand_experiment$beast2_options$output_state_filename # nolint yup it's long
       experiments[[i]]$beast2_options$beast2_working_dir <- first_pff_cand_experiment$beast2_options$beast2_working_dir # nolint yup it's long
     }
