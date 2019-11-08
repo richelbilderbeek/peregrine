@@ -18,7 +18,6 @@
 library(peregrine)
 library(testthat)
 
-
 if (!peregrine::is_on_peregrine()) {
   stop("It has no use this run this script in a non-Peregrine environment")
 }
@@ -56,25 +55,25 @@ for (filename in filenames) {
 
 # Hardcoded results
 if (is_on_peregrine_login_node()) {
-  expect_false(can_create_file("/local/tmp.txt"))
-  expect_true(can_create_file("/local/tmp/tmp.txt"))
-  expect_false(can_create_file("/tmp.txt"))
-  expect_true(can_create_file("/tmp/tmp.txt"))
-  expect_false(can_create_file("/data/tmp.txt"))
-  expect_true(can_create_file("/data/p230198/tmp.txt"))
-  expect_true(can_create_file("/home/p230198/tmp.txt"))
-  expect_false(can_create_file("/home/tmp.txt"))
+  testthat::expect_false(can_create_file("/local/tmp.txt"))
+  testthat::expect_true(can_create_file("/local/tmp/tmp.txt"))
+  testthat::expect_false(can_create_file("/tmp.txt"))
+  testthat::expect_true(can_create_file("/tmp/tmp.txt"))
+  testthat::expect_false(can_create_file("/data/tmp.txt"))
+  testthat::expect_true(can_create_file("/data/p230198/tmp.txt"))
+  testthat::expect_true(can_create_file("/home/p230198/tmp.txt"))
+  testthat::expect_false(can_create_file("/home/tmp.txt"))
 }
 
 if (is_on_peregrine_worker_node()) {
-  expect_true(can_create_file("/local/tmp.txt"))
-  expect_true(can_create_file("/local/tmp/tmp.txt"))
-  expect_false(can_create_file("/tmp.txt"))
-  expect_true(can_create_file("/tmp/tmp.txt"))
-  expect_false(can_create_file("/data/tmp.txt"))
-  expect_true(can_create_file("/data/p230198/tmp.txt"))
-  expect_true(can_create_file("/home/p230198/tmp.txt"))
-  expect_false(can_create_file("/home/tmp.txt"))
+  testthat::expect_true(can_create_file("/local/tmp.txt"))
+  testthat::expect_true(can_create_file("/local/tmp/tmp.txt"))
+  testthat::expect_false(can_create_file("/tmp.txt"))
+  testthat::expect_true(can_create_file("/tmp/tmp.txt"))
+  testthat::expect_false(can_create_file("/data/tmp.txt"))
+  testthat::expect_true(can_create_file("/data/p230198/tmp.txt"))
+  testthat::expect_true(can_create_file("/home/p230198/tmp.txt"))
+  testthat::expect_false(can_create_file("/home/tmp.txt"))
 }
 
 can_run_beast <- function(prefix) {
@@ -180,10 +179,7 @@ can_use_beast <- function(folder_name) {
   output_state_filename <- file.path(folder_name, "out.xml.state")
   beast2_options <- beastier::create_beast2_options(
     input_filename = input_filename,
-    output_log_filename = output_log_filename,
-    output_trees_filenames = output_trees_filenames,
-    output_state_filename = output_state_filename,
-    beast2_working_dir = get_pff_tempdir()
+    output_state_filename = output_state_filename
   )
   tryCatch({
     suppressMessages(
@@ -228,15 +224,18 @@ for (folder_name in folder_names) {
 ################################################################################
 can_use_working_dir <- function(folder_name) {
   input_filename <- beastier::get_beastier_paths("2_4.xml")
-  output_log_filename <- file.path(get_pff_tempdir(), "out.log")
-  output_tree_filename <- file.path(get_pff_tempdir(), "out.trees")
-  output_state_filename <- file.path(get_pff_tempdir(), "out.xml.state")
-  inference_model <- create_test_inference_model(
-    mcmc = create_test_mcmc(
-      tracelog = create_test_tracelog(
+  output_log_filename <-
+    file.path(peregrine::get_pff_tempdir(), "out.log")
+  output_tree_filename <-
+    file.path(peregrine::get_pff_tempdir(), "out.trees")
+  output_state_filename <-
+    file.path(peregrine::get_pff_tempdir(), "out.xml.state")
+  inference_model <- beautier::create_test_inference_model(
+    mcmc = beautier::create_test_mcmc(
+      tracelog = beautier::create_test_tracelog(
         output_log_filename
       ),
-      treelog = create_test_treelog(
+      treelog = beautier::create_test_treelog(
         output_tree_filename
       )
     )
@@ -248,7 +247,7 @@ can_use_working_dir <- function(folder_name) {
   tryCatch({
     suppressMessages(
       babette::bbt_run_from_model(
-        fasta_filename = get_fasta_filename(),
+        fasta_filename = beautier::get_fasta_filename(),
         inference_model = inference_model,
         beast2_options = beast2_options
       )

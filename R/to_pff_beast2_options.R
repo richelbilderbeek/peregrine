@@ -7,22 +7,15 @@ to_pff_beast2_options <- function(beast2_options) {
 
   beastier::check_beast2_options(beast2_options)
 
-  if (!is_pff(beast2_options$input_filename)) { # nolint peregrine function
-    beast2_options$input_filename <- to_pff(beast2_options$input_filename) # nolint peregrine function
+  if (!peregrine::is_pff(beast2_options$input_filename)) { # nolint peregrine function
+    beast2_options$input_filename <-
+      peregrine::to_pff(beast2_options$input_filename) # nolint peregrine function
   }
-  if (!is_pff(beast2_options$output_log_filename)) { # nolint peregrine function
-    beast2_options$output_log_filename <- to_pff(beast2_options$output_log_filename) # nolint peregrine function
+  if (!peregrine::is_pff(beast2_options$output_state_filename)) {
+    beast2_options$output_state_filename <-
+      peregrine::to_pff(beast2_options$output_state_filename) # nolint peregrine function
   }
-  if (!is_pff(beast2_options$output_trees_filenames)) { # nolint peregrine function
-    beast2_options$output_trees_filenames <- to_pff(beast2_options$output_trees_filenames) # nolint peregrine function
-  }
-  if (!is_pff(beast2_options$output_state_filename)) {
-    beast2_options$output_state_filename <- to_pff(beast2_options$output_state_filename) # nolint peregrine function
-  }
-  if (!is_pff(beast2_options$beast2_working_dir)) { # nolint peregrine function
-    beast2_options$beast2_working_dir <- to_pff(beast2_options$beast2_working_dir) # nolint peregrine function
-  }
-  if (!is_pff(beast2_options$beast2_path)) { # nolint peregrine function
+  if (!peregrine::is_pff(beast2_options$beast2_path)) { # nolint peregrine function
     stop(
       "Cannot convert Peregrine-unfriendly filename ",
       "for 'beast2_options$beast2_path' \n",
@@ -31,6 +24,6 @@ to_pff_beast2_options <- function(beast2_options) {
     )
   }
 
-  check_pff_beast2_options(beast2_options) # nolint peregrine functione
+  peregrine::check_pff_beast2_options(beast2_options) # nolint peregrine functione
   beast2_options
 }
