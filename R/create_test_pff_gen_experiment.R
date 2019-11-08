@@ -11,7 +11,7 @@ create_test_pff_gen_experiment <- function(
     is_monophyletic = TRUE
   ),
   mcmc = beautier::create_mcmc(chain_length = 2000, store_every = 1000),
-  beast2_options = create_pff_beast2_options()
+  beast2_options = peregrine::create_pff_beast2_options()
 ) {
   experiment <- pirouette::create_test_gen_experiment(
     inference_model = beautier::create_inference_model(
@@ -20,7 +20,7 @@ create_test_pff_gen_experiment <- function(
     ),
     beast2_options = beast2_options
   )
-  experiment$errors_filename <- get_pff_tempfile( # nolint peregrine function
+  experiment$errors_filename <- peregrine::get_pff_tempfile( # nolint peregrine function
     pattern = "errors_", fileext = ".csv"
   )
   experiment
