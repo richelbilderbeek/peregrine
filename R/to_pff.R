@@ -45,7 +45,7 @@
 #' @export
 to_pff <- function(filename) {
   file.path(
-    get_pff_tempdir(),
+    peregrine::get_pff_tempdir(),
     basename(filename)
   )
 }

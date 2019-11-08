@@ -23,13 +23,13 @@ create_pff_pir_params <- function(
   pirouette::check_error_measure_params(error_measure_params)
 
   pff_pir_params <- pirouette::create_pir_params(
-    alignment_params = to_pff_alignment_params(alignment_params),
+    alignment_params = peregrine::to_pff_alignment_params(alignment_params),
     twinning_params = twinning_params,
-    experiments = to_pff_experiments(experiments),
+    experiments = peregrine::to_pff_experiments(experiments),
     error_measure_params = error_measure_params,
     evidence_filename = evidence_filename,
     verbose = verbose
   )
-  check_pff_pir_params(pff_pir_params) # nolint peregrine function
+  peregrine::check_pff_pir_params(pff_pir_params) # nolint peregrine function
   pff_pir_params
 }

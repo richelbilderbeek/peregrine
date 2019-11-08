@@ -18,7 +18,8 @@ create_pff_alignment_params <- function(
   site_model = pirouette::create_alignment_params()$site_model,
   clock_model = pirouette::create_alignment_params()$clock_model,
   rng_seed = pirouette::create_alignment_params()$rng_seed,
-  fasta_filename = get_pff_tempfile(pattern = "alignment_", fileext = ".fasta") # nolint peregrine function
+  fasta_filename =
+    peregrine::get_pff_tempfile(pattern = "alignment_", fileext = ".fasta") # nolint peregrine function
 ) {
   alignment_params <- pirouette::create_alignment_params(
     root_sequence = root_sequence,
@@ -28,6 +29,6 @@ create_pff_alignment_params <- function(
     rng_seed = rng_seed,
     fasta_filename = fasta_filename
   )
-  check_pff_alignment_params(alignment_params) # nolint peregrine function
+  peregrine::check_pff_alignment_params(alignment_params) # nolint peregrine function
   alignment_params
 }

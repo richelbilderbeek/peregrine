@@ -15,7 +15,6 @@ to_pff_experiments <- function(experiments) {
     }
   }
 
-
   for (i in seq_along(experiments)) {
     experiment <- experiments[[i]]
     if (experiment$inference_conditions$model_type == "generative") {

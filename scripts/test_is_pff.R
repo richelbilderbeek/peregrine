@@ -54,7 +54,7 @@ for (filename in filenames) {
 }
 
 # Hardcoded results
-if (is_on_peregrine_login_node()) {
+if (peregrine::is_on_peregrine_login_node()) {
   testthat::expect_false(can_create_file("/local/tmp.txt"))
   testthat::expect_true(can_create_file("/local/tmp/tmp.txt"))
   testthat::expect_false(can_create_file("/tmp.txt"))

@@ -8,13 +8,13 @@ create_pff_twinning_params <- function(
   twin_model = pirouette::create_twinning_params()$twin_model,
   method = pirouette::create_twinning_params()$method,
   n_replicates = pirouette::create_twinning_params()$n_replicates,
-  twin_tree_filename = get_pff_tempfile(
+  twin_tree_filename = peregrine::get_pff_tempfile(
     pattern = "tree_twin_", fileext = ".newick"
   ),
-  twin_alignment_filename = get_pff_tempfile(
+  twin_alignment_filename = peregrine::get_pff_tempfile(
     pattern = "alignment_twin_", fileext = ".fasta"
   ),
-  twin_evidence_filename = get_pff_tempfile(
+  twin_evidence_filename = peregrine::get_pff_tempfile(
     pattern = "evidence_twin_",  fileext = ".csv"
   )
 ) {
@@ -28,6 +28,6 @@ create_pff_twinning_params <- function(
     twin_alignment_filename = twin_alignment_filename,
     twin_evidence_filename = twin_evidence_filename
   )
-  check_pff_twinning_params(twinning_params) # nolint peregrine function
+  peregrine::check_pff_twinning_params(twinning_params) # nolint peregrine function
   twinning_params
 }
