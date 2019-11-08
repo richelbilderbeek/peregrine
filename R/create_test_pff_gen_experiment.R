@@ -10,7 +10,10 @@ create_test_pff_gen_experiment <- function(
     ),
     is_monophyletic = TRUE
   ),
-  mcmc = beautier::create_mcmc(chain_length = 2000, store_every = 1000),
+  mcmc = peregrine::create_pff_mcmc(
+    chain_length = 2000,
+    store_every = 1000
+  ),
   beast2_options = peregrine::create_pff_beast2_options()
 ) {
   experiment <- pirouette::create_test_gen_experiment(

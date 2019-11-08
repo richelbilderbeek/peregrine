@@ -7,7 +7,7 @@ create_all_pff_experiments <- function(
   site_models = beautier::create_site_models(),
   clock_models = beautier::create_clock_models(),
   tree_priors = beautier::create_tree_priors(),
-  mcmc = beautier::create_mcmc(store_every = 1000),
+  mcmc = peregrine::create_pff_mcmc(store_every = 1000),
   exclude_model = NA
 ) {
   experiments <- pirouette::create_all_experiments(
@@ -17,5 +17,5 @@ create_all_pff_experiments <- function(
     mcmc = mcmc,
     exclude_model = exclude_model
   )
-  to_pff_experiments(experiments) # nolint peregrine function
+  peregrine::to_pff_experiments(experiments) # nolint peregrine function
 }

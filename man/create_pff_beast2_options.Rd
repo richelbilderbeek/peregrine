@@ -4,20 +4,13 @@
 \alias{create_pff_beast2_options}
 \title{Create BEAST2 options that has Peregrine friendly filenames}
 \usage{
-create_pff_beast2_options(input_filename = get_pff_tempfile(),
-  output_log_filename = get_pff_tempfile(),
-  output_trees_filenames = get_pff_tempfile(),
-  output_state_filename = get_pff_tempfile(),
-  beast2_working_dir = get_pff_tempdir())
+
+  create_pff_beast2_options(input_filename = peregrine::get_pff_tempfile(),
+  output_state_filename = peregrine::get_pff_tempfile(),
+  beast2_working_dir = peregrine::get_pff_tempdir())
 }
 \arguments{
 \item{input_filename}{BEAST2 input file name,
-as used in \link[beastier]{create_beast2_options}}
-
-\item{output_log_filename}{BEAST2 ouput \code{.log} file name,
-as used in \link[beastier]{create_beast2_options}}
-
-\item{output_trees_filenames}{BEAST2 ouput \code{.trees} file name,
 as used in \link[beastier]{create_beast2_options}}
 
 \item{output_state_filename}{BEAST2 ouput \code{.xml.state} file name,
