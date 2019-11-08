@@ -23,7 +23,8 @@ as created by \link[beautier]{create_clock_model}}
 as created by \link[beautier]{create_tree_prior}}
 
 \item{mcmc}{an MCMC,
-as created by \link[beautier]{create_mcmc}}
+as created by \link[beautier]{create_mcmc} or by
+\link{create_pff_mcmc} for automatic peregrine friendly filenames check}
 
 \item{exclude_model}{an inference model that has to be excluded, as can be
 created by \link[beautier]{create_inference_model}}

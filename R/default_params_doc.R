@@ -35,7 +35,8 @@
 #' @param input_filename BEAST2 input file name,
 #' as used in \link[beastier]{create_beast2_options}
 #' @param mcmc an MCMC,
-#' as created by \link[beautier]{create_mcmc}
+#' as created by \link[beautier]{create_mcmc} or by
+#' \link{create_pff_mcmc} for automatic peregrine friendly filenames check
 #' @param mcmc_chain_length length of an MCMC
 #' @param method determines how to create the twin tree
 #' \itemize{

@@ -75,7 +75,8 @@ can be either \code{test} or \code{full}}
 as used in \link[beastier]{create_beast2_options}}
 
 \item{mcmc}{an MCMC,
-as created by \link[beautier]{create_mcmc}}
+as created by \link[beautier]{create_mcmc} or by
+\link{create_pff_mcmc} for automatic peregrine friendly filenames check}
 
 \item{mcmc_chain_length}{length of an MCMC}
 
