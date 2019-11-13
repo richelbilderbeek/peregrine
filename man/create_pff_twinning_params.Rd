@@ -10,11 +10,12 @@
   twin_model = pirouette::create_twinning_params()$twin_model,
   method = pirouette::create_twinning_params()$method,
   n_replicates = pirouette::create_twinning_params()$n_replicates,
-  twin_tree_filename = get_pff_tempfile(pattern = "tree_twin_", fileext =
-  ".newick"), twin_alignment_filename = get_pff_tempfile(pattern =
+  twin_tree_filename = peregrine::get_pff_tempfile(pattern =
+  "tree_twin_", fileext = ".newick"),
+  twin_alignment_filename = peregrine::get_pff_tempfile(pattern =
   "alignment_twin_", fileext = ".fasta"),
-  twin_evidence_filename = get_pff_tempfile(pattern = "evidence_twin_",
-  fileext = ".csv"))
+  twin_evidence_filename = peregrine::get_pff_tempfile(pattern =
+  "evidence_twin_", fileext = ".csv"))
 }
 \arguments{
 \item{rng_seed_twin_tree}{the random number generator seed as used in the

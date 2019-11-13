@@ -6,17 +6,13 @@
 \usage{
 
   create_pff_beast2_options(input_filename = peregrine::get_pff_tempfile(),
-  output_state_filename = peregrine::get_pff_tempfile(),
-  beast2_working_dir = peregrine::get_pff_tempdir())
+  output_state_filename = peregrine::get_pff_tempfile())
 }
 \arguments{
 \item{input_filename}{BEAST2 input file name,
 as used in \link[beastier]{create_beast2_options}}
 
 \item{output_state_filename}{BEAST2 ouput \code{.xml.state} file name,
-as used in \link[beastier]{create_beast2_options}}
-
-\item{beast2_working_dir}{BEAST2 temporary working directory,
 as used in \link[beastier]{create_beast2_options}}
 }
 \description{
