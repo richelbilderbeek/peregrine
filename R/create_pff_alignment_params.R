@@ -14,18 +14,15 @@
 #' @export
 create_pff_alignment_params <- function(
   root_sequence = pirouette::create_alignment_params()$root_sequence,
-  mutation_rate = pirouette::create_alignment_params()$mutation_rate,
-  site_model = pirouette::create_alignment_params()$site_model,
-  clock_model = pirouette::create_alignment_params()$clock_model,
+  sim_true_alignment_function =
+    pirouette::create_alignment_params()$sim_true_alignment_function,
   rng_seed = pirouette::create_alignment_params()$rng_seed,
   fasta_filename =
     peregrine::get_pff_tempfile(pattern = "alignment_", fileext = ".fasta") # nolint peregrine function
 ) {
   alignment_params <- pirouette::create_alignment_params(
     root_sequence = root_sequence,
-    mutation_rate = mutation_rate,
-    site_model = site_model,
-    clock_model = clock_model,
+    sim_true_alignment_function = sim_true_alignment_function,
     rng_seed = rng_seed,
     fasta_filename = fasta_filename
   )

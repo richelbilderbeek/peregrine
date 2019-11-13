@@ -1,5 +1,6 @@
 test_that("use", {
-  testthat::expect_error(
+  # Used to give an error, thanks to rappdirs for fixing this
+  testthat::expect_silent(
     peregrine::check_pff_beast2_options(beastier::create_beast2_options())
   )
 
