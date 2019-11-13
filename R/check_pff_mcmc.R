@@ -3,7 +3,7 @@
 #' @export
 check_pff_mcmc <- function(mcmc) {
 
-  beastier::check_mcmc(mcmc)
+  beautier::check_mcmc(mcmc)
 
   if (!peregrine::is_pff(mcmc$tracelog$filename)) {
     stop("Peregrine-unfriendly filename for 'mcmc$tracelog$filename'")

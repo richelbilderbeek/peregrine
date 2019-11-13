@@ -1,6 +1,6 @@
 test_that("use", {
   beast2_options <- beastier::create_beast2_options()
-  expect_false(is_pff_beast2_options(beast2_options))
+  expect_true(is_pff_beast2_options(beast2_options))
   beast2_options <- to_pff_beast2_options(beast2_options)
   expect_true(is_pff_beast2_options(beast2_options))
 

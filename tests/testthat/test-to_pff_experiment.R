@@ -1,6 +1,6 @@
 test_that("use", {
   experiment <- pirouette::create_test_experiment()
-  expect_false(is_pff_experiment(experiment))
+  expect_true(is_pff_experiment(experiment))
   experiment <- to_pff_experiment(experiment)
   expect_true(is_pff_experiment(experiment))
 
