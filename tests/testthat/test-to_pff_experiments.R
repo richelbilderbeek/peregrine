@@ -3,10 +3,12 @@ test_that("use, all cand", {
   # Takes too long
   if (!beastier::is_on_travis()) return()
 
-  experiments <- pirouette::create_all_experiments()
-  expect_false(are_pff_experiments(experiments))
-  experiments <- to_pff_experiments(experiments)
-  expect_true(are_pff_experiments(experiments))
+  pir_params <- pirouette::create_test_pir_params()
+  pir_params$experiments <- pirouette::create_all_experiments()
+  pir_params <- pirouette::init_pir_params(pir_params)
+  expect_false(are_pff_experiments(pir_params$experiments))
+  pir_params$experiments <- to_pff_experiments(pir_params$experiments)
+  expect_true(are_pff_experiments(pir_params$experiments))
 })
 
 test_that("use, gen", {
