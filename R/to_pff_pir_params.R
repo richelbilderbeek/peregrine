@@ -25,5 +25,8 @@ to_pff_pir_params <- function(pir_params) {
   pir_params$evidence_filename <- peregrine::to_pff(
     pir_params$evidence_filename
   )
+
+  peregrine::check_pff_pir_params(pir_params)
+
   pir_params
 }

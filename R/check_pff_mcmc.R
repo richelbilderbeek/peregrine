@@ -8,6 +8,11 @@ check_pff_mcmc <- function(mcmc) {
   if (!peregrine::is_pff(mcmc$tracelog$filename)) {
     stop("Peregrine-unfriendly filename for 'mcmc$tracelog$filename'")
   }
+  if (!peregrine::is_pff(mcmc$screenlog$filename)) {
+    stop(
+      "Peregrine-unfriendly filename for 'mcmc$screenlog$filename'"
+    )
+  }
   if (!peregrine::is_pff(mcmc$treelog$filename)) {
     stop(
       "Peregrine-unfriendly filename for 'mcmc$treelog$filename'"

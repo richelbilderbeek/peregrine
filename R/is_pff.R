@@ -19,6 +19,10 @@
 #' @author Richel J.C. Bilderbeek
 #' @export
 is_pff <- function(filename) {
+  testit::assert(length(filename) == 1)
+  testit::assert(is.character(filename))
+  testit::assert(nchar(filename) > 0)
+
 
   # Convert to canonical form
   filename <- gsub(pattern = "\\\\", replacement = "/", x = filename)
