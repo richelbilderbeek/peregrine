@@ -16,7 +16,27 @@ create_pff_mcmc(chain_length = beautier::create_mcmc()$chain_length,
   peregrine::get_pff_tempfile()))
 }
 \arguments{
-\item{chain_length}{something}
+\item{chain_length}{length of the MCMC chain}
+
+\item{store_every}{number of states the MCMC will process
+before the posterior's state will be saved to file.
+Use -1 or \code{NA} to use the default frequency.}
+
+\item{pre_burnin}{number of burn in samples taken before entering
+the main loop}
+
+\item{n_init_attempts}{number of initialization attempts before failing}
+
+\item{sample_from_prior}{set to \link{TRUE} to sample from the prior}
+
+\item{tracelog}{a \code{tracelog},
+as created by \link{create_tracelog}}
+
+\item{screenlog}{a \code{screenlog},
+as created by \link{create_screenlog}}
+
+\item{treelog}{a \code{treelog},
+as created by \link{create_treelog}}
 }
 \description{
 Create mcmc that has Peregrine friendly filenames

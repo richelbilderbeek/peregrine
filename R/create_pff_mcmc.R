@@ -1,5 +1,5 @@
 #' Create mcmc that has Peregrine friendly filenames
-#' @inheritParams default_params_doc
+#' @inheritParams beautier::create_mcmc
 #' @author Giovanni Laudanno, Richel J.C. Bilderbeek
 #' @export
 create_pff_mcmc <- function(
