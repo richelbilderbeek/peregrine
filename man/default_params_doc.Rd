@@ -15,10 +15,10 @@ default_params_doc(alignment, alignment_params, beast2_options,
   parameter_filename, parameters_filename, pattern, pff_tmpdir, phylo,
   pir_params, posterior_trees, rng_seed, rng_seed_twin_alignment,
   rng_seed_twin_tree, root_sequence, sample_interval, seed,
-  sequence_length, site_model, site_models, sub_chain_length, tree,
-  tree_prior, tree_priors, tree_filename, trees_filename,
-  twin_alignment_filename, twin_evidence_filename, twin_model,
-  twin_tree_filename, twinning_params, verbose)
+  sequence_length, sim_true_alignment_fun, site_model, site_models,
+  sub_chain_length, tree, tree_prior, tree_priors, tree_filename,
+  trees_filename, twin_alignment_filename, twin_evidence_filename,
+  twin_model, twin_tree_filename, twinning_params, verbose)
 }
 \arguments{
 \item{alignment}{a DNA alignment}
@@ -143,6 +143,16 @@ makes a measurement}
 \item{seed}{a random number generator seed}
 
 \item{sequence_length}{the length of each DNA sequence in an alignment}
+
+\item{sim_true_alignment_fun}{function to simulate a
+true alignment with.
+This function must have two arguments,
+called \code{true_phylogeny} (which will hold the true phylogeny)
+and \code{root_sequence} (which holds the DNA root sequence).
+The return type must be \link[ape]{DNAbin}.
+
+Use \link[pirouette]{check_sim_true_alignment_fun}
+to verify if the function has the right signature and output.}
 
 \item{site_model}{a nucleotide substitution model,
 as created by \link[beautier]{create_site_model}}

@@ -4,20 +4,26 @@
 \alias{create_pff_alignment_params}
 \title{Create alignment parameters with PFF}
 \usage{
-create_pff_alignment_params(
-  root_sequence = pirouette::create_alignment_params()$root_sequence,
-  mutation_rate = pirouette::create_alignment_params()$mutation_rate,
-  site_model = pirouette::create_alignment_params()$site_model,
-  clock_model = pirouette::create_alignment_params()$clock_model,
+
+  create_pff_alignment_params(root_sequence = pirouette::create_alignment_params()$root_sequence,
+  sim_true_alignment_fun = pirouette::create_alignment_params()$sim_true_alignment_fun,
   rng_seed = pirouette::create_alignment_params()$rng_seed,
-  fasta_filename = get_pff_tempfile(
-    pattern = "alignment_", fileext = ".fasta"
-  )
-)
+  fasta_filename = peregrine::get_pff_tempfile(pattern = "alignment_",
+  fileext = ".fasta"))
 }
 \arguments{
 \item{root_sequence}{the DNA sequence at the root of the phylogeny.
 By default, this will consist out of an equal amount of each letter}
+
+\item{sim_true_alignment_fun}{function to simulate a
+true alignment with.
+This function must have two arguments,
+called \code{true_phylogeny} (which will hold the true phylogeny)
+and \code{root_sequence} (which holds the DNA root sequence).
+The return type must be \link[ape]{DNAbin}.
+
+Use \link[pirouette]{check_sim_true_alignment_fun}
+to verify if the function has the right signature and output.}
 
 \item{rng_seed}{a random number generator seed}
 
