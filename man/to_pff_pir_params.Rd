@@ -3,7 +3,7 @@
 \name{to_pff_pir_params}
 \alias{to_pff_pir_params}
 \title{Convert a \code{pir_params} to a \code{pir_params}
-with Peregrine friendly filenames}
+with Peregrine friendly filenames.}
 \usage{
 to_pff_pir_params(pir_params)
 }
@@ -13,5 +13,9 @@ as created by \link[pirouette]{create_pir_params}}
 }
 \description{
 Convert a \code{pir_params} to a \code{pir_params}
-with Peregrine friendly filenames
+with Peregrine friendly filenames.
+}
+\note{
+\link{to_pff_pir_params} will also initialize the
+\code{pir_params}, by calling \link[pirouette]{init_pir_params}
 }

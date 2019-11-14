@@ -19,14 +19,6 @@ create_pff_alignment_params(
 \item{root_sequence}{the DNA sequence at the root of the phylogeny.
 By default, this will consist out of an equal amount of each letter}
 
-\item{mutation_rate}{something}
-
-\item{site_model}{a nucleotide substitution model,
-as created by \link[beautier]{create_site_model}}
-
-\item{clock_model}{a clock model,
-as created by \link[beautier]{create_clock_model}}
-
 \item{rng_seed}{a random number generator seed}
 
 \item{fasta_filename}{name of a FASTA file}

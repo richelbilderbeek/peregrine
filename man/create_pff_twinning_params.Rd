@@ -6,10 +6,9 @@
 \usage{
 
   create_pff_twinning_params(rng_seed_twin_tree = pirouette::create_twinning_params()$rng_seed_twin_tree,
+  sim_twin_tree_fun = pirouette::create_twinning_params()$sim_twin_tree_fun,
   rng_seed_twin_alignment = pirouette::create_twinning_params()$rng_seed_twin_alignment,
-  twin_model = pirouette::create_twinning_params()$twin_model,
-  method = pirouette::create_twinning_params()$method,
-  n_replicates = pirouette::create_twinning_params()$n_replicates,
+  sim_twin_alignment_fun = pirouette::create_twinning_params()$sim_twin_alignment_fun,
   twin_tree_filename = peregrine::get_pff_tempfile(pattern =
   "tree_twin_", fileext = ".newick"),
   twin_alignment_filename = peregrine::get_pff_tempfile(pattern =
@@ -23,25 +22,6 @@ simulation of a twin tree}
 
 \item{rng_seed_twin_alignment}{the random number generator seed
 as used in the simulation of a twin alignment}
-
-\item{twin_model}{the model you want to use to generate the twin tree:
-\itemize{
-  \item \code{birth_death}: birth death
-  \item \code{yule}: Yule or pure-birth
-}
-See \link[pirouette]{get_twin_models} to see all possible
-values of \code{twin_model}}
-
-\item{method}{determines how to create the twin tree
-\itemize{
-    \item 'random_tree' just produces a random tree;
-    \item 'max_clade_cred' simulates \code{n_replicates} trees and
-      uses \link[phangorn]{maxCladeCred} to create a consensus tree;
-    \item 'max_likelihood' simulates \code{n_replicates} trees
-     and selects the most likely;
-  }}
-
-\item{n_replicates}{number of replicates}
 
 \item{twin_tree_filename}{name of the (\code{.newick}) file the twin
 tree will be saved to}

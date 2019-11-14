@@ -19,7 +19,6 @@ BugReports: https://github.com/richelbilderbeek/peregrine/issues
 Language: en-US
 Depends:
 Imports:
-    assertive,
     beastier,
     beautier,
     pirouette,
@@ -27,5 +26,6 @@ Imports:
     stringr,
     testit    
 Suggests:
+    assertive,
     testthat (>= 2.1.0)
 RoxygenNote: 6.1.1
