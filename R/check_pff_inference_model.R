@@ -4,7 +4,7 @@
 #' @inheritParams default_params_doc
 #' @export
 check_pff_inference_model <- function(inference_model) {
-  pirouette::check_pff_inference_model(inference_model)
+  beautier::check_inference_model(inference_model)
 
   if (is.character(inference_model$tipdates_filename) &&
     !is_pff(inference_model$tipdates_filename)) {
