@@ -9,14 +9,14 @@ r_github_packages:
   - richelbilderbeek/nLTT
   - ropensci/spelling
   - ropensci/beastier
-  - richelbilderbeek/beautier@develop
+  - richelbilderbeek/beautier
   - richelbilderbeek/tracerer
-  - richelbilderbeek/beastier@develop
-  - richelbilderbeek/mauricer@develop
-  - richelbilderbeek/babette@develop
-  - richelbilderbeek/mcbette@develop
-  - thijsjanzen/nodeSub@richel
-  - richelbilderbeek/pirouette@richel
+  - richelbilderbeek/beastier
+  - richelbilderbeek/mauricer
+  - richelbilderbeek/babette
+  - richelbilderbeek/mcbette
+  - thijsjanzen/nodeSub
+  - richelbilderbeek/pirouette
 
 before_install:
   - sudo add-apt-repository -y ppa:opencpu/imagemagick
