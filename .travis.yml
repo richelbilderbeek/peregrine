@@ -30,8 +30,9 @@ before_install:
   - sudo pip install proselint
 
 script:
-  - travis_wait 60 R CMD build .
-  - travis_wait 60 R CMD check *tar.gz
+  - echo "Caching packages"
+  #- travis_wait 60 R CMD build .
+  #- travis_wait 60 R CMD check *tar.gz
 
 after_success:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then Rscript -e 'lintr::lint_package()'; fi
