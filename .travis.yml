@@ -8,12 +8,11 @@ r_github_packages:
   - MangoTheCat/goodpractice
   - richelbilderbeek/nLTT
   - ropensci/spelling
+  - ropensci/beautier
+  - ropensci/tracerer
   - ropensci/beastier
-  - richelbilderbeek/beautier
-  - richelbilderbeek/tracerer
-  - richelbilderbeek/beastier
-  - richelbilderbeek/mauricer
-  - richelbilderbeek/babette
+  - ropensci/mauricer
+  - ropensci/babette
   - richelbilderbeek/mcbette
   - thijsjanzen/nodeSub
   - richelbilderbeek/pirouette
