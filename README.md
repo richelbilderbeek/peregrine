@@ -49,7 +49,7 @@ filename | can_create_file
 /home/tmp.txt | FALSE
 
 
-###Can start BEAST2?
+### Can start BEAST2?
 
 prefix | can_start_beast
 ---|---
