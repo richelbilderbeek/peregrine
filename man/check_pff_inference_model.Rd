@@ -6,6 +6,12 @@
 \usage{
 check_pff_inference_model(inference_model)
 }
+\arguments{
+\item{inference_model}{an Bayesian phylogenetic inference model,
+as can be created by \code{\link{create_inference_model}}.
+An inference model is the complete model setup in which a site model,
+clock model, tree prior and more are specified.}
+}
 \description{
 Will \link{stop} if not
 }

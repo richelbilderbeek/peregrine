@@ -20,8 +20,56 @@
 \item{rng_seed_twin_tree}{the random number generator seed as used in the
 simulation of a twin tree}
 
+\item{sim_twin_tree_fun}{function to simulate a twin tree with.
+This function must have one argument called \code{phylogeny}
+of type \link[ape]{phylo} and have a return type of type \link[ape]{phylo}
+as well.
+
+Some standard functions:\cr
+\itemize{
+  \item Use \link{create_sim_yule_twin_tree_fun} to use a
+    Yule (aka Pure Birth) process
+  \item Use \link{create_copy_twin_tree_from_true_fun} to for a function
+    that copies the true tree
+  \item Use \link{get_sim_bd_twin_tree_fun} to use a
+    Birth-Death process
+}}
+
 \item{rng_seed_twin_alignment}{the random number generator seed
 as used in the simulation of a twin alignment}
+
+\item{sim_twin_alignment_fun}{function to simulate a
+twin alignment with.
+This function must have two arguments called \code{twin_phylogeny} (which
+will hold the twin phylogeny) and \code{true_alignment} (which will
+hold the alignment simulated from the true phylogeny). The
+return type must be \link[ape]{DNAbin}.
+
+Use \link{check_sim_twin_alignment_fun} to verify if the function
+has the right signature and output.
+
+Some standard functions:\cr
+\itemize{
+  \item Use \link{get_copy_true_alignment_fun}
+    to get a function
+    (\link{copy_true_alignment})
+    that copies a true to alignment to create a twin alignment
+  \item Use \link{get_sim_twin_alignment_with_std_site_model_fun}
+    to get a function
+    (\link{sim_twin_alignment_with_std_site_model})
+    that simulates a twin alignment using a standard site model
+  \item Use \link{get_sim_twin_alignment_with_same_n_mutation_fun}
+    to get a function
+    (\link{sim_twin_alignment_with_same_n_mutation})
+    that simulates -using a standard model- a twin alignment with as much
+    mutations compared to the root sequence as the true alignment has
+  \item Use \link{sim_twin_alignment_with_lns_site_model}
+    that simulates a twin alignment using a linked node substitution
+    model
+  \item Use \link{sim_twin_alignment_with_uns_site_model}
+    that simulates a twin alignment using an unlinked node substitution
+    model
+}}
 
 \item{twin_tree_filename}{name of the (\code{.newick}) file the twin
 tree will be saved to}

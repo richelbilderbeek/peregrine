@@ -1,7 +1,7 @@
 #' Check if the inference model is Peregrine friendly
 #'
 #' Will \link{stop} if not
-#' @inheritParams default_params_doc
+#' @inheritParams beautier::check_inference_model
 #' @export
 check_pff_inference_model <- function(inference_model) {
   beautier::check_inference_model(inference_model)

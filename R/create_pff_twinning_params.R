@@ -1,5 +1,5 @@
 #' Create a PFF twinning parameter set
-#' @inheritParams default_params_doc
+#' @inheritParams pirouette::create_twinning_params
 #' @export
 create_pff_twinning_params <- function(
   rng_seed_twin_tree = pirouette::create_twinning_params()$rng_seed_twin_tree,

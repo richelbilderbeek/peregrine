@@ -9,8 +9,8 @@ default_params_doc(alignment, alignment_params, beast2_options,
   beast2_working_dir, chain_length, clock_model, clock_models, crown_age,
   error_measure_params, evidence_filename, exclude_model, experiment,
   experiments, experiment_type, fasta_filename, fileext, filename,
-  folder_name, input_filename, mcmc, mcmc_chain_length, method,
-  misc_params, mrca_prior, mutation_rate, n_replicates,
+  folder_name, inference_model, input_filename, mcmc, mcmc_chain_length,
+  method, misc_params, mrca_prior, mutation_rate, n_replicates,
   output_log_filename, output_trees_filenames, output_state_filename,
   parameter_filename, parameters_filename, pattern, pff_tmpdir, phylo,
   pir_params, posterior_trees, rng_seed, rng_seed_twin_alignment,
@@ -70,6 +70,9 @@ can be either \code{test} or \code{full}}
 \item{filename}{the file's name, without the path}
 
 \item{folder_name}{name of the main folder}
+
+\item{inference_model}{a BEAST2 inference model,
+as created by \link[beautier]{create_inference_model}}
 
 \item{input_filename}{BEAST2 input file name,
 as used in \link[beastier]{create_beast2_options}}

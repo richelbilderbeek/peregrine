@@ -32,6 +32,8 @@
 #' @param fileext see \link{tempfile}
 #' @param filename the file's name, without the path
 #' @param folder_name name of the main folder
+#' @param inference_model a BEAST2 inference model,
+#' as created by \link[beautier]{create_inference_model}
 #' @param input_filename BEAST2 input file name,
 #' as used in \link[beastier]{create_beast2_options}
 #' @param mcmc an MCMC,
@@ -143,6 +145,7 @@ default_params_doc <- function(
   fileext,
   filename,
   folder_name,
+  inference_model,
   input_filename,
   mcmc,
   mcmc_chain_length,
