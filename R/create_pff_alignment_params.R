@@ -3,15 +3,15 @@
 #' @export
 create_pff_alignment_params <- function(
   root_sequence = pirouette::create_alignment_params()$root_sequence,
-  sim_true_alignment_fun =
-    pirouette::create_alignment_params()$sim_true_alignment_fun,
+  sim_trall_fun =
+    pirouette::create_alignment_params()$sim_trall_fun,
   rng_seed = pirouette::create_alignment_params()$rng_seed,
   fasta_filename =
     peregrine::get_pff_tempfile(pattern = "alignment_", fileext = ".fasta") # nolint peregrine function
 ) {
   alignment_params <- pirouette::create_alignment_params(
     root_sequence = root_sequence,
-    sim_true_alignment_fun = sim_true_alignment_fun,
+    sim_trall_fun = sim_trall_fun,
     rng_seed = rng_seed,
     fasta_filename = fasta_filename
   )

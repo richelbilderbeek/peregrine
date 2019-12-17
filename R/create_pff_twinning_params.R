@@ -7,8 +7,8 @@ create_pff_twinning_params <- function(
     pirouette::create_twinning_params()$sim_twin_tree_fun,
   rng_seed_twin_alignment
     = pirouette::create_twinning_params()$rng_seed_twin_alignment,
-  sim_twin_alignment_fun =
-    pirouette::create_twinning_params()$sim_twin_alignment_fun,
+  sim_twal_fun =
+    pirouette::create_twinning_params()$sim_twal_fun,
   twin_tree_filename = peregrine::get_pff_tempfile(
     pattern = "tree_twin_", fileext = ".newick"
   ),
@@ -23,7 +23,7 @@ create_pff_twinning_params <- function(
     rng_seed_twin_tree = rng_seed_twin_tree,
     sim_twin_tree_fun = sim_twin_tree_fun,
     rng_seed_twin_alignment = rng_seed_twin_alignment,
-    sim_twin_alignment_fun = sim_twin_alignment_fun,
+    sim_twal_fun = sim_twal_fun,
     twin_tree_filename = twin_tree_filename,
     twin_alignment_filename = twin_alignment_filename,
     twin_evidence_filename = twin_evidence_filename
