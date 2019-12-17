@@ -82,14 +82,14 @@
 #'   makes a measurement
 #' @param sequence_length the length of each DNA sequence in an alignment
 #' @param seed a random number generator seed
-#' @param sim_trall_fun function to simulate a
+#' @param sim_tral_fun function to simulate a
 #' true alignment with.
 #' This function must have two arguments,
 #' called \code{true_phylogeny} (which will hold the true phylogeny)
 #' and \code{root_sequence} (which holds the DNA root sequence).
 #' The return type must be \link[ape]{DNAbin}.
 #'
-#' Use \link[pirouette]{check_sim_trall_fun}
+#' Use \link[pirouette]{check_sim_tral_fun}
 #' to verify if the function has the right signature and output.
 #' @param site_model a nucleotide substitution model,
 #'   as created by \link[beautier]{create_site_model}
@@ -171,7 +171,7 @@ default_params_doc <- function(
   sample_interval,
   seed,
   sequence_length,
-  sim_trall_fun,
+  sim_tral_fun,
   site_model,
   site_models,
   sub_chain_length,
