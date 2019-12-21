@@ -4,9 +4,10 @@
 \alias{create_pff_beast2_options}
 \title{Create BEAST2 options that has Peregrine friendly filenames}
 \usage{
-
-  create_pff_beast2_options(input_filename = peregrine::get_pff_tempfile(),
-  output_state_filename = peregrine::get_pff_tempfile())
+create_pff_beast2_options(
+  input_filename = peregrine::get_pff_tempfile(),
+  output_state_filename = peregrine::get_pff_tempfile()
+)
 }
 \arguments{
 \item{input_filename}{BEAST2 input file name,

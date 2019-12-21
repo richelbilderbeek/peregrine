@@ -4,42 +4,43 @@
 \alias{create_pff_alignment_params}
 \title{Create alignment parameters with PFF}
 \usage{
-
-  create_pff_alignment_params(root_sequence = pirouette::create_alignment_params()$root_sequence,
-  sim_true_alignment_fun = pirouette::create_alignment_params()$sim_true_alignment_fun,
+create_pff_alignment_params(
+  root_sequence = pirouette::create_alignment_params()$root_sequence,
+  sim_tral_fun = pirouette::create_alignment_params()$sim_tral_fun,
   rng_seed = pirouette::create_alignment_params()$rng_seed,
-  fasta_filename = peregrine::get_pff_tempfile(pattern = "alignment_",
-  fileext = ".fasta"))
+  fasta_filename = peregrine::get_pff_tempfile(pattern = "alignment_", fileext =
+    ".fasta")
+)
 }
 \arguments{
 \item{root_sequence}{the DNA sequence at the root of the phylogeny.
 By default, this will consist out of an equal amount of each letter
-Use \link{check_root_sequence} to check if a root sequence is valid.}
+Use \link[pirouette]{check_root_sequence} to check if a root sequence is valid.}
 
-\item{sim_true_alignment_fun}{function to simulate a
+\item{sim_tral_fun}{function to simulate a
 true alignment with.
 This function must have two arguments,
 called \code{true_phylogeny} (which will hold the true phylogeny)
 and \code{root_sequence} (which holds the DNA root sequence).
 The return type must be \link[ape]{DNAbin}.
 
-Use \link{check_sim_true_alignment_fun} to verify if the function
+Use \link[pirouette]{check_sim_tral_fun} to verify if the function
 has the right signature and output.
 
 Some standard functions:\cr
 \itemize{
-  \item Use \link{get_sim_true_alignment_with_std_site_model_fun}
-  to get a function (\link{sim_true_alignment_with_std_site_model})
+  \item Use \link[pirouette]{get_sim_tral_with_std_nsm_fun}
+  to get a function (\link[pirouette]{sim_tral_with_std_nsm})
   the use a standard site model.
   \item Use
-  \link{get_sim_true_alignment_with_lns_site_model_fun}
+  \link[pirouette]{get_sim_tral_with_lns_nsm_fun}
   to get a function
-  (\link{sim_true_alignment_with_lns_site_model})
+  (\link[pirouette]{sim_tral_with_lns_nsm})
   the use a linked node substitution site model.
   \item Use
-  \link{get_sim_true_alignment_with_uns_site_model_fun}
+  \link[pirouette]{get_sim_tral_with_uns_nsm_fun}
   to get a function
-  (\link{sim_true_alignment_with_uns_site_model})
+  (\link[pirouette]{sim_tral_with_uns_nsm})
   the use an unlinked node substitution site model.
 }}
 

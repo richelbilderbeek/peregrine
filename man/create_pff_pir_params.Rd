@@ -4,11 +4,14 @@
 \alias{create_pff_pir_params}
 \title{Create a \code{pir_params} with PFFs}
 \usage{
-create_pff_pir_params(alignment_params, twinning_params = NA,
+create_pff_pir_params(
+  alignment_params,
+  twinning_params = NA,
   experiments = list(pirouette::create_experiment()),
   error_measure_params = pirouette::create_error_measure_params(),
-  evidence_filename = get_pff_tempfile(pattern = "evidence_", fileext =
-  ".csv"), verbose = FALSE)
+  evidence_filename = get_pff_tempfile(pattern = "evidence_", fileext = ".csv"),
+  verbose = FALSE
+)
 }
 \arguments{
 \item{alignment_params}{parameters for creating an alignment,

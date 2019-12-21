@@ -5,20 +5,67 @@
 \title{This function does nothing. It is intended to inherit is parameters'
 documentation.}
 \usage{
-default_params_doc(alignment, alignment_params, beast2_options,
-  beast2_working_dir, chain_length, clock_model, clock_models, crown_age,
-  error_measure_params, evidence_filename, exclude_model, experiment,
-  experiments, experiment_type, fasta_filename, fileext, filename,
-  folder_name, inference_model, input_filename, mcmc, mcmc_chain_length,
-  method, misc_params, mrca_prior, mutation_rate, n_replicates,
-  output_log_filename, output_trees_filenames, output_state_filename,
-  parameter_filename, parameters_filename, pattern, pff_tmpdir, phylo,
-  pir_params, posterior_trees, rng_seed, rng_seed_twin_alignment,
-  rng_seed_twin_tree, root_sequence, sample_interval, seed,
-  sequence_length, sim_true_alignment_fun, site_model, site_models,
-  sub_chain_length, tree, tree_prior, tree_priors, tree_filename,
-  trees_filename, twin_alignment_filename, twin_evidence_filename,
-  twin_model, twin_tree_filename, twinning_params, verbose)
+default_params_doc(
+  alignment,
+  alignment_params,
+  beast2_options,
+  beast2_working_dir,
+  chain_length,
+  clock_model,
+  clock_models,
+  crown_age,
+  error_measure_params,
+  evidence_filename,
+  exclude_model,
+  experiment,
+  experiments,
+  experiment_type,
+  fasta_filename,
+  fileext,
+  filename,
+  folder_name,
+  inference_model,
+  input_filename,
+  mcmc,
+  mcmc_chain_length,
+  method,
+  misc_params,
+  mrca_prior,
+  mutation_rate,
+  n_replicates,
+  output_log_filename,
+  output_trees_filenames,
+  output_state_filename,
+  parameter_filename,
+  parameters_filename,
+  pattern,
+  pff_tmpdir,
+  phylo,
+  pir_params,
+  posterior_trees,
+  rng_seed,
+  rng_seed_twin_alignment,
+  rng_seed_twin_tree,
+  root_sequence,
+  sample_interval,
+  seed,
+  sequence_length,
+  sim_tral_fun,
+  site_model,
+  site_models,
+  sub_chain_length,
+  tree,
+  tree_prior,
+  tree_priors,
+  tree_filename,
+  trees_filename,
+  twin_alignment_filename,
+  twin_evidence_filename,
+  twin_model,
+  twin_tree_filename,
+  twinning_params,
+  verbose
+)
 }
 \arguments{
 \item{alignment}{a DNA alignment}
@@ -147,14 +194,14 @@ makes a measurement}
 
 \item{sequence_length}{the length of each DNA sequence in an alignment}
 
-\item{sim_true_alignment_fun}{function to simulate a
+\item{sim_tral_fun}{function to simulate a
 true alignment with.
 This function must have two arguments,
 called \code{true_phylogeny} (which will hold the true phylogeny)
 and \code{root_sequence} (which holds the DNA root sequence).
 The return type must be \link[ape]{DNAbin}.
 
-Use \link[pirouette]{check_sim_true_alignment_fun}
+Use \link[pirouette]{check_sim_tral_fun}
 to verify if the function has the right signature and output.}
 
 \item{site_model}{a nucleotide substitution model,

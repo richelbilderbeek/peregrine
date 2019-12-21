@@ -6,11 +6,13 @@
 \link[pirouette]{create_all_experiments}
 with PFF}
 \usage{
-create_all_pff_experiments(site_models = beautier::create_site_models(),
+create_all_pff_experiments(
+  site_models = beautier::create_site_models(),
   clock_models = beautier::create_clock_models(),
   tree_priors = beautier::create_tree_priors(),
   mcmc = peregrine::create_pff_mcmc(store_every = 1000),
-  exclude_model = NA)
+  exclude_model = NA
+)
 }
 \arguments{
 \item{site_models}{a list of one or more site models,

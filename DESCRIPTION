@@ -28,4 +28,4 @@ Imports:
 Suggests:
     assertive,
     testthat (>= 2.1.0)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2

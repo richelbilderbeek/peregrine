@@ -4,13 +4,14 @@
 \alias{create_test_pff_pir_params}
 \title{Create a \code{pir_params} with PFFs}
 \usage{
-
-  create_test_pff_pir_params(alignment_params = pirouette::create_test_alignment_params(),
+create_test_pff_pir_params(
+  alignment_params = pirouette::create_test_alignment_params(),
   twinning_params = NA,
   experiments = list(peregrine::create_test_pff_gen_experiment()),
   error_measure_params = pirouette::create_error_measure_params(),
   evidence_filename = pirouette::get_temp_evidence_filename(),
-  verbose = FALSE)
+  verbose = FALSE
+)
 }
 \arguments{
 \item{alignment_params}{parameters for creating an alignment,

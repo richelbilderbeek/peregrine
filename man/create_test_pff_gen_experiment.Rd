@@ -4,12 +4,12 @@
 \alias{create_test_pff_gen_experiment}
 \title{Creates a Peregrine-friendly generative experiment for testing}
 \usage{
-
-  create_test_pff_gen_experiment(mrca_prior = beautier::create_mrca_prior(mrca_distr
-  = beautier::create_normal_distr(mean = 15, sigma = 0.001),
-  is_monophyletic = TRUE), mcmc = peregrine::create_pff_mcmc(chain_length
-  = 2000, store_every = 1000),
-  beast2_options = peregrine::create_pff_beast2_options())
+create_test_pff_gen_experiment(
+  mrca_prior = beautier::create_mrca_prior(mrca_distr =
+    beautier::create_normal_distr(mean = 15, sigma = 0.001), is_monophyletic = TRUE),
+  mcmc = peregrine::create_pff_mcmc(chain_length = 2000, store_every = 1000),
+  beast2_options = peregrine::create_pff_beast2_options()
+)
 }
 \arguments{
 \item{mrca_prior}{an MRCA priors,

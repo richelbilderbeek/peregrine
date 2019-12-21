@@ -4,16 +4,16 @@
 \alias{create_pff_mcmc}
 \title{Create mcmc that has Peregrine friendly filenames}
 \usage{
-create_pff_mcmc(chain_length = beautier::create_mcmc()$chain_length,
+create_pff_mcmc(
+  chain_length = beautier::create_mcmc()$chain_length,
   store_every = beautier::create_mcmc()$store_every,
   pre_burnin = beautier::create_mcmc()$pre_burnin,
   n_init_attempts = beautier::create_mcmc()$n_init_attempts,
   sample_from_prior = beautier::create_mcmc()$sample_from_prior,
-  tracelog = beautier::create_tracelog(filename =
-  peregrine::get_pff_tempfile()),
+  tracelog = beautier::create_tracelog(filename = peregrine::get_pff_tempfile()),
   screenlog = beautier::create_screenlog(filename = ""),
-  treelog = beautier::create_treelog(filename =
-  peregrine::get_pff_tempfile()))
+  treelog = beautier::create_treelog(filename = peregrine::get_pff_tempfile())
+)
 }
 \arguments{
 \item{chain_length}{length of the MCMC chain}
@@ -30,13 +30,13 @@ the main loop}
 \item{sample_from_prior}{set to \link{TRUE} to sample from the prior}
 
 \item{tracelog}{a \code{tracelog},
-as created by \link{create_tracelog}}
+as created by \link[beautier]{create_tracelog}}
 
 \item{screenlog}{a \code{screenlog},
-as created by \link{create_screenlog}}
+as created by \link[beautier]{create_screenlog}}
 
 \item{treelog}{a \code{treelog},
-as created by \link{create_treelog}}
+as created by \link[beautier]{create_treelog}}
 }
 \description{
 Create mcmc that has Peregrine friendly filenames
