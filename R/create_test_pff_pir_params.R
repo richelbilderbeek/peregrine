@@ -12,7 +12,7 @@ create_test_pff_pir_params <- function(
   evidence_filename = pirouette::get_temp_evidence_filename(),
   verbose = FALSE
 ) {
-  pir_params <- peregrine::create_pff_pir_params( # nolint peregrine function
+  pir_params <- peregrine::create_pff_pir_params(
     alignment_params = alignment_params,
     twinning_params = twinning_params,
     experiments = experiments,

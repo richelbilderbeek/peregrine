@@ -28,6 +28,6 @@ create_pff_twinning_params <- function(
     twin_alignment_filename = twin_alignment_filename,
     twin_evidence_filename = twin_evidence_filename
   )
-  peregrine::check_pff_twinning_params(twinning_params) # nolint peregrine function
+  peregrine::check_pff_twinning_params(twinning_params)
   twinning_params
 }

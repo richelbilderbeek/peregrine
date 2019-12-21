@@ -4,7 +4,7 @@
 is_pff_experiment <- function(experiment) {
   result <- FALSE
   tryCatch({
-    peregrine::check_pff_experiment(experiment) # nolint peregrine function
+    peregrine::check_pff_experiment(experiment)
     result <- TRUE
   }, error = function(e) {} # nolint ignore e
   )

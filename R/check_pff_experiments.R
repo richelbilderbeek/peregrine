@@ -4,6 +4,6 @@
 check_pff_experiments <- function(experiments) {
   pirouette::check_experiments(experiments)
   for (i in seq_along(experiments)) {
-    peregrine::check_pff_experiment(experiments[[i]]) # nolint peregrine function
+    peregrine::check_pff_experiment(experiments[[i]])
   }
 }

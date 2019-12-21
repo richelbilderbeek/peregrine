@@ -4,13 +4,13 @@
 #' @export
 to_pff_experiments <- function(experiments) {
 
-  pirouette::check_experiments(experiments) # nolint peregrine function
+  pirouette::check_experiments(experiments)
 
   first_pff_cand_experiment <- NA
   for (experiment in experiments) {
     if (experiment$inference_conditions$model_type == "candidate") {
-      first_pff_cand_experiment <- peregrine::to_pff_experiment(experiment) # nolint peregrine function
-      peregrine::check_pff_experiment(first_pff_cand_experiment) # nolint peregrine function
+      first_pff_cand_experiment <- peregrine::to_pff_experiment(experiment)
+      peregrine::check_pff_experiment(first_pff_cand_experiment)
       break
     }
   }
@@ -18,7 +18,7 @@ to_pff_experiments <- function(experiments) {
   for (i in seq_along(experiments)) {
     experiment <- experiments[[i]]
     if (experiment$inference_conditions$model_type == "generative") {
-      experiments[[i]] <- peregrine::to_pff_experiment(experiment) # nolint peregrine function
+      experiments[[i]] <- peregrine::to_pff_experiment(experiment)
     } else {
       testit::assert(experiment$inference_conditions$model_type == "candidate")
       experiments[[i]]$errors_filename <- first_pff_cand_experiment$errors_filename # nolint yup it's long
@@ -27,9 +27,9 @@ to_pff_experiments <- function(experiments) {
       experiments[[i]]$inference_model$mcmc$tracelog$filename <- first_pff_cand_experiment$inference_model$mcmc$tracelog$filename # nolint yup it's long
       experiments[[i]]$inference_model$mcmc$treelog$filename <- first_pff_cand_experiment$inference_model$mcmc$treelog$filename # nolint yup it's long
     }
-    peregrine::check_pff_experiment(experiments[[i]]) # nolint peregrine function
+    peregrine::check_pff_experiment(experiments[[i]])
   }
 
-  peregrine::check_pff_experiments(experiments) # nolint peregrine function
+  peregrine::check_pff_experiments(experiments)
   experiments
 }

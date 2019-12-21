@@ -4,5 +4,5 @@
 #' @export
 is_on_peregrine <- function() {
   peregrine::is_on_peregrine_login_node() ||
-    peregrine::is_on_peregrine_worker_node() # nolint peregrine function
+    peregrine::is_on_peregrine_worker_node()
 }

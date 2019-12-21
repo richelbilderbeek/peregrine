@@ -17,7 +17,7 @@ get_pff_tempfile <- function(
   pff_tmpdir = get_pff_tempdir(),
   fileext = ""
 ) {
-  testit::assert(is_pff(pff_tmpdir)) # nolint peregrine function
+  testit::assert(peregrine::is_pff(pff_tmpdir))
   filename <- tempfile(
     pattern = pattern,
     tmpdir = pff_tmpdir,
