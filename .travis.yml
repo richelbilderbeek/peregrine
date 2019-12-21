@@ -37,3 +37,5 @@ after_success:
 
 after_failure:
   - cat /home/travis/build/richelbilderbeek/peregrine/peregrine.Rcheck/00check.log
+  - cat /home/travis/build/richelbilderbeek/peregrine/peregrine.Rcheck/00install.out
+
