@@ -6,7 +6,7 @@ test_that("use, all cand", {
   pir_params <- pirouette::create_test_pir_params()
   pir_params$experiments <- pirouette::create_all_experiments()
   pir_params <- pirouette::init_pir_params(pir_params)
-  expect_false(are_pff_experiments(pir_params$experiments))
+  expect_true(are_pff_experiments(pir_params$experiments))
   pir_params$experiments <- to_pff_experiments(pir_params$experiments)
   expect_true(are_pff_experiments(pir_params$experiments))
 })
