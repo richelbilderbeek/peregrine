@@ -24,6 +24,6 @@ to_pff_beast2_options <- function(beast2_options) {
     )
   }
 
-  peregrine::check_pff_beast2_options(beast2_options)e
+  peregrine::check_pff_beast2_options(beast2_options)
   beast2_options
 }
