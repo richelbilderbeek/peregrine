@@ -26,7 +26,8 @@ test_that("use, gen + cand", {
   )
   experiments[[1]]$inference_model$mcmc$tracelog$filename <- "/unfriendly"
   experiments[[2]]$inference_model$mcmc$tracelog$filename <- "/unfriendly"
-  experiments[[2]]$inference_model$site_model <- beautier::create_gtr_site_model()
+  experiments[[2]]$inference_model$site_model <-
+    beautier::create_gtr_site_model()
   expect_false(are_pff_experiments(experiments))
 
   experiments <- to_pff_experiments(experiments)
@@ -40,8 +41,10 @@ test_that("use, gen + cand + cand", {
     cand_experiment,
     cand_experiment
   )
-  experiments[[2]]$inference_model$site_model <- beautier::create_gtr_site_model()
-  experiments[[3]]$inference_model$site_model <- beautier::create_tn93_site_model()
+  experiments[[2]]$inference_model$site_model <-
+    beautier::create_gtr_site_model()
+  experiments[[3]]$inference_model$site_model <-
+    beautier::create_tn93_site_model()
   experiments[[1]]$inference_model$mcmc$tracelog$filename <- "/unfriendly"
   experiments[[2]]$inference_model$mcmc$tracelog$filename <- "/unfriendly"
   experiments[[3]]$inference_model$mcmc$tracelog$filename <- "/unfriendly"
@@ -56,7 +59,8 @@ test_that("use, cand + cand", {
     cand_experiment,
     cand_experiment
   )
-  experiments[[2]]$inference_model$site_model <- beautier::create_gtr_site_model()
+  experiments[[2]]$inference_model$site_model <-
+    beautier::create_gtr_site_model()
   experiments[[1]]$inference_model$mcmc$tracelog$filename <- "/unfriendly"
   experiments[[2]]$inference_model$mcmc$tracelog$filename <- "/unfriendly"
   expect_false(are_pff_experiments(experiments))

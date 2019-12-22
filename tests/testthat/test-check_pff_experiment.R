@@ -20,4 +20,3 @@ test_that("use", {
   )
 
 })
-

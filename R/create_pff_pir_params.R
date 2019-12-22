@@ -31,7 +31,7 @@ create_pff_pir_params <- function(
     verbose = verbose
   )
 
-  pff_pir_params <- to_pff_pir_params(pir_params)
+  pff_pir_params <- peregrine::to_pff_pir_params(pir_params)
 
   peregrine::check_pff_pir_params(pff_pir_params)
 
