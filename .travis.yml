@@ -7,6 +7,7 @@ r_github_packages:
   - jimhester/lintr
   - MangoTheCat/goodpractice
   - ropensci/spelling
+  - richelbilderbeek/babette
   - richelbilderbeek/mcbette
   - thijsjanzen/nodeSub
   - richelbilderbeek/pirouette
