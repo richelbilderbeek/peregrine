@@ -12,7 +12,7 @@ module load GCCcore/4.9.3
 module load XZ/5.2.2-foss-2016a
 module load R/3.3.1-foss-2016a
 Rscript -e 'devtools::install_github("KlausVigo/phangorn", ref = "devel")'
-Rscript -e 'devtools::install_github("richelbilderbeek/nLTT", ref = "develop")'
+Rscript -e 'devtools::install_github("thijsjanzen/nLTT", ref = "develop")'
 Rscript -e 'devtools::install_github("richelbilderbeek/beautier", ref = "develop")'
 Rscript -e 'devtools::install_github("richelbilderbeek/beastier", ref = "develop")'
 Rscript -e 'devtools::install_github("richelbilderbeek/tracerer", ref = "develop")'

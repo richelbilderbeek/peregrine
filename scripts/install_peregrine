@@ -21,7 +21,7 @@
 #SBATCH --job-name=install_peregrine
 #SBATCH --output=install_peregrine.log
 module load R
-Rscript -e 'devtools::install_github("richelbilderbeek/nLTT")'
+Rscript -e 'devtools::install_github("thijsjanzen/nLTT")'
 Rscript -e 'devtools::install_github("ropensci/beautier")'
 Rscript -e 'devtools::install_github("ropensci/tracerer")'
 Rscript -e 'devtools::install_github("ropensci/beastier")'
