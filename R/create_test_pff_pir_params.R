@@ -1,4 +1,6 @@
 #' Create a \code{pir_params} with PFFs
+#'
+#' Has become irrelevant.
 #' @inheritParams default_params_doc
 #' @seealso Use \link{create_pff_pir_params} to create a
 #'   PFF \code{pir_params} without testing defaults
