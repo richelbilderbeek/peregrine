@@ -10,7 +10,7 @@ experiments <- c(list(gen_exp), cand_exps)
 peregrine::check_pff_experiments(experiments)
 
 # pirouette parameters
-pir_params <- peregrine::create_test_pff_pir_params(
+pir_params <- pirouette::create_test_pir_params(
   experiments = experiments,
   twinning_params = peregrine::create_pff_twinning_params()
 )

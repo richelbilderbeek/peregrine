@@ -37,10 +37,6 @@ evidences (aka marginal likelihoods)}
 \description{
 Create a \code{pir_params} with PFFs
 }
-\seealso{
-Use \link{create_test_pff_pir_params} to create a testing
-  PFF \code{pir_params}
-}
 \author{
 Richel J.C. Bilderbeek
 }

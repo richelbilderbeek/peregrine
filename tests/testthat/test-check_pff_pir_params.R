@@ -2,7 +2,7 @@ context("test-check_pff_pir_params")
 
 test_that("use", {
 
-  good_pir_params <- create_test_pff_pir_params(
+  good_pir_params <- pirouette::create_test_pir_params(
     twinning_params = create_pff_twinning_params()
   )
 

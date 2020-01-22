@@ -1,7 +1,5 @@
 #' Create a \code{pir_params} with PFFs
 #' @inheritParams default_params_doc
-#' @seealso Use \link{create_test_pff_pir_params} to create a testing
-#'   PFF \code{pir_params}
 #' @author Richel J.C. Bilderbeek
 #' @export
 create_pff_pir_params <- function(
