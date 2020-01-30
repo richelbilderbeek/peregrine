@@ -12,8 +12,7 @@
 time_strs_to_n_secs <- function(strs) {
   n_secs <- rep(NA, length(strs))
   for (i in seq_along(strs)) {
-    n_secs[i] <- time_str_to_n_sec(strs[i])
+    n_secs[i] <- peregrine::time_str_to_n_sec(strs[i])
   }
   n_secs
 }
-

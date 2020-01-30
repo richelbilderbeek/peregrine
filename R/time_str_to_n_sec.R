@@ -24,4 +24,3 @@ time_str_to_n_sec <- function(str) {
   n_secs <- n_secs + (n_mins * 60)
   n_secs
 }
-
