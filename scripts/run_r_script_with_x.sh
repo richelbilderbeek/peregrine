@@ -3,9 +3,9 @@
 #
 # Usage:
 #
-# sbatch run_r_script_with_x my_r_script.R
+#   sbatch run_r_script_with_x my_r_script.R
 #
-#SBATCH --time=10:00:00
+#SBATCH --time=240:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1

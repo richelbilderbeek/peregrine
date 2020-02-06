@@ -2,14 +2,17 @@
 
 Peregrine scripts.
 
-Name                  |Description
-----------------------|----------------------------------------------------
-`install_beast2.sh`   |Installs BEAST2 and the BEAST2 NS package
-`install_babette.sh`  |Installs `babette`, BEAST2 and the BEAST2 NS package
-`install_mcbette.sh`  |Installs `mcbette`, BEAST2 and the BEAST2 NS package
-`install_pirouette.sh`|Installs `pirouette`, BEAST2 and the BEAST2 NS package
-`install_razzo.sh`    |Installs `razzo`, BEAST2 and the BEAST2 NS package
-`uninstall_beast2.sh` |Uninstalls BEAST2 and the BEAST2 NS package
+Name                    |Description
+------------------------|----------------------------------------------------
+`install_beast2.sh`     |Installs BEAST2 and the BEAST2 NS package
+`install_babette.sh`    |Installs `babette`, BEAST2 and the BEAST2 NS package
+`install_mcbette.sh`    |Installs `mcbette`, BEAST2 and the BEAST2 NS package
+`install_pirouette.sh`  |Installs `pirouette`, BEAST2 and the BEAST2 NS package
+`install_razzo.sh`      |Installs `razzo`, BEAST2 and the BEAST2 NS package
+`run_r_cmd.sh`          |Run an R command
+`run_r_script.sh`       |Run an R script
+`run_r_script_with_x.sh`|Run an R script with the X Window system
+`uninstall_beast2.sh`   |Uninstalls BEAST2 and the BEAST2 NS package
 
 Usage, where `[script_name]` is the name of a script file:
 
