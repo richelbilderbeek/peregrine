@@ -5,8 +5,9 @@ Peregrine scripts.
 Name                    |Description
 ------------------------|------------------------------------------------------------------
 `check_beast2.sh`       |Checks if BEAST2 and the BEAST2 NS package are installed correctly
-`install_beast2.sh`     |Installs BEAST2 and the BEAST2 NS package
+`check_mcbette.sh`      |Checks if `mcbette` and its dependencies are installed correctly
 `install_babette.sh`    |Installs `babette`, BEAST2 and the BEAST2 NS package
+`install_beast2.sh`     |Installs BEAST2 and the BEAST2 NS package
 `install_mcbette.sh`    |Installs `mcbette`, BEAST2 and the BEAST2 NS package
 `install_pirouette.sh`  |Installs `pirouette`, BEAST2 and the BEAST2 NS package
 `install_razzo.sh`      |Installs `razzo`, BEAST2 and the BEAST2 NS package
