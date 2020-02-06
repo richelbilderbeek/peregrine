@@ -27,4 +27,6 @@ module load HDF5/1.10.1-foss-2018a
 Rscript -e 'remotes::install_github("thijsjanzen/nodeSub")'
 Rscript -e 'remotes::install_github("Giappo/mbd")'
 
+Rscript -e 'remotes::install_github("richelbilderbeek/pirouette")'
+
 
