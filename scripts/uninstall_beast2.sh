@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script to uninstall BEAST2 and the BEAST2 NS package
-# on the Peregrine computer cluster
+# on the Peregrine computer cluster.
 #
 # Usage, locally:
 #
