@@ -22,6 +22,6 @@
 module load R
 module load HDF5/1.10.1-foss-2018a
 
+Rscript -e 'if (beastier::is_beast2_installed() && mauricer::is_beast2_pkg_installed("NS")) mauricer::uninstall_beast2_pkg("NS")'
 Rscript -e 'if (beastier::is_beast2_installed()) beastier::uninstall_beast2()'
-Rscript -e 'if (mauricer::is_beast2_pkg_installed("NS")) mauricer::uninstall_beast2_pkg("NS")'
 
