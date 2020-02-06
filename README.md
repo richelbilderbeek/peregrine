@@ -9,8 +9,10 @@ Branch    |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)        
 
 `peregrine` is:
 
- * A collection of notes on the Groningen Peregrine computer cluster: [see my notes](doc/README.md)
+ * [A collection of notes](doc/README.md) on the Groningen Peregrine computer cluster
+ * [A collection of scripts](scripts/README.md) for the Groningen Peregrine computer cluster
  * An R package for some Peregrine functions
+ * Some presentations on the Groningen Peregrine computer cluster (see below)
 
 ## Presentations
 
@@ -42,45 +44,46 @@ Using `scripts/test_is_pff.R`.
 
 ### Can create file?
 
-filename | can_create_file
----|---
-/local/tmp.txt | TRUE
-/local/tmp/tmp.txt | TRUE
-/tmp.txt | FALSE
-/tmp/tmp.txt | TRUE
-/data/tmp.txt | FALSE
-/data/p230198/tmp.txt | TRUE
-/home/p230198/tmp.txt | TRUE
-/home/tmp.txt | FALSE
+filename                | `can_create_file`
+------------------------|------------------
+`/local/tmp.txt`        | TRUE
+`/local/tmp/tmp.txt`    | TRUE
+`/tmp.txt`              | FALSE
+`/tmp/tmp.txt`          | TRUE
+`/data/tmp.txt`         | FALSE
+`/data/p230198/tmp.txt` | TRUE
+`/home/p230198/tmp.txt` | TRUE
+`/home/tmp.txt`         | FALSE
 
 
 ### Can start BEAST2?
 
-prefix | can_start_beast
----|---
-/local | TRUE
-/local/tmp | TRUE
-/tmp | FALSE
-/ | FALSE
-/data | FALSE
-/data/p230198 | FALSE
-/home | FALSE
-/home/p230198 | FALSE
+prefix          | `can_start_beast`
+----------------|------------------
+`/local`        | TRUE
+`/local/tmp`    | TRUE
+`/tmp`          | FALSE
+`/`             | FALSE
+`/data`         | FALSE
+`/data/p230198` | FALSE
+`/home`         | FALSE
+`/home/p230198` | FALSE
 
 ### Can use BEAST2?
 
-folder_name | can_use_beast
----|---
-/tmp | FALSE
-/local/tmp | TRUE
-/data/p230198 | FALSE
-/home/p230198 | TRUE
+folder_name    | `can_use_beast`
+---------------|----------------
+`/tmp          | FALSE
+`/local/tmp    | TRUE
+`/data/p230198 | FALSE
+`/home/p230198 | TRUE
 
 ### Can use working dir?
 
-folder_name | can_use_working_dir
----|---
-/tmp | FALSE
-/local/tmp | FALSE
-/data/p230198 | FALSE
-/home/p230198 | TRUE
+folder_name     | `can_use_working_dir`
+----------------|----------------------
+`/tmp`          | FALSE
+`/local/tmp`    | FALSE
+`/data/p230198` | FALSE
+`/home/p230198` | TRUE
+
