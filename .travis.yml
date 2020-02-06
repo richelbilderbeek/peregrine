@@ -7,20 +7,17 @@ r_github_packages:
   - jimhester/lintr
   - MangoTheCat/goodpractice
   - ropensci/spelling
-  - richelbilderbeek/babette
   - richelbilderbeek/mcbette
   - thijsjanzen/nodeSub
   - richelbilderbeek/pirouette
 
 before_install:
+  - sudo apt-get update
+  # ImageMagick
   - sudo add-apt-repository -y ppa:opencpu/imagemagick
   - sudo apt-get update
   - sudo apt-get install -y libmagick++-dev
   - sudo apt install -qq libmpfr-dev
-  # Check dead links
-  - sudo apt-get install -qq npm
-  - npm config set strict-ssl false
-  - sudo npm install -g markdown-link-check
   # proselint
   - sudo pip install proselint
 
