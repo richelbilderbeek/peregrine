@@ -7,6 +7,8 @@ Branch    |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)        
 `giovanni`|[![Build Status](https://travis-ci.org/richelbilderbeek/peregrine.svg?branch=giovanni)](https://travis-ci.org/richelbilderbeek/peregrine)|[![codecov.io](https://codecov.io/github/richelbilderbeek/peregrine/coverage.svg?branch=giovanni)](https://codecov.io/github/richelbilderbeek/peregrine?branch=giovanni)
 `richel`  |[![Build Status](https://travis-ci.org/richelbilderbeek/peregrine.svg?branch=richel)](https://travis-ci.org/richelbilderbeek/peregrine)  |[![codecov.io](https://codecov.io/github/richelbilderbeek/peregrine/coverage.svg?branch=richel)](https://codecov.io/github/richelbilderbeek/peregrine?branch=richel)
 
+![Peregrine falcon, by Christopher Watson](pics/peregrine_falcon.jpg)
+
 `peregrine` is:
 
  * [A collection of notes](doc/README.md) on the Groningen Peregrine computer cluster
