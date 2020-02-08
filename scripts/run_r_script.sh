@@ -3,7 +3,7 @@
 #
 # Usage:
 #
-#   sbatch run_r_script my_r_script.R
+#   sbatch run_r_script.sh my_r_script.R
 #
 #SBATCH --time=240:00:00
 #SBATCH --nodes=1
