@@ -16,6 +16,10 @@ Branch    |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)        
  * An R package for some Peregrine functions
  * Some presentations on the Groningen Peregrine computer cluster (see below)
 
+## Videos
+
+ * How to run an R script on Peregrine [download (.ogv)](http://richelbilderbeek.nl/peregrine_call_r_script.ogv) [YouTube](https://youtu.be/Xf8IZwR9T8U)
+
 ## Presentations
 
  * Running (independent) jobs on the Peregrine computer cluster [PDF](independent_jobs.pdf) [ODP](independent_jobs.odp)
