@@ -3,6 +3,9 @@ dist: bionic
 cache: packages
 
 r_github_packages:
+  - richelbilderbeek/beautier
+  - richelbilderbeek/beastier
+  - richelbilderbeek/babette
   - jimhester/covr
   - jimhester/lintr
   - MangoTheCat/goodpractice
