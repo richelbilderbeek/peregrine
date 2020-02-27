@@ -22,6 +22,10 @@
 module load R
 module load HDF5/1.10.1-foss-2018a
 
+Rscript -e 'remotes::install_github("ropensci/beautier")'
+Rscript -e 'remotes::install_github("ropensci/tracerer")'
+Rscript -e 'remotes::install_github("ropensci/beastier")'
+Rscript -e 'remotes::install_github("ropensci/mauricer")'
 Rscript -e 'remotes::install_github("ropensci/babette")'
 
 ./install_beast2.sh
