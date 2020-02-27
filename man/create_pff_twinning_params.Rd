@@ -13,8 +13,7 @@ create_pff_twinning_params(
     ".newick"),
   twin_alignment_filename = peregrine::get_pff_tempfile(pattern = "alignment_twin_",
     fileext = ".fasta"),
-  twin_evidence_filename = peregrine::get_pff_tempfile(pattern = "evidence_twin_",
-    fileext = ".csv")
+  twin_evidence_filename = NA
 )
 }
 \arguments{

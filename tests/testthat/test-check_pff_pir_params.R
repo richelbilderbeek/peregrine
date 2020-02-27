@@ -5,6 +5,7 @@ test_that("use", {
   good_pir_params <- pirouette::create_test_pir_params(
     twinning_params = create_pff_twinning_params()
   )
+  expect_silent(check_pff_pir_params(good_pir_params))
 
   # Mostly done by check_pir_params
 
@@ -24,6 +25,8 @@ test_that("use", {
   )
 
   pir_params <- good_pir_params
+  pir_params$experiments <- list(pirouette::create_test_cand_experiment())
+  pir_params$evidence_filename <- "pff.csv"
   pir_params$twinning_params$twin_evidence_filename <- "/tmp/puf" # nolint do use absolute path in tests
   expect_error(
     check_pff_pir_params(pir_params),
@@ -38,6 +41,8 @@ test_that("use", {
   )
 
   pir_params <- good_pir_params
+  pir_params$experiments <- list(pirouette::create_test_cand_experiment())
+  pir_params$twinning_params$twin_evidence_filename <- "pff.csv"
   pir_params$evidence_filename <- "/tmp/puf.csv" # nolint do use absolute path in tests
   expect_error(
     check_pff_pir_params(pir_params),

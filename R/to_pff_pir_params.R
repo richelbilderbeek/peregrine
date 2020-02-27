@@ -22,10 +22,12 @@ to_pff_pir_params <- function(pir_params) {
   pir_params$experiments <- peregrine::to_pff_experiments(
     pir_params$experiments
   )
-  pir_params$evidence_filename <- peregrine::to_pff(
-    pir_params$evidence_filename
-  )
 
+  if (!beautier::is_one_na(pir_params$evidence_filename)) {
+    pir_params$evidence_filename <- peregrine::to_pff(
+      pir_params$evidence_filename
+    )
+  }
   peregrine::check_pff_pir_params(pir_params)
 
   pir_params

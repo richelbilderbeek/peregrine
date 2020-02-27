@@ -9,7 +9,7 @@ create_pff_pir_params(
   twinning_params = NA,
   experiments = list(pirouette::create_experiment()),
   error_measure_params = pirouette::create_error_measure_params(),
-  evidence_filename = get_pff_tempfile(pattern = "evidence_", fileext = ".csv"),
+  evidence_filename = NA,
   verbose = FALSE
 )
 }

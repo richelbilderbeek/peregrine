@@ -10,7 +10,8 @@ check_pff_pir_params <- function(
 ) {
   pirouette::check_pir_params(pir_params)
 
-  if (!peregrine::is_pff(pir_params$evidence_filename)) {
+  if (!beautier::is_one_na(pir_params$evidence_filename) &&
+    !peregrine::is_pff(pir_params$evidence_filename)) {
     stop("Peregrine-unfriendly filename for 'pir_params$evidence_filename'")
   }
   peregrine::check_pff_twinning_params(pir_params$twinning_params)

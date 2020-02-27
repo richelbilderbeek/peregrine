@@ -15,9 +15,7 @@ create_pff_twinning_params <- function(
   twin_alignment_filename = peregrine::get_pff_tempfile(
     pattern = "alignment_twin_", fileext = ".fasta"
   ),
-  twin_evidence_filename = peregrine::get_pff_tempfile(
-    pattern = "evidence_twin_",  fileext = ".csv"
-  )
+  twin_evidence_filename = NA
 ) {
   twinning_params <- pirouette::create_twinning_params(
     rng_seed_twin_tree = rng_seed_twin_tree,

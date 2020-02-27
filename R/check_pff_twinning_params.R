@@ -16,7 +16,8 @@ check_pff_twinning_params <- function(twinning_params) {
       "'twinning_params$twin_alignment_filename'"
     )
   }
-  if (!peregrine::is_pff(twinning_params$twin_evidence_filename)) {
+  if (!beautier::is_one_na(twinning_params$twin_evidence_filename) &&
+      !peregrine::is_pff(twinning_params$twin_evidence_filename)) {
     stop(
       "Peregrine-unfriendly filename for ",
       "'twinning_params$twin_evidence_filename'"
