@@ -35,7 +35,6 @@
 #
 #
 # Peregrine directives:
-#SBATCH --partition=gelifes
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
