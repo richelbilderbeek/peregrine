@@ -19,5 +19,4 @@
 #SBATCH --job-name=update_packages
 #SBATCH --output=update_packages.log
 module load R
-
-update.packages()
+Rscript -e "devtools::update_packages()"
