@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to install bbbq (without and its dependencies)
+# Script to install bbbq and its dependencies
 # on the Peregrine computer cluster
 #
 # Usage, locally:
@@ -19,8 +19,10 @@
 #SBATCH --job-name=install_bbbq
 #SBATCH --output=install_bbbq.log
 module load R
-module load HDF5/1.10.1-foss-2018a
 
-Rscript -e 'remotes::install_github("jtextor/epitope-prediction")'
+./install_epitope_prediction.sh
+./install_tmhmm.sh
+./install_netmhc2pan.sh
+
 Rscript -e 'remotes::install_github("richelbilderbeek/bbbq")'
 
