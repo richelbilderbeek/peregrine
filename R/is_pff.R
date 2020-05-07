@@ -15,7 +15,7 @@
 #' expect_false(is_pff("/data/p230198/peregrine_unfriendly"))
 #' @seealso Use \link{to_pff} to convert a filename or folder to
 #' its Peregrine-friendly equivalent
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 is_pff <- function(filename) {
   testit::assert(length(filename) == 1)

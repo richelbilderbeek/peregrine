@@ -1,6 +1,6 @@
 #' Create a \code{pir_params} with PFFs
 #' @inheritParams default_params_doc
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 create_pff_pir_params <- function(
   alignment_params,

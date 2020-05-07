@@ -1,6 +1,6 @@
 #' Is this code run on a Peregrine worker node?
 #' @return TRUe if yes, FALSE if np
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 is_on_peregrine_worker_node <- function() {
   !is.na(

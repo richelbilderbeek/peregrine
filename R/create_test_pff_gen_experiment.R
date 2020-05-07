@@ -1,6 +1,6 @@
 #' Creates a Peregrine-friendly generative experiment for testing
 #' @inheritParams default_params_doc
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 create_test_pff_gen_experiment <- function(
   mrca_prior = beautier::create_mrca_prior(

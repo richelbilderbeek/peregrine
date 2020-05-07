@@ -3,7 +3,7 @@
 #' Will \link{stop} if the \code{pir_params} are invalid
 #' or Peregrine-unfriendly, else will do nothing
 #' @inheritParams default_params_doc
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 check_pff_pir_params <- function(
   pir_params

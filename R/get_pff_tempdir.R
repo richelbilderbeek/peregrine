@@ -9,7 +9,7 @@
 #' expect_false(is_pff("/peregrine_unfriendly"))
 #' expect_false(is_pff("/tmp/peregrine_unfriendly"))
 #' expect_false(is_pff("/data/peregrine_unfriendly"))
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 get_pff_tempdir <- function() {
   dirname <- file.path(
