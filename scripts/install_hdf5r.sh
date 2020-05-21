@@ -39,7 +39,7 @@
 # Load the most recent module
 module load HDF5/1.10.5-gompic-2019b
 
-Rscript -e 'install.packages("hdf5r")'
+Rscript -e 'install.packages("hdf5r", repos = "https://cloud.r-project.org")'
 #Rscript -e 'devtools::update_packages("hdf5r", upgrade = "always")'
 
 
