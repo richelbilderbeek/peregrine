@@ -42,3 +42,4 @@ module load HDF5/1.10.5-gompic-2019b
 Rscript -e 'install.packages("hdf5r")'
 #Rscript -e 'devtools::update_packages("hdf5r", upgrade = "always")'
 
+
