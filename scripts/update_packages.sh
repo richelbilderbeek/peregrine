@@ -19,4 +19,5 @@
 #SBATCH --job-name=update_packages
 #SBATCH --output=update_packages.log
 module load R
+module load HDF5/1.10.1-foss-2018a
 Rscript -e "devtools::update_packages()"
