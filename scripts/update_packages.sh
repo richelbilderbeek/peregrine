@@ -15,7 +15,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
-#SBATCH --mem=1G
+#SBATCH --mem=2G
 #SBATCH --job-name=update_packages
 #SBATCH --output=update_packages.log
 module load R
