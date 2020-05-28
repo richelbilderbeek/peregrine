@@ -24,4 +24,6 @@ Rscript -e 'remotes::install_github("richelbilderbeek/mhcnuggetsr")'
 
 ./install_mhcnuggets.sh
 
+Rscript -e 'mhcnuggetsr::mhcnuggetsr_self_test()'
+
 
