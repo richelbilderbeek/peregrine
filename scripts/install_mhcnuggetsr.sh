@@ -19,6 +19,7 @@
 #SBATCH --job-name=install_mhcnuggetsr
 #SBATCH --output=install_mhcnuggetsr.log
 module load R
+module load pip
 
 Rscript -e 'remotes::install_github("richelbilderbeek/mhcnuggetsr")'
 
