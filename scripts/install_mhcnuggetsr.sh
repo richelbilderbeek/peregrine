@@ -47,10 +47,16 @@ echo "  "
 echo "  Would you like to install Miniconda? [Y/n]:"
 echo " "
 echo "Pick yes to install Miniconda"
-echo "Pick yes to install Miniconda"
-
+echo " "
+echo " "
+echo "Also try this from a terminal:"
+echo " "
+echo "python -m pip install numpy --user"
+echo "python -m pip install ~/.local/share/mhcnuggets/ --user"
 
 # 
 # > install_mhcnuggets()
 # ERROR: Could not install packages due to an EnvironmentError: [('/home/p230198/.local/share/mhcnuggets/.git/objects/pack/pack-1dd355527f837650a21ec9aa3fa2249c929b314b.pack', '/local/tmp/pip-req-build-vtoekd4p/.git/objects/pack/pack-1dd355527f837650a21ec9aa3fa2249c929b314b.pack', "[Errno 13] Permission denied: '/local/tmp/pip-req-build-vtoekd4p/.git/objects/pack/pack-1dd355527f837650a21ec9aa3fa2249c929b314b.pack'"), ('/home/p230198/.local/share/mhcnuggets/.git/objects/pack/pack-1dd355527f837650a21ec9aa3fa2249c929b314b.idx', '/local/tmp/pip-req-build-vtoekd4p/.git/objects/pack/pack-1dd355527f837650a21ec9aa3fa2249c929b314b.idx', "[Errno 13] Permission denied: '/local/tmp/pip-req-build-vtoekd4p/.git/objects/pack/pack-1dd355527f837650a21ec9aa3fa2249c929b314b.idx'")]
+
+
 
