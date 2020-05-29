@@ -18,9 +18,7 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=uninstall_mhcnuggets
 #SBATCH --output=uninstall_mhcnuggets.log
-module load R
-module load Python/3.8.2-GCCcore-9.3.0
-module load pip
+module load R Python/3.8.2-GCCcore-9.3.0 binutils
 
 Rscript -e 'if (mhcnuggetsr::is_mhcnuggets_installed()) mhcnuggetsr::uninstall_mhcnuggets()'
 
