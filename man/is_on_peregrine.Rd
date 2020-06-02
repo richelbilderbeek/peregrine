@@ -13,5 +13,5 @@ TRUE if yes, FALSE if no
 Is this code running on Peregrine?
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

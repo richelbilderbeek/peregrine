@@ -42,5 +42,5 @@ as created by \link[beautier]{create_treelog}}
 Create mcmc that has Peregrine friendly filenames
 }
 \author{
-Giovanni Laudanno, Richel J.C. Bilderbeek
+Giovanni Laudanno, Richèl J.C. Bilderbeek
 }

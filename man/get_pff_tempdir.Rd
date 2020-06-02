@@ -23,5 +23,5 @@ use \link{get_pff_tempfile}
 to get a Peregrine-friendly filename
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

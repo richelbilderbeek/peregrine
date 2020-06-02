@@ -13,5 +13,5 @@ TRUe if yes, FALSE if np
 Is this code run on the Peregrine login node?
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

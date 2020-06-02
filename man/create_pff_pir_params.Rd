@@ -38,5 +38,5 @@ evidences (aka marginal likelihoods)}
 Create a \code{pir_params} with PFFs
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

@@ -26,5 +26,5 @@ as can be created by \link[beastier]{create_beast2_options}}
 Creates a Peregrine-friendly generative experiment for testing
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

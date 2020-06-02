@@ -32,5 +32,5 @@ Use \link{to_pff} to convert a filename or folder to
 its Peregrine-friendly equivalent
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

@@ -7,7 +7,7 @@
 time_strs_to_n_secs(strs)
 }
 \arguments{
-\item{str}{the time string as text, for example \code{"12:34:56"}}
+\item{strs}{the time strings as text, for example \code{"12:34:56"}}
 }
 \description{
 Convert each time string to the number of seconds

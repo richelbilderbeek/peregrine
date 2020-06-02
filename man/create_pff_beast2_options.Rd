@@ -20,5 +20,5 @@ as used in \link[beastier]{create_beast2_options}}
 Create BEAST2 options that has Peregrine friendly filenames
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

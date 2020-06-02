@@ -15,5 +15,5 @@ Will \link{stop} if the \code{pir_params} are invalid
 or Peregrine-unfriendly, else will do nothing
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }
