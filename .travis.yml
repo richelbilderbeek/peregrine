@@ -23,6 +23,9 @@ before_install:
   - sudo apt install -qq libmpfr-dev
   # proselint
   - sudo pip install proselint
+  # Python3 and pip
+  - sudo apt install python3-pip
+  - sudo pip install --upgrade pip
 
 script:
   - travis_wait 60 R CMD build .
