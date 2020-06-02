@@ -51,7 +51,8 @@ echo " "
 echo " "
 echo "Also try this from a terminal:"
 echo " "
-echo "python -m pip install numpy --user"
+echo "module load Python/3.8.2-GCCcore-9.3.0"
+echo "python -m pip install --upgrade pip --user"
 echo "python -m pip install ~/.local/share/mhcnuggets/ --user"
 
 # 
