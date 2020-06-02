@@ -29,7 +29,7 @@ script:
   - travis_wait 60 R CMD check *tar.gz
 
 after_script:
-  - ./scripts/install_mhcnuggetsr.sh
+  - cd scripts && ./install_mhcnuggetsr.sh
 
 after_success:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then Rscript -e 'lintr::lint_package()'; fi
