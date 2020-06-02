@@ -31,28 +31,28 @@ script:
   - travis_wait 60 R CMD build .
   - travis_wait 60 R CMD check *tar.gz
   # mhcnuggetsr
-  - cd scripts && ./install_mhcnuggetsr.sh
-  - cd scripts && check_mhcnuggetsr.sh
+  - cd scripts ; ./install_mhcnuggetsr.sh ; cd ..
+  - cd scripts ; ./check_mhcnuggetsr.sh ; cd ..
   # BEAST2
-  - cd scripts && ./install_beast2.sh
-  - cd scripts && ./check_beast2.sh
+  - cd scripts ; ./install_beast2.sh ; cd ..
+  - cd scripts ; ./check_beast2.sh ; cd ..
   # babette
-  - cd scripts && ./install_babette.sh
+  - cd scripts ; ./install_babette.sh ; cd ..
   # mcbette
-  - cd scripts && ./install_mcbette.sh
-  - cd scripts && ./check_mcbette.sh
+  - cd scripts ; ./install_mcbette.sh ; cd ..
+  - cd scripts ; ./check_mcbette.sh ; cd ..
   # pirouette
-  - cd scripts && ./install_pirouette.sh
+  - cd scripts ; ./install_pirouette.sh ; cd ..
   # razzo
-  - cd scripts && ./install_razzo.sh
+  - cd scripts ; ./install_razzo.sh ; cd ..
   # EpitopePrediction
-  - cd scripts && ./install_epitope_prediction.sh
+  - cd scripts ; ./install_epitope_prediction.sh ; cd ..
   # pureseqtmr
-  - cd scripts && ./install_pureseqtmr.sh
+  - cd scripts ; ./install_pureseqtmr.sh ; cd ..
   # BBBQ
-  - cd scripts && ./install_bbbq.sh
+  - cd scripts ; ./install_bbbq.sh ; cd ..
   # Peregrine?
-  - cd scripts && ./install_peregrine.sh
+  - cd scripts ; ./install_peregrine.sh ; cd ..
 
 after_success:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then Rscript -e 'lintr::lint_package()'; fi
