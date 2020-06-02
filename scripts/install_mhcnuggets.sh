@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Script to install MHCnuggets
 # on the Peregrine computer cluster
 #
@@ -19,6 +20,8 @@
 #SBATCH --job-name=install_mhcnuggets
 #SBATCH --output=install_mhcnuggets.log
 module load R Python/3.8.2-GCCcore-9.3.0 binutils
+python -m pip install --upgrade pip --user
+python -m pip install ~/.local/share/mhcnuggets/ --user
 
 Rscript -e 'if (!mhcnuggetsr::is_mhcnuggets_installed()) mhcnuggetsr::install_mhcnuggets()'
 
