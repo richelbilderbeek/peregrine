@@ -27,7 +27,29 @@ before_install:
 script:
   - travis_wait 60 R CMD build .
   - travis_wait 60 R CMD check *tar.gz
+  # mhcnuggetsr
   - cd scripts && ./install_mhcnuggetsr.sh
+  - cd scripts && check_mhcnuggetsr.sh
+  # BEAST2
+  - cd scripts && ./install_beast2.sh
+  - cd scripts && ./check_beast2.sh
+  # babette
+  - cd scripts && ./install_babette.sh
+  # mcbette
+  - cd scripts && ./install_mcbette.sh
+  - cd scripts && ./check_mcbette.sh
+  # pirouette
+  - cd scripts && ./install_pirouette.sh
+  # razzo
+  - cd scripts && ./install_razzo.sh
+  # EpitopePrediction
+  - cd scripts && ./install_epitope_prediction.sh
+  # pureseqtmr
+  - cd scripts && ./install_pureseqtmr.sh
+  # BBBQ
+  - cd scripts && ./install_bbbq.sh
+  # Peregrine?
+  - cd scripts && ./install_peregrine.sh
 
 after_success:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then Rscript -e 'lintr::lint_package()'; fi
