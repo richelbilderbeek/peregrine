@@ -26,7 +26,7 @@ my_python=$(Rscript -e "cat(reticulate::py_config()\$python)")
 echo "Reticulate Python path: "$my_python
 
 $my_python -m pip install --upgrade pip --user
-$my_python -m pip install ~/.local/share/mhcnuggets/ --user
 
 Rscript -e 'if (!mhcnuggetsr::is_mhcnuggets_installed()) mhcnuggetsr::install_mhcnuggets()'
+
 
