@@ -21,12 +21,12 @@
 #SBATCH --output=install_mhcnuggets.log
 module load R Python/3.8.2-GCCcore-9.3.0 binutils
 
-my_python=$(Rscript -e "cat(reticulate::py_config()\$python)") 
+# Do not install pip: mhcnuggetsr must do that
+#
+# my_python=$(Rscript -e "cat(reticulate::py_config()\$python)") 
+# echo "Reticulate Python path: "$my_python
+# $my_python -m pip install --upgrade pip --user
 
-echo "Reticulate Python path: "$my_python
-
-$my_python -m pip install --upgrade pip --user
-
-Rscript -e 'if (!mhcnuggetsr::is_mhcnuggets_installed()) mhcnuggetsr::install_mhcnuggets()'
+Rscript -e 'if (!mhcnuggetsr::is_mhcnuggets_installed()) mhcnuggetsr::install_mhcnuggets(verbose = TRUE)'
 
 
