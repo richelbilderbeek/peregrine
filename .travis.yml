@@ -31,8 +31,8 @@ script:
   - travis_wait 60 R CMD build .
   - travis_wait 60 R CMD check *tar.gz
   # mhcnuggetsr
-  - cd scripts ; ./install_mhcnuggetsr.sh ; cd ..
-  - cd scripts ; ./check_mhcnuggetsr.sh ; cd ..
+  - cd scripts && ./install_mhcnuggetsr.sh && cd ..
+  - cd scripts && ./check_mhcnuggetsr.sh && cd ..
   # BEAST2
   - cd scripts ; ./install_beast2.sh ; cd ..
   - cd scripts ; ./check_beast2.sh ; cd ..

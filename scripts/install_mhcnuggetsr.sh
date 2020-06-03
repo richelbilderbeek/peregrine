@@ -20,7 +20,7 @@
 #SBATCH --output=install_mhcnuggetsr.log
 module load R Python/3.8.2-GCCcore-9.3.0 binutils
 
-Rscript -e 'remotes::install_github("richelbilderbeek/mhcnuggetsr")'
+Rscript -e 'remotes::install_github("richelbilderbeek/mhcnuggetsr", ref = "develop")'
 
 ./install_mhcnuggets.sh
 
