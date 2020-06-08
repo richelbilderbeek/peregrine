@@ -12,6 +12,6 @@
 #SBATCH --mem=10G
 #SBATCH --job-name=make
 #SBATCH --output=make_%j.log
-module load R
+module load R Python/3.8.2-GCCcore-9.3.0 binutils
 echo "Rscript -e $@"
 Rscript -e "$@"
