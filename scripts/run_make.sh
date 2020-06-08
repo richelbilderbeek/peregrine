@@ -3,7 +3,7 @@
 #
 # Usage:
 #
-#   sbatch run_r_cmd "print(\"hello\")"
+#   sbatch run_make.sh
 #
 #SBATCH --time=240:00:00
 #SBATCH --nodes=1
@@ -13,5 +13,5 @@
 #SBATCH --job-name=make
 #SBATCH --output=make_%j.log
 module load R Python/3.8.2-GCCcore-9.3.0 binutils
-echo "Rscript -e $@"
-Rscript -e "$@"
+make
+
