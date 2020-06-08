@@ -15,6 +15,6 @@
 #
 
 all:
-	echo "HOSTNAME: $HOSTNAME"
-	if test -eq $HOSTNAME "peregrine.hpc.rug.nl"; then echo "On Peregrine login node"; fi
+	echo "HOSTNAME: $$HOSTNAME"
+	if test -eq $$HOSTNAME "peregrine.hpc.rug.nl"; then echo "On Peregrine login node"; fi
 
