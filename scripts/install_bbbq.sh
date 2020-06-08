@@ -24,5 +24,5 @@ module load R
 ./install_pureseqtmr.sh
 ./install_mhcnuggetsr.sh
 
-Rscript -e 'remotes::install_github("richelbilderbeek/bbbq")'
+Rscript -e 'remotes::install_github("richelbilderbeek/bbbq", ref = "develop")'
 
