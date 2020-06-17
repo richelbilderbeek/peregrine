@@ -23,6 +23,7 @@ module load R
 ./install_epitope_prediction.sh
 ./install_pureseqtmr.sh
 ./install_mhcnuggetsr.sh
+./install_mhcnpreds.sh
 
 Rscript -e 'remotes::install_github("richelbilderbeek/bbbq", ref = "develop")'
 
