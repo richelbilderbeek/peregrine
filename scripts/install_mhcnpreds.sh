@@ -22,3 +22,4 @@ module load R
 
 Rscript -e 'remotes::install_github("richelbilderbeek/mhcnpreds")'
 
+
