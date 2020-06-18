@@ -33,6 +33,8 @@ script:
   # mhcnuggetsr
   - cd scripts && ./install_mhcnuggetsr.sh && cd ..
   - cd scripts && ./check_mhcnuggetsr.sh && cd ..
+  # mhcnpreds
+  - cd scripts && ./install_mhcnpreds.sh && cd ..
   # BEAST2
   - cd scripts ; ./install_beast2.sh ; cd ..
   - cd scripts ; ./check_beast2.sh ; cd ..
