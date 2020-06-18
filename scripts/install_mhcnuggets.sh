@@ -27,6 +27,6 @@ module load R Python/3.8.2-GCCcore-9.3.0 binutils
 # echo "Reticulate Python path: "$my_python
 # $my_python -m pip install --upgrade pip --user
 
-Rscript -e 'if (!mhcnuggetsr::is_mhcnuggets_installed()) mhcnuggetsr::install_mhcnuggets(verbose = TRUE)'
+Rscript -e 'if (!mhcnuggetsr::is_mhcnuggets_installed()) mhcnuggetsr::install_mhcnuggets()'
 
 
