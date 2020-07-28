@@ -18,7 +18,7 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=install_csv2latex
 #SBATCH --output=install_csv2latex.log
-module load Python
+module load Python/3.8.2-GCCcore-9.3.0
 
 pip install --user csv2latex
 
