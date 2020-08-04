@@ -20,6 +20,8 @@
 #SBATCH --output=install_mhcnpreds.log
 module load R
 
+./install_mhcnuggetsr.sh
+
 Rscript -e 'remotes::install_github("richelbilderbeek/mhcnpreds")'
 
 
