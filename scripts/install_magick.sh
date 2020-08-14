@@ -20,5 +20,4 @@
 #SBATCH --output=install_magick.log
 module load R ImageMagick
 
-Rscript -e 'install.packages("magick")'
-
+Rscript -e 'install.packages("magick", repos = "https://cloud.r-project.org")'
