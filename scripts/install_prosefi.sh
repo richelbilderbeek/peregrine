@@ -20,6 +20,5 @@
 #SBATCH --output=install_prosefi.log
 module load R
 
-Rscript -e 'remotes::install_github("richelbilderbeek/protein_sequence_finder")'
-
+Rscript -e 'remotes::install_github("richelbilderbeek/prosefi")'
 
