@@ -18,9 +18,10 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=install_pirouette
 #SBATCH --output=install_pirouette.log
-module load R ImageMagick
+module load R 
 module load HDF5/1.10.1-foss-2018a
 
+./install_magick.sh
 ./install_mcbette.sh
 
 Rscript -e 'remotes::install_github("thijsjanzen/nodeSub")'
