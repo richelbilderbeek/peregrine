@@ -6,7 +6,7 @@ is_on_peregrine_worker_node <- function() {
   !is.na(
     stringr::str_match(
       string = Sys.getenv("HOSTNAME"),
-      pattern = "pg-node[0-9]{3}"
+      pattern = "(pg|dh)-node[:digit:]{2,3}"
     )
   )[1, 1]
 }
