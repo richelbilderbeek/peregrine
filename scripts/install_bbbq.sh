@@ -20,7 +20,10 @@
 #SBATCH --output=install_bbbq.log
 module load R
 
+./install_netmhc2pan.sh
+./install_nmhc2ppreds.sh
 ./install_epitope_prediction.sh
+./install_epiprepreds.sh
 ./install_pureseqtmr.sh
 ./install_mhcnuggetsr.sh
 ./install_mhcnpreds.sh
