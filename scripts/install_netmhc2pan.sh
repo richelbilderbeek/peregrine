@@ -20,6 +20,9 @@
 #SBATCH --output=install_netmhc2pan.log
 module load R
 
+# Install the package
 Rscript -e 'remotes::install_github("richelbilderbeek/netmhc2pan")'
 
+# Install NetMHC2pan
+Rscript -e 'netmhc2pan::install_netmhc2pan()'
 
