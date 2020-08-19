@@ -7,5 +7,5 @@ count_jobs <- function(user_name = "p230198") {
       args = c("-u", "p230198"),
       stdout = TRUE
     )
-  )
+  ) - 1
 }
