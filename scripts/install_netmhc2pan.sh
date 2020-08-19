@@ -24,5 +24,5 @@ module load R
 Rscript -e 'remotes::install_github("richelbilderbeek/netmhc2pan")'
 
 # Install NetMHC2pan
-Rscript -e 'netmhc2pan::install_netmhc2pan()'
+Rscript -e 'if (!netmhc2pan::is_netmhc2pan_installed()) netmhc2pan::install_netmhc2pan()'
 
