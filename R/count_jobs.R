@@ -9,4 +9,3 @@ count_jobs <- function(user_name = "p230198") {
     )
   )
 }
-
