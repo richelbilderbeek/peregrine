@@ -21,6 +21,7 @@ before_install:
   - sudo add-apt-repository -y ppa:opencpu/imagemagick
   - sudo apt-get update
   - sudo apt-get install -y libmagick++-dev
+  # Rmfpfr
   - sudo apt install -qq libmpfr-dev
   # proselint
   - sudo pip install proselint
@@ -54,8 +55,11 @@ script:
   - cd scripts ; ./install_pureseqtmr.sh ; cd ..
   # BBBQ
   - cd scripts ; ./install_bbbq.sh ; cd ..
-  # Peregrine?
+  # Peregrine
   - cd scripts ; ./install_peregrine.sh ; cd ..
+  - cd scripts ; ./count_jobs.sh ; cd ..
+  - cd scripts ; ./count_regular_jobs.sh ; cd ..
+  - cd scripts ; ./count_vulture_jobs.sh ; cd ..
 
 after_success:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then Rscript -e 'lintr::lint_package()'; fi

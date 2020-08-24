@@ -119,6 +119,7 @@
 #'   values of \code{twin_model}
 #' @param twinning_params parameters for creating a twin tree,
 #'   as can be created by \code{\link[pirouette]{create_twinning_params}}
+#' @param user_name the Peregrine username, for example \code{p123456}
 #' @param verbose give more output
 #' @author Documentation by Giovanni Laudanno,
 #'   use of this function by Richel J.C. Bilderbeek
@@ -185,6 +186,7 @@ default_params_doc <- function(
   twin_model,
   twin_tree_filename,
   twinning_params,
+  user_name,
   verbose
 ) {
   # Nothing

@@ -64,6 +64,7 @@ default_params_doc(
   twin_model,
   twin_tree_filename,
   twinning_params,
+  user_name,
   verbose
 )
 }
@@ -244,6 +245,8 @@ tree will be saved to}
 
 \item{twinning_params}{parameters for creating a twin tree,
 as can be created by \code{\link[pirouette]{create_twinning_params}}}
+
+\item{user_name}{the Peregrine username, for example \code{p123456}}
 
 \item{verbose}{give more output}
 }
