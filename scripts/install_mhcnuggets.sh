@@ -23,10 +23,5 @@ module load R Python/3.8.2-GCCcore-9.3.0 binutils
 
 ./install_pip.sh
 
-Rscript -e 'mhcnuggetsr::mhcnuggetsr_report()'
-
 Rscript -e 'if (!mhcnuggetsr::is_mhcnuggets_installed()) mhcnuggetsr::install_mhcnuggets()'
-
-Rscript -e 'mhcnuggetsr::mhcnuggetsr_report()'
-
 
