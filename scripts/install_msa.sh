@@ -21,6 +21,6 @@
 #SBATCH --output=install_msa.log
 module load R
 
-Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")'
+Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", repos = "https://cloud.r-project.org")'
 Rscript -e 'BiocManager::install("msa")'
 
