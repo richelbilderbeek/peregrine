@@ -15,7 +15,7 @@
 #SBATCH --job-name=email_me
 #SBATCH --output=email_me.log
 #SBATCH --mail-type=END
-#SBATCH --mail-user=richel@richelbilderbeek.nl
+#SBATCH --mail-user=r.j.c.bilderbeek@rug.nl
 
 echo "Email sent"
 
