@@ -10,11 +10,11 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
-#SBATCH --mem=1G
-#SBATCH --job-name=count_jobs
-#SBATCH --output=count_jobs.log
-module load R
+#SBATCH --mem=10
+#SBATCH --job-name=email_me
+#SBATCH --output=email_me.log
+#SBATCH --mail-user=r.j.c.bilderbeek@rug.nl
 
-Rscript -e 'peregrine::count_jobs()'
+echo "Email sent"
 
 
