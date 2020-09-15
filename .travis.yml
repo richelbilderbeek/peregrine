@@ -68,8 +68,12 @@ after_success:
   # Check dead links
   - rm .travis.yml
   - ./scripts/check_dead_links
+  # Download thesis
+  - Rscript -e 'download.file("https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf", tempfile())'
 
 after_failure:
   - cat /home/travis/build/richelbilderbeek/peregrine/peregrine.Rcheck/00check.log
   - cat /home/travis/build/richelbilderbeek/peregrine/peregrine.Rcheck/00install.out
+  # Download thesis
+  - Rscript -e 'download.file("https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf", tempfile())'
 
