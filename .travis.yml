@@ -49,7 +49,7 @@ script:
   # pirouette
   - cd scripts ; ./install_pirouette.sh ; cd ..
   # razzo
-  - cd scripts ; ./install_razzo.sh ; cd ..
+  - travis_wait 30 cd scripts ; ./install_razzo.sh ; cd ..
   # EpitopePrediction
   - cd scripts ; ./install_epitope_prediction.sh ; cd ..
   # pureseqtmr
