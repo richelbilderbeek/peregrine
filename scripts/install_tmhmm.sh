@@ -22,4 +22,6 @@ module load R
 
 Rscript -e 'remotes::install_github("richelbilderbeek/tmhmm")'
 
+Rscript -e 'if (!tmhmm::is_tmhmm_installed()) tmhmm::install_tmhmm()'
+
 
