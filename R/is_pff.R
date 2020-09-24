@@ -3,7 +3,6 @@
 #' @seealso see \link{get_pff_tempdir} and \link{get_pff_tempfile}
 #' to get a Peregrine-friendly temporary folder and filename
 #' @examples
-#' library(testthat)
 #'
 #' expect_true(is_pff(get_pff_tempdir()))
 #' expect_true(is_pff(get_pff_tempfile()))

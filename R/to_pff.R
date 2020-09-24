@@ -1,7 +1,6 @@
 #' Convert a filename or folder to it Peregrine-friendly equivalent
 #' @inheritParams default_params_doc
 #' @examples
-#' library(testthat)
 #'
 #' # Filenames
 #'

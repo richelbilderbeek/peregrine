@@ -2,7 +2,6 @@
 #' @seealso use \link{get_pff_tempfile}
 #' to get a Peregrine-friendly filename
 #' @examples
-#' library(testthat)
 #'
 #' expect_true(is_pff(get_pff_tempdir()))
 #' expect_true(is_pff(get_pff_tempfile()))

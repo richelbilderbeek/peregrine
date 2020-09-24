@@ -1,7 +1,6 @@
 #' Convert each time string to the number of seconds
 #' @param strs the time strings as text, for example \code{"12:34:56"}
 #' @examples
-#' library(testthat)
 #' time_strs <- c("00:00:01", "01:02:03", "1-02:03:04")
 #'
 #' # Reduplicated plural: a vector of number of seconds
