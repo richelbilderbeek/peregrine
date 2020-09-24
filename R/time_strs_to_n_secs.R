@@ -6,7 +6,7 @@
 #' # Reduplicated plural: a vector of number of seconds
 #' n_secses <- time_strs_to_n_secs(time_strs)
 #'
-#' expect_true(all(n_secses > 0))
+#' all(n_secses > 0))
 #' @export
 time_strs_to_n_secs <- function(strs) {
   n_secs <- rep(NA, length(strs))

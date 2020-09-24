@@ -3,11 +3,11 @@
 #' to get a Peregrine-friendly filename
 #' @examples
 #'
-#' expect_true(is_pff(get_pff_tempdir()))
-#' expect_true(is_pff(get_pff_tempfile()))
-#' expect_false(is_pff("/peregrine_unfriendly"))
-#' expect_false(is_pff("/tmp/peregrine_unfriendly"))
-#' expect_false(is_pff("/data/peregrine_unfriendly"))
+#' is_pff(get_pff_tempdir()))
+#' is_pff(get_pff_tempfile()))
+#' is_pff("/peregrine_unfriendly"))
+#' is_pff("/tmp/peregrine_unfriendly"))
+#' is_pff("/data/peregrine_unfriendly"))
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_pff_tempdir <- function() {
