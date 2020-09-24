@@ -5,9 +5,8 @@
 #' @examples
 #'
 #' time_str <- "12:55:44"
-#' expect_n_secs <- (12 * 60 * 60) + (55 * 60) + 44
-#' actual_n_secs <- time_str_to_n_sec(time_str)
-#' expect_equal(actual_n_secs, expect_n_secs)
+#' # 12 * 60 * 60) + (55 * 60) + 44
+#' time_str_to_n_sec(time_str)
 #' @seealso use \link{time_strs_to_n_secs} for multiple strings
 #' @export
 time_str_to_n_sec <- function(str) {
