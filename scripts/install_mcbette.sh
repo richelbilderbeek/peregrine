@@ -23,7 +23,7 @@ module load HDF5/1.10.1-foss-2018a
 
 ./install_babette.sh
 
-Rscript -e 'remotes::install_github("richelbilderbeek/mcbette")'
+Rscript -e 'remotes::install_github("ropensci/mcbette")'
 
 
 Rscript -e 'remotes::install_github("thijsjanzen/nLTT", ref = "v1.4.3", dependencies = TRUE)'
