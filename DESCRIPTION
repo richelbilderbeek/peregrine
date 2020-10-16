@@ -14,7 +14,7 @@ Description: The Peregrine computer cluster is a computer cluster in
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/richelbilderbeek/peregrine
+URL: https://github.com/richelbilderbeek/peregrine/
 BugReports: https://github.com/richelbilderbeek/peregrine/issues
 Language: en-US
 Depends:
