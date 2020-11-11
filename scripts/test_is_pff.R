@@ -22,10 +22,10 @@ if (!peregrine::is_on_peregrine()) {
   stop("It has no use this run this script in a non-Peregrine environment")
 }
 if (peregrine::is_on_peregrine_login_node()) {
-  print("Run on login node")
+  message("Run on login node")
 }
 if (peregrine::is_on_peregrine_worker_node()) {
-  print("Run on worker node using sbatch")
+  message("Run on worker node using sbatch")
 }
 
 
@@ -45,12 +45,12 @@ filenames <- c(
   "/home/tmp.txt"
 )
 
-print("Can create file?")
-print(" ")
-print("filename | can_create_file")
-print("---|---")
+message("Can create file?")
+message(" ")
+message("filename | can_create_file")
+message("---|---")
 for (filename in filenames) {
-  print(paste0(filename, " | ", can_create_file(filename)))
+  message(paste0(filename, " | ", can_create_file(filename)))
 }
 
 # Hardcoded results
@@ -115,12 +115,12 @@ prefixes <- c(
 )
 
 if (1 == 2) {
-  print("Can create BEAST2?")
-  print(" ")
-  print("prefix | can_run_beast")
-  print("---|---")
+  message("Can create BEAST2?")
+  message(" ")
+  message("prefix | can_run_beast")
+  message("---|---")
   for (prefix in prefixes) {
-    print(paste0(prefix, " | ", can_run_beast(prefix)))
+    message(paste0(prefix, " | ", can_run_beast(prefix)))
   }
 }
 
@@ -158,13 +158,13 @@ can_start_beast <- function() {
   )
 }
 
-print("Can start BEAST2?")
-print(" ")
-print("prefix | can_start_beast")
-print("---|---")
+message("Can start BEAST2?")
+message(" ")
+message("prefix | can_start_beast")
+message("---|---")
 for (prefix in prefixes) {
   setwd(prefix)
-  print(paste0(prefix, " | ", can_start_beast()))
+  message(paste0(prefix, " | ", can_start_beast()))
 }
 
 
@@ -208,13 +208,13 @@ folder_names <- c(
   "/home/p230198"
 )
 
-print("Can use BEAST2?")
-print(paste("getwd():", getwd()))
-print(" ")
-print("folder_name | can_use_beast")
-print("---|---")
+message("Can use BEAST2?")
+message(paste("getwd():", getwd()))
+message(" ")
+message("folder_name | can_use_beast")
+message("---|---")
 for (folder_name in folder_names) {
-  print(paste0(folder_name, " | ", can_use_beast(folder_name)))
+  message(paste0(folder_name, " | ", can_use_beast(folder_name)))
 }
 
 
@@ -275,11 +275,11 @@ folder_names <- c(
   "/home/p230198"
 )
 
-print("Can use working dir?")
-print(paste("getwd():", getwd()))
-print(" ")
-print("folder_name | can_use_working_dir")
-print("---|---")
+message("Can use working dir?")
+message(paste("getwd():", getwd()))
+message(" ")
+message("folder_name | can_use_working_dir")
+message("---|---")
 for (folder_name in folder_names) {
-  print(paste0(folder_name, " | ", can_use_working_dir(folder_name)))
+  message(paste0(folder_name, " | ", can_use_working_dir(folder_name)))
 }

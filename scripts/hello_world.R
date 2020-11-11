@@ -4,4 +4,4 @@
 #
 #   Rscript hello_world.R
 #
-print("Hello world")
+message("Hello world")
