@@ -3,15 +3,11 @@ language: r
 cache: packages
 
 r_github_packages:
-  - richelbilderbeek/beautier
-  - richelbilderbeek/beastier
-  - richelbilderbeek/babette
   - richelbilderbeek/tiebeaur
   - jimhester/covr
   - jimhester/lintr
   - MangoTheCat/goodpractice
   - ropensci/spelling
-  - ropensci/mcbette
   - thijsjanzen/nodeSub
   - richelbilderbeek/pirouette
 
