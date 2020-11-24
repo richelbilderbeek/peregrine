@@ -20,6 +20,9 @@
 #SBATCH --output=install_ncbi.log
 module load R
 
+./install_cobaltr.sh
+./install_pureseqtmr.sh
+
 Rscript -e 'remotes::install_github("richelbilderbeek/ncbi")'
 
 
