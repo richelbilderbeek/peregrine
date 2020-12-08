@@ -1,11 +1,9 @@
 # `peregrine`
 
-Branch    |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)                                                                            |[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
-----------|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`master`  |[![Build Status](https://travis-ci.org/richelbilderbeek/peregrine.svg?branch=master)](https://travis-ci.org/richelbilderbeek/peregrine)  |[![codecov.io](https://codecov.io/github/richelbilderbeek/peregrine/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/peregrine?branch=master)
-`develop` |[![Build Status](https://travis-ci.org/richelbilderbeek/peregrine.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/peregrine) |[![codecov.io](https://codecov.io/github/richelbilderbeek/peregrine/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/peregrine?branch=develop)
-`giovanni`|[![Build Status](https://travis-ci.org/richelbilderbeek/peregrine.svg?branch=giovanni)](https://travis-ci.org/richelbilderbeek/peregrine)|[![codecov.io](https://codecov.io/github/richelbilderbeek/peregrine/coverage.svg?branch=giovanni)](https://codecov.io/github/richelbilderbeek/peregrine?branch=giovanni)
-`richel`  |[![Build Status](https://travis-ci.org/richelbilderbeek/peregrine.svg?branch=richel)](https://travis-ci.org/richelbilderbeek/peregrine)  |[![codecov.io](https://codecov.io/github/richelbilderbeek/peregrine/coverage.svg?branch=richel)](https://codecov.io/github/richelbilderbeek/peregrine?branch=richel)
+Branch   |[GitHub Actions](https://github.com/richelbilderbeek/peregrine/actions)                                     |[![Codecov logo](man/figures/Codecov.png)](https://www.codecov.io)
+---------|-----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------
+`master` |![R-CMD-check](https://github.com/richelbilderbeek/peregrine/workflows/R-CMD-check/badge.svg?branch=master) |[![codecov.io](https://codecov.io/github/richelbilderbeek/peregrine/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/peregrine/branch/master)
+`develop`|![R-CMD-check](https://github.com/richelbilderbeek/peregrine/workflows/R-CMD-check/badge.svg?branch=develop)|[![codecov.io](https://codecov.io/github/richelbilderbeek/peregrine/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/peregrine/branch/develop)
 
 ![Peregrine falcon, by Christopher Watson](pics/peregrine_falcon.jpg)
 
