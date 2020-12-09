@@ -8,13 +8,8 @@ name: R-CMD-check
 
 jobs:
   R-CMD-check:
-    strategy:
-      matrix:
-        include:
-          - install_cobalt: "true" 
-          - install_cobalt: "false"
 
-    runs-on: macOS-latest
+    runs-on: ubuntu-18.04
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -32,29 +27,6 @@ jobs:
           remotes::install_github("MangoTheCat/goodpractice")
           remotes::install_github("richelbilderbeek/pirouette")
         shell: Rscript {0}
-
-      - name: Show COBALT
-        env:
-          INSTALL_COBALT: ${{ matrix.install_cobalt }}
-        run: echo "$INSTALL_COBALT"
-
-      - name: If statement on COBALT is true
-        env:
-          INSTALL_COBALT: ${{ matrix.install_cobalt }}
-        run: if [[ "$INSTALL_COBALT" == true ]]; then echo "Yay!"; fi
-
-      - name: Show location
-        run: pwd
-
-      - name: If statement on COBALT is false
-        env:
-          INSTALL_COBALT: ${{ matrix.install_cobalt }}
-        run: if [[ "$INSTALL_COBALT" == false ]]; then echo "Nay!"; fi
-
-      - name: Install COBALT
-        env:
-          INSTALL_COBALT: ${{ matrix.install_cobalt }}
-        run: if [[ "$INSTALL_COBALT" == true ]]; then ../../scripts/install_cobalt.sh; fi
 
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
