@@ -22,6 +22,7 @@ module load R
 
 ./install_cobaltr.sh
 ./install_pureseqtmr.sh
+./install_sprentrez.sh
 
 Rscript -e 'remotes::install_github("richelbilderbeek/ncbi")'
 
