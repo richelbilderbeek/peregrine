@@ -18,7 +18,7 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=install_bbbq
 #SBATCH --output=install_bbbq.log
-module load R
+module load R libgit2
 
 ./install_netmhc2pan.sh
 ./install_nmhc2ppreds.sh
@@ -27,6 +27,11 @@ module load R
 ./install_pureseqtmr.sh
 ./install_mhcnuggetsr.sh
 ./install_mhcnpreds.sh
+
+./install_cobaltr.sh
+./install_sprentrez.sh
+./install_ncbi.sh
+./install_ncbi_peregrine.sh
 
 Rscript -e 'remotes::install_github("richelbilderbeek/bbbq", ref = "develop")'
 
