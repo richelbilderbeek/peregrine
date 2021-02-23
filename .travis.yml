@@ -65,11 +65,11 @@ after_success:
   - rm .travis.yml
   - ./scripts/check_dead_links
   # Download thesis
-  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
+  - wget https://pure.rug.nl/ws/files/132028374/Complete_thesis.pdf
 
 after_failure:
   - cat /home/travis/build/richelbilderbeek/peregrine/peregrine.Rcheck/00check.log
   - cat /home/travis/build/richelbilderbeek/peregrine/peregrine.Rcheck/00install.out
   # Download thesis
-  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
+  - wget https://pure.rug.nl/ws/files/132028374/Complete_thesis.pdf
 
