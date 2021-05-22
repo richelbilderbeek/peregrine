@@ -19,7 +19,7 @@ Language: en-US
 Depends:
 Imports:
     beastier,
-    beautier,
+    beautier (>= 2.5.2),
     pirouette,
     rappdirs,
     stringr,
