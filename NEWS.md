@@ -2,6 +2,24 @@
 
 Newest versions at top.
 
+## peregrine 1.1.1 (2021-05-22)
+
+### NEW FEATURES
+
+  * None
+  
+### MINOR IMPROVEMENTS
+
+  * Works with newer packages
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
 ## peregrine 1.1 (2020-02-27)
 
 ### NEW FEATURES
