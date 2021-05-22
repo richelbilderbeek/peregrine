@@ -20,7 +20,7 @@ to_pff_beast2_options <- function(beast2_options) {
       "Cannot convert Peregrine-unfriendly filename ",
       "for 'beast2_options$beast2_path' \n",
       "Please install BEAST2 in a Peregrine-friendly location. \n",
-      "Tip: 'use beastier::install_beast2()'. \n"
+      "Tip: 'use beastierinstall::install_beast2()'. \n"
     )
   }
 
