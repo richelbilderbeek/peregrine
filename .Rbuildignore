@@ -5,3 +5,5 @@
 ^pics$
 ^scripts$
 ^NEWS\.md$
+^\.covrignore$
+^\.github$

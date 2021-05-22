@@ -3,15 +3,14 @@
 #' @seealso see \link{get_pff_tempdir} and \link{get_pff_tempfile}
 #' to get a Peregrine-friendly temporary folder and filename
 #' @examples
-#'
-#' is_pff(get_pff_tempdir()))
-#' is_pff(get_pff_tempfile()))
-#' is_pff("/peregrine_unfriendly"))
-#' is_pff("/tmp/peregrine_unfriendly"))
-#' is_pff("/local/peregrine_unfriendly"))
-#' is_pff("/local/tmp/peregrine_unfriendly"))
-#' is_pff("/data/peregrine_unfriendly"))
-#' is_pff("/data/p230198/peregrine_unfriendly"))
+#' is_pff(get_pff_tempdir())
+#' is_pff(get_pff_tempfile())
+#' is_pff("/peregrine_unfriendly")
+#' is_pff("/tmp/peregrine_unfriendly")
+#' is_pff("/local/peregrine_unfriendly")
+#' is_pff("/local/tmp/peregrine_unfriendly")
+#' is_pff("/data/peregrine_unfriendly")
+#' is_pff("/data/p230198/peregrine_unfriendly")
 #' @seealso Use \link{to_pff} to convert a filename or folder to
 #' its Peregrine-friendly equivalent
 #' @author Richèl J.C. Bilderbeek

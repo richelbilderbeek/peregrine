@@ -13,11 +13,8 @@ time_strs_to_n_secs(strs)
 Convert each time string to the number of seconds
 }
 \examples{
-library(testthat)
 time_strs <- c("00:00:01", "01:02:03", "1-02:03:04")
 
 # Reduplicated plural: a vector of number of seconds
-n_secses <- time_strs_to_n_secs(time_strs)
-
-expect_true(all(n_secses > 0))
+time_strs_to_n_secs(time_strs)
 }

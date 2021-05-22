@@ -3,7 +3,6 @@
 #' This time format is used in a Peregrine log file
 #' @param str the time string as text, for example \code{"12:34:56"}
 #' @examples
-#'
 #' time_str <- "12:55:44"
 #' # 12 * 60 * 60) + (55 * 60) + 44
 #' time_str_to_n_sec(time_str)

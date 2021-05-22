@@ -4,9 +4,7 @@
 #' time_strs <- c("00:00:01", "01:02:03", "1-02:03:04")
 #'
 #' # Reduplicated plural: a vector of number of seconds
-#' n_secses <- time_strs_to_n_secs(time_strs)
-#'
-#' all(n_secses > 0))
+#' time_strs_to_n_secs(time_strs)
 #' @export
 time_strs_to_n_secs <- function(strs) {
   n_secs <- rep(NA, length(strs))

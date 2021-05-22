@@ -13,16 +13,14 @@ is_pff(filename)
 Is the filename a Peregrine-friendly filename?
 }
 \examples{
-library(testthat)
-
-expect_true(is_pff(get_pff_tempdir()))
-expect_true(is_pff(get_pff_tempfile()))
-expect_false(is_pff("/peregrine_unfriendly"))
-expect_false(is_pff("/tmp/peregrine_unfriendly"))
-expect_false(is_pff("/local/peregrine_unfriendly"))
-expect_false(is_pff("/local/tmp/peregrine_unfriendly"))
-expect_false(is_pff("/data/peregrine_unfriendly"))
-expect_false(is_pff("/data/p230198/peregrine_unfriendly"))
+is_pff(get_pff_tempdir())
+is_pff(get_pff_tempfile())
+is_pff("/peregrine_unfriendly")
+is_pff("/tmp/peregrine_unfriendly")
+is_pff("/local/peregrine_unfriendly")
+is_pff("/local/tmp/peregrine_unfriendly")
+is_pff("/data/peregrine_unfriendly")
+is_pff("/data/p230198/peregrine_unfriendly")
 }
 \seealso{
 see \link{get_pff_tempdir} and \link{get_pff_tempfile}
