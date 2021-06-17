@@ -13,5 +13,4 @@ dat <- data.frame(
 )
 
 # Very basic bar graph
-ggplot(data = dat, aes(x = time, y = total_bill)) +
-    geom_bar(stat = "identity") + ggsave("ggplot.png", width = 7, height = 7)
+ggplot(data = dat, aes(x = time, y = total_bill)); geom_bar(stat = "identity"); ggsave("ggplot.png", width = 7, height = 7)
