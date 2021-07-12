@@ -49,6 +49,9 @@ Now just type `q` to view your jobs in the queue.
 echo "cowsay -f stegosaurus 'Welcome master'" >> ~/.bash_profile
 ```
 
+echo "module load cowsay; cowsay -f moose 'Welcome to Bianca, NSPHS'" >> ~/.bash_profile
+
+
 Do not use `.bashrc`, as this will disable using `scp`.
 
 ## Put job first in your queue
