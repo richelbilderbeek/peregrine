@@ -10,7 +10,8 @@
 #
 #   sbatch ./install_plinks.sh
 #
-# Peregrine directives:
+# Uppmax directives:
+#SBATCH -A sens2021565
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
