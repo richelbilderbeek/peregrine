@@ -1,5 +1,5 @@
 test_that("use", {
-  if (!beastier::is_on_travis()) return()
+  if (!beautier::is_on_gha()) return()
   testthat::expect_false(
     peregrine::are_pff_experiments(pirouette::create_all_experiments())
   )

@@ -1,7 +1,7 @@
 test_that("use, all cand", {
 
   # Takes too long
-  if (!beastier::is_on_travis()) return()
+  if (!beautier::is_on_gha()) return()
 
   pir_params <- pirouette::create_test_pir_params()
   pir_params$experiments <- pirouette::create_all_experiments()
