@@ -18,14 +18,10 @@ BugReports: https://github.com/richelbilderbeek/peregrine/issues
 Language: en-US
 Depends:
 Imports:
-    beastier,
-    beautier (>= 2.6.2),
-    pirouette,
     rappdirs,
     stringr,
     testit    
 Suggests:
     assertive,
-    nLTT,
     testthat (>= 2.1.0)
 RoxygenNote: 7.1.1
