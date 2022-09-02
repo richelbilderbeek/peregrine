@@ -25,6 +25,9 @@ jobs:
       - name: Install libmpfr-dev for Rmpfr
         run: sudo apt install -qq libmpfr-dev
 
+      - name: Install libharfbuzz-dev libfribidi-dev
+        run: sudo apt install -qq libharfbuzz-dev libfribidi-dev
+
       - name: Install libcurl4-openssl-dev
         run: sudo apt install -qq libcurl4-openssl-dev
 
@@ -35,6 +38,11 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"))
+          remotes::install_github("richelbilderbeek/beautier")
+          remotes::install_github("richelbilderbeek/beastier")
+          remotes::install_github("richelbilderbeek/mauricer")
+          remotes::install_github("richelbilderbeek/babette")
+          remotes::install_github("richelbilderbeek/mcbette")
           remotes::install_github("richelbilderbeek/pirouette")
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
