@@ -1,6 +1,6 @@
 test_that("use", {
   # Takes too long
-  if (!beautier::is_on_gha()) return()
+  if (!beautier::is_on_ci()) return()
 
   expect_false(are_pff_experiments(pirouette::create_all_experiments()))
 

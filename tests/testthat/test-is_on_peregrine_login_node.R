@@ -4,7 +4,7 @@ test_that("use", {
   expect_true(assertive::is_if_condition(is_on_peregrine_login_node()))
 
   # Travis is not Peregrine
-  if (beautier::is_on_gha()) {
+  if (beautier::is_on_travis()) {
     expect_false(is_on_peregrine_login_node())
   }
   # AppVeyor is not Peregrine
