@@ -44,6 +44,7 @@ jobs:
           remotes::install_github("richelbilderbeek/babette")
           remotes::install_github("richelbilderbeek/mcbette")
           remotes::install_github("richelbilderbeek/pirouette")
+          remotes::install_cran("nLTT")
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
           remotes::install_cran("covr")

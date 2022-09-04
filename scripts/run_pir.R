@@ -12,7 +12,7 @@ peregrine::check_pff_experiments(experiments)
 # pirouette parameters
 pir_params <- pirouette::create_test_pir_params(
   experiments = experiments,
-  twinning_params = peregrine::create_pff_twinning_params()
+  twinning_params = pff_pirouette::create_pff_twinning_params()
 )
 peregrine::check_pff_pir_params(pir_params)
 
