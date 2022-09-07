@@ -1,5 +1,7 @@
 test_that("use", {
+
   if (!beautier::is_on_ci()) return()
+  return()
   testthat::expect_false(
     peregrine::are_pff_experiments(pirouette::create_all_experiments())
   )

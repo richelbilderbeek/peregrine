@@ -1,6 +1,7 @@
 test_that("use, all cand", {
 
   # Takes too long
+  return()
   if (!beautier::is_on_ci()) return()
 
   pir_params <- pirouette::create_test_pir_params()
