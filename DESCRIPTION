@@ -18,6 +18,7 @@ BugReports: https://github.com/richelbilderbeek/peregrine/issues
 Language: en-US
 Depends:
 Imports:
+    beautier,
     rappdirs,
     stringr,
     testit    
