@@ -19,6 +19,8 @@ Language: en-US
 Depends:
 Imports:
     beautier,
+    beastier,
+    pirouette,
     rappdirs,
     stringr,
     testit    
