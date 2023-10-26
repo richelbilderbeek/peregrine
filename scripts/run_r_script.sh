@@ -13,5 +13,5 @@
 #SBATCH --job-name=run_r_script
 #SBATCH --output=run_r_script_%j.log
 module load R
-echo "Rscript $@"
+echo "Rscript $*"
 Rscript "$@"

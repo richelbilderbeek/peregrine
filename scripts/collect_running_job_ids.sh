@@ -6,4 +6,4 @@
 #
 #  ./collect_running_job_ids.sh
 #
-squeue -u $USER | tail -n +2 | cut -d " " -f 11 | tr '\n' ',' | sed 's/.$//'
+squeue -u "${USER}" | tail -n +2 | cut -d " " -f 11 | tr '\n' ',' | sed 's/.$//'

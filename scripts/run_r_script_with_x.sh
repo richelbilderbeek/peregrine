@@ -17,5 +17,5 @@ module load ImageMagick
 module load X11 
 module load libX11
 module load xprop
-echo "xvfb-run Rscript $@"
+echo "xvfb-run Rscript $*"
 xvfb-run Rscript "$@"

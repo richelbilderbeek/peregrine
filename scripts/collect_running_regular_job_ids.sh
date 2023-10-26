@@ -6,5 +6,5 @@
 #
 #  ./collect_running_regular_job_ids.sh
 #
-squeue -u $USER | egrep " {1,20}[[:digit:]]{4,10} {1,4}regular " | tail -n +2 | cut -d " " -f 11 | tr '\n' ',' | sed 's/.$//'
+squeue -u "${USER}" | grep -E " {1,20}[[:digit:]]{4,10} {1,4}regular " | tail -n +2 | cut -d " " -f 11 | tr '\n' ',' | sed 's/.$//'
 

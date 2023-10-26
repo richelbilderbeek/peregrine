@@ -15,5 +15,5 @@
 #SBATCH --job-name=make
 #SBATCH --output=make_%j.log
 module load R Python
-echo "make $@"
+echo "make $*"
 make "$@"
