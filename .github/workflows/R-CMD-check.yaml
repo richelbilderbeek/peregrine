@@ -36,12 +36,12 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"))
-          remotes::install_github("richelbilderbeek/beautier")
-          remotes::install_github("richelbilderbeek/beastier")
+          remotes::install_github("richelbilderbeek/beautier", ref = "develop")
+          remotes::install_github("richelbilderbeek/beastier", ref = "develop")
           remotes::install_github("richelbilderbeek/mauricer")
           remotes::install_github("richelbilderbeek/babette")
           remotes::install_github("richelbilderbeek/mcbette")
-          remotes::install_github("richelbilderbeek/pirouette")
+          remotes::install_github("richelbilderbeek/pirouette", ref = "develop")
           remotes::install_cran("nLTT")
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
