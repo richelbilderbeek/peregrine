@@ -41,6 +41,7 @@ jobs:
           remotes::install_github("richelbilderbeek/mauricer")
           remotes::install_github("richelbilderbeek/babette")
           remotes::install_github("richelbilderbeek/mcbette")
+          remotes::install_github("thijsjanzen/nodesub")
           remotes::install_github("richelbilderbeek/pirouette", ref = "develop")
           remotes::install_cran("nLTT")
           remotes::install_deps(dependencies = TRUE)
