@@ -17,7 +17,7 @@ check_pff_twinning_params <- function(twinning_params) {
     )
   }
   if (!beautier::is_one_na(twinning_params$twin_evidence_filename) &&
-      !peregrine::is_pff(twinning_params$twin_evidence_filename)) {
+      !peregrine::is_pff(twinning_params$twin_evidence_filename)) { # nolint this indentation is what I want
     stop(
       "Peregrine-unfriendly filename for ",
       "'twinning_params$twin_evidence_filename'"
