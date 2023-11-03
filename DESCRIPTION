@@ -18,7 +18,7 @@ BugReports: https://github.com/richelbilderbeek/peregrine/issues
 Language: en-US
 Depends:
 Imports:
-    beautier,
+    beautier (>= 2.6.11),
     beastier,
     pirouette,
     rappdirs,
