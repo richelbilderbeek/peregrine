@@ -2,10 +2,10 @@ Package: peregrine
 Title: Work With The Groninger Peregrine Computer Cluster  
 Version: 1.1.1
 Authors@R: c(
-    person("Richèl J.C.", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")),
+    person("Richèl J.C.", "Bilderbeek", email = "rjcbilderbeek@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")),
     person("Thijs", "Janzen", role = "ctb"),
     person("Giovanni", "Laudanno", role = "ctb"))
-Maintainer: Richèl J.C. Bilderbeek <richel@richelbilderbeek.nl>
+Maintainer: Richèl J.C. Bilderbeek <rjcbilderbeek@gmail.com>
 Description: The Peregrine computer cluster is a computer cluster in
     the Dutch city of Groningen. Running R code on such a cluster
     has different constraints then when doing so on a local computer.
